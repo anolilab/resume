@@ -1,0 +1,6 @@
+node_modules/
+.eslintcache
+coverage/
+.env.local
+resume-data.private.json
+.tsbuildinfo

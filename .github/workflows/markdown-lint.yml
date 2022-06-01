@@ -1,0 +1,60 @@
+# https://help.github.com/en/categories/automating-your-workflow-with-github-actions
+
+name: "Markdown Lint"
+
+on: # yamllint disable-line rule:truthy
+    push:
+        paths:
+            - "**.md"
+    pull_request:
+        paths:
+            - "**.md"
+
+env:
+    package: "@${{ github.repository }}"
+    registry_url: "https://npm.pkg.github.com"
+    scope: "${{ github.repository_owner }}"
+
+jobs:
+    text-lint:
+        name: "Markdown lint"
+
+        runs-on: "ubuntu-latest"
+
+        steps:
+            - name: "Git checkout"
+              uses: "actions/checkout@v3"
+              with:
+                  fetch-depth: 2
+              env:
+                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
+                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
+                  EMAIL: "github-actions[bot]@users.noreply.github.com"
+
+            - name: "Use Node.js 16.x"
+              uses: "actions/setup-node@v3"
+              with:
+                  node-version: "16.x"
+                  registry-url: "${{ env.registry_url }}"
+                  # Defaults to the user or organization that owns the workflow file
+                  scope: "@${{ env.scope }}"
+
+            - name: "Install pnpm"
+              run: "curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@6"
+
+            - name: "Cache .pnpm-store"
+              uses: "actions/cache@v3"
+              id: "pnpm-cache" # use this to check for `cache-hit` (`steps.pnpm-cache.outputs.cache-hit != 'true'`)
+              with:
+                  path: "~/.pnpm-store"
+                  key: "${{ runner.os }}-node16-${{ hashFiles('**/pnpm-lock.yaml') }}"
+                  restore-keys: |
+                      ${{ runner.os }}-pnpm-
+
+            - name: "Install packages"
+              run: "pnpm install --frozen-lockfile"
+              env:
+                  NPM_TOKEN: "${{ secrets.SEMANTIC_RELEASE_GITHUB_NPM_PACKAGE_TOKEN }}"
+
+            - name: "lint"
+              run: "pnpm run lint:text"

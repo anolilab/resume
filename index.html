@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="noindex">
+        <meta name="googlebot" content="noindex">
+        <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="./favicon.png" type="image/png" />
+        <title>{{#resume.basics}}{{name}}{{/resume.basics}} - Résumé</title>
+        <link rel="stylesheet" href="./src/style.css" type="text/css" />
+    </head>
+    <body class="font-sans antialiased w-full dark:text-white dark:bg-zinc-900" itemscope itemtype="http://schema.org/Person">
+        <div class="container mx-auto max-w-screen-xl">
+            <div class="flex flex-col sm:flex-row mt-5 md:mt-12">
+                <nav class="w-full sm:max-w-sm mb-5">
+                    {{#resume.basics}}
+                    <div>
+                        <div>
+                            <h3 class="font-semibold text-2xl" itemprop="name">{{name}}</h3>
+                            <div class="font-light" itemprop="jobTitle">{{label}}</div>
+                        </div>
+                        {{#if email}}
+                        <div class="mt-3">
+                            <a href="mailto:{{email}}" class="font-normal border-b border-dashed" itemprop="email" target="_blank">{{email}}</a>
+                        </div>
+                        {{/if}} {{#if phone}}
+                        <div class="mt-3">
+                            <a href="tel://{{phone}}" class="font-normal border-b border-dashed" itemprop="telephone" target="_blank"> {{phone}} </a>
+                        </div>
+                        {{/if}} {{#if location}}
+                        <div class="mt-3">
+                            {{#location}}
+                            <span class="font-light"> {{city}}, {{region}}, {{countryCode}} </span>
+                            {{/location}}
+                        </div>
+                        {{/if}}
+                    </div>
+
+                    <div class="flex mt-4 space-x-6">
+                        {{#profiles}}
+                        <a href="{{url}}" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white" title="{{network}}: {{username}}">
+                            {{{toSocialIcon network}}}
+                        </a>
+                        {{/profiles}}
+                    </div>
+
+                    {{/resume.basics}}
+                </nav>
+
+                <main class="w-full">
+                    <section>
+                        <div class="relative">
+                            <a href="#about" class="section-headline"><h4 id="about">About</h4></a>
+                            {{{toSocialIcon 'hash' 'w-5 h-5 external-link'}}}
+                        </div>
+                        <div class="pl-5 py-5 font-light" itemprop="description">{{breaklines resume.basics.summary}}</div>
+                    </section>
+
+                    <section id="work-projects-group">
+                        {{#if resume.projects}}
+                        <div class="relative">
+                            <a href="#projects" class="section-headline"><h4 id="projects">Projects</h4></a>
+                            {{{toSocialIcon 'hash' 'w-5 h-5 external-link'}}}
+                        </div>
+                        <ul class="grid md:grid-cols-2 py-5">
+                            {{#each resume.projects}}
+                            <li class="pl-5 py-5 {{domClasses}}">
+                                <div>
+                                    <div class="flex space-x-2" itemprop="award">
+                                        <strong>{{displayName}}</strong>&nbsp {{#if githubUrl}}
+                                        <a href="{{githubUrl}}" class="text-gray-500 hover:text-gray-900 dark:hover:text-white" target="_blank">
+                                            {{{toSocialIcon 'github'}}}
+                                        </a>
+                                        {{/if}} {{#if website}}
+                                        <a href="{{website}}" class="text-gray-500 hover:text-gray-900 dark:hover:text-white" target="_blank">
+                                            {{{toSocialIcon 'link'}}}
+                                        </a>
+                                        {{/if}}
+                                    </div>
+                                    <p>
+                                        <small>{{summary}}</small>
+                                    </p>
+                                    {{#if githubUrl}}
+                                    <p class="flex space-x-2">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 576 512"
+                                            role="img"
+                                            class="w-3 h-3 mt-1.5"
+                                            aria-hidden="true"
+                                            fill="currentColor"
+                                        >
+                                            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                            <path
+                                                d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"
+                                            />
+                                        </svg>
+                                        <span data-gh-api="{{getGithubApi githubUrl}}">{{stars}}</span>
+                                    </p>
+                                    {{/if}}
+                                </div>
+                            </li>
+                            {{/each}} {{#if resume.basics.projects_url}}
+                            <li class="pl-5 py-5">
+                                <a href="{{resume.basics.projects_url}}" target="_blank" class="text-ms font-light border-b border-dashed">More Projects...</a>
+                            </li>
+                            {{/if}}
+                        </ul>
+                        {{/if}}
+
+                        <div class="relative">
+                            <a href="#work-experience" class="section-headline"><h4 id="work-experience">Work Experience</h4></a>
+                            {{{toSocialIcon 'hash' 'w-5 h-5 external-link'}}}
+                        </div>
+                        <ul class="list-none">
+                            {{#each resume.work}}
+                            <li class="pl-5 py-5">
+                                <p>
+                                    <strong
+                                        >{{#if website}}<a href="{{website}}" target="_blank" class="border-b border-dashed">{{company}}</a
+                                        >{{else}}{{company}}{{/if}}</strong
+                                    >
+                                    <span class="font-light" style="margin-left: 0.3em">{{position}}</span>
+                                </p>
+                                <p class="font-light mb-2">
+                                    <small>{{startDate}} - {{#if endDate}}{{endDate}}{{else}}Present{{/if}} | {{location}}</small>
+                                </p>
+                                <p>{{summary}}</p>
+                                {{#if highlights}}
+                                <ul class="list-disc ml-10">
+                                    {{#each highlights}}
+                                    <li>{{.}}</li>
+                                    {{/each}}
+                                </ul>
+                                {{/if}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </section>
+
+                    <section>
+                        <div class="relative">
+                            <a href="#stacks" class="section-headline"><h4 id="stacks">Stacks</h4></a>
+                            {{{toSocialIcon 'hash' 'w-5 h-5 external-link'}}}
+                        </div>
+                        <div class="pl-5 py-5" itemprop="description">
+                            <div class="grid gap-1.5" style="grid-template-columns: max-content auto">
+                                {{#each resume.skills}}
+                                <div class="font-bold text-right">{{name}}</div>
+                                <div>{{join keywords}}</div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="relative">
+                            <a href="#education" class="section-headline"><h4 id="education">Education</h4></a>
+                            {{{toSocialIcon 'hash' 'w-5 h-5 external-link'}}}
+                        </div>
+                        <ul class="list-none pl-5">
+                            {{#each resume.education}}
+                            <li class="my-5">
+                                <p><strong>{{#if area}} {{area}}, {{/if}}{{studyType}}</strong>,<span class="font-light">&nbsp; {{institution}}</span></p>
+                                <p class="font-light mb-2">
+                                    <small> {{startDate}} - {{#if endDate}} {{endDate}} {{else}} Currently Pursuing {{/if}} </small>
+                                </p>
+                                <div>{{description}}</div>
+                                <i>{{gpa}}</i>
+                                <div class="">{{#courses}} <span class="">{{.}}</span> {{/courses}}</div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </section>
+
+                    {{#if resume.publications}}
+                    <section>
+                        <div class="relative">
+                            <a href="#publications" class="section-headline"><h4 id="publications">Talks</h4></a>
+                            {{{toSocialIcon 'hash' 'w-5 h-5 external-link'}}}
+                        </div>
+                        <ul class="list-none pl-5">
+                            {{#each resume.publications}}
+                            <li class="my-5">
+                                <p>
+                                    <strong>{{#if website}}<a href="{{website}}" target="_blank">{{name}}</a>{{else}}{{name}}{{/if}}</strong>,<span
+                                        class="font-light"
+                                        >&nbsp; {{publisher}}</span
+                                    >
+                                </p>
+                                <p class="font-light mb-2">
+                                    <small>{{releaseDate}} {{dateNote}}</small>
+                                    <small>{{#if slides}},&nbsp;<a href="{{slides}}" target="_blank">Slides</a>{{/if}}</small>
+                                </p>
+                                <p>{{summary}}</p>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </section>
+                    {{/if}} {{#if resume.awards}}
+                    <section>
+                        <div class="relative">
+                            <a href="#awards" class="section-headline"><h4 id="awards">Awards</h4></a>
+                            {{{toSocialIcon 'hash' 'w-5 h-5 external-link'}}}
+                        </div>
+                        <ul class="list-none pl-5">
+                            {{#each resume.awards}}
+                            <li class="my-5">
+                                <div>
+                                    <p itemprop="award"><strong>{{title}}</strong>,<span class="font-light">&nbsp; {{awarder}}</span></p>
+                                    <p class="font-light mb-2">
+                                        <small> {{date}} </small>
+                                    </p>
+                                    {{#if summary}}
+                                    <p>{{summary}}</p>
+                                    {{/if}}
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </section>
+                    {{/if}} {{#if resume.volunteer}}
+                    <section>
+                        <div class="relative">
+                            <a href="#volunteer-work" class="section-headline"><h4 id="volunteer-work">Volunteer Work</h4></a>
+                            {{{toSocialIcon 'hash' 'w-5 h-5 external-link'}}}
+                        </div>
+                        <ul class="list-none pl-5">
+                            {{#each resume.volunteer}}
+                            <li class="my-5">
+                                <div>
+                                    <p><strong>{{position}}</strong>,<span class="font-light">&nbsp; {{organization}}</span></p>
+                                    <p class="font-light mb-2">
+                                        <small> {{startDate}} - {{#if endDate}} {{endDate}} {{else}} Present {{/if}} </small>
+                                    </p>
+                                    <p>{{summary}}</p>
+                                    <ul>
+                                        {{#each highlights}}
+                                        <li>{{.}}</li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </section>
+                    {{/if}} {{#if resume.interests}}
+                    <section>
+                        <div class="relative">
+                            <a href="#interests" class="section-headline"><h4 id="interests">Interests</h4></a>
+                            {{{toSocialIcon 'hash' 'w-5 h-5 external-link'}}}
+                        </div>
+                        <ul class="list-none pl-5">
+                            {{#each resume.interests}}
+                            <li class="card-nested">
+                                <p>
+                                    <strong>{{name}}</strong>
+                                </p>
+
+                                <div class="">
+                                    {{#keywords}}
+                                    <span class="">{{.}}</span>
+                                    {{/keywords}}
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </section>
+                    {{/if}} {{#if resume.references}}
+                    <section>
+                        <div class="relative">
+                            <a href="#references" class="section-headline"><h4 id="references">References</h4></a>
+                            {{{toSocialIcon 'hash' 'w-5 h-5 external-link'}}}
+                        </div>
+                        <ul class="list-none pl-5">
+                            {{#each resume.references}}
+                            <li class="my-5">
+                                <p>
+                                    <strong>{{name}}</strong>
+                                </p>
+                                <blockquote class="">
+                                    <p>{{reference}}</p>
+                                </blockquote>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </section>
+                    {{/if}} {{#if resume.languages}}
+                    <section>
+                        <div class="relative">
+                            <a href="#languages" class="section-headline"><h4 id="languages">Languages</h4></a>
+                            {{{toSocialIcon 'hash' 'w-5 h-5 external-link'}}}
+                        </div>
+                        <ul class="list-none pl-5 py-5">
+                            {{#each resume.languages}}
+                            <li><strong>{{language}}</strong> ({{fluency}})</li>
+                            {{/each}}
+                        </ul>
+                    </section>
+                    {{/if}}
+
+                    <div class="my-5 px-2">
+                        <ul role="list" class="border border-gray-200 rounded-md divide-y divide-gray-200 print:hidden mb-5">
+                            <li class="pl-3 pr-4 py-5 flex items-center justify-between text-sm">
+                                <div class="w-0 flex-1 flex items-center">
+                                    <!-- Heroicon name: solid/paper-clip -->
+                                    <svg
+                                        class="flex-shrink-0 h-5 w-5 text-gray-400"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                    <span class="ml-2 flex-1 w-0 truncate">resume.pdf</span>
+                                </div>
+                                <div class="ml-4 flex-shrink-0">
+                                    <a href="./resume.pdf" class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="text-center mb-5 font-light text-xs print:hidden">Last updated at {{getBuildDate ''}}</div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <script>
+            async function updateStars() {
+                await Promise.all(
+                    Array.from(document.querySelectorAll("[data-gh-api]")).map(async (e) => {
+                        const api = e.dataset.ghApi;
+                        const r = await fetch(api);
+                        const json = await r.json();
+                        if (json.stargazers_count) e.innerText = json.stargazers_count;
+                        console.info(`${api} - ${json.stargazers_count}`);
+                    }),
+                );
+            }
+            window.addEventListener("load", updateStars);
+        </script>
+    </body>
+</html>

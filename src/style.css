@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section-headline {
+    @apply bg-zinc-900 inline-block my-1 py-1 pl-2 pr-16 text-white font-bold dark:text-black dark:bg-white;
+}
+
+.external-link {
+    @apply text-sm opacity-0 absolute invisible;
+    left: -28px;
+    top: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.section-headline:hover ~ .external-link {
+    @apply opacity-100 visible;
+}
