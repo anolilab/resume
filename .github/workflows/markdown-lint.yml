@@ -10,11 +10,6 @@ on: # yamllint disable-line rule:truthy
         paths:
             - "**.md"
 
-env:
-    package: "@${{ github.repository }}"
-    registry_url: "https://npm.pkg.github.com"
-    scope: "${{ github.repository_owner }}"
-
 jobs:
     text-lint:
         name: "Markdown lint"
@@ -35,26 +30,21 @@ jobs:
               uses: "actions/setup-node@v3"
               with:
                   node-version: "16.x"
-                  registry-url: "${{ env.registry_url }}"
-                  # Defaults to the user or organization that owns the workflow file
-                  scope: "@${{ env.scope }}"
 
-            - name: "Install pnpm"
-              run: "curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@6"
-
-            - name: "Cache .pnpm-store"
-              uses: "actions/cache@v3"
-              id: "pnpm-cache" # use this to check for `cache-hit` (`steps.pnpm-cache.outputs.cache-hit != 'true'`)
+            - uses: "pnpm/action-setup@v2.2.1"
               with:
-                  path: "~/.pnpm-store"
-                  key: "${{ runner.os }}-node16-${{ hashFiles('**/pnpm-lock.yaml') }}"
-                  restore-keys: |
-                      ${{ runner.os }}-pnpm-
+                  version: 6
+
+            - name: "Set node version to ${{ matrix.node_version }}"
+              uses: "actions/setup-node@v3"
+              with:
+                  node-version: "${{ matrix.node_version }}"
+                  cache: "pnpm"
 
             - name: "Install packages"
               run: "pnpm install --frozen-lockfile"
               env:
-                  NPM_TOKEN: "${{ secrets.SEMANTIC_RELEASE_GITHUB_NPM_PACKAGE_TOKEN }}"
+                  SKIP_CHECK: "true"
 
-            - name: "lint"
+            - name: "lint:text"
               run: "pnpm run lint:text"
