@@ -4,14 +4,15 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="noindex">
-        <meta name="googlebot" content="noindex">
+        <meta name="robots" content="noindex" />
+        <meta name="googlebot" content="noindex" />
         <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="./favicon.png" type="image/png" />
         <title>{{#resume.basics}}{{name}}{{/resume.basics}} - Résumé</title>
-        <link rel="stylesheet" href="./src/style.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC|Nunito+Sans:400,700&amp;display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="src/assets/style.css" type="text/css" />
     </head>
-    <body class="font-sans antialiased w-full dark:text-white dark:bg-zinc-900" itemscope itemtype="http://schema.org/Person">
+    <body class="body-font font-noto-sans antialiased w-full dark:text-white dark:bg-zinc-900" itemscope itemtype="http://schema.org/Person">
         <div class="container mx-auto max-w-screen-xl">
             <div class="flex flex-col sm:flex-row mt-5 md:mt-12">
                 <nav class="w-full sm:max-w-sm mb-5">
@@ -19,20 +20,22 @@
                     <div>
                         <div>
                             <h3 class="font-semibold text-2xl" itemprop="name">{{name}}</h3>
-                            <div class="font-light" itemprop="jobTitle">{{label}}</div>
+                            <div class="text-md text-zinc-500" itemprop="jobTitle">{{label}}</div>
                         </div>
                         {{#if email}}
                         <div class="mt-3">
-                            <a href="mailto:{{email}}" class="font-normal border-b border-dashed" itemprop="email" target="_blank">{{email}}</a>
+                            <a href="mailto:{{email}}" class="font-normal border-b border-dashed border-zinc-400" itemprop="email" target="_blank">{{email}}</a>
                         </div>
                         {{/if}} {{#if phone}}
                         <div class="mt-3">
-                            <a href="tel://{{phone}}" class="font-normal border-b border-dashed" itemprop="telephone" target="_blank"> {{phone}} </a>
+                            <a href="tel://{{phone}}" class="font-normal border-b border-dashed border-zinc-400" itemprop="telephone" target="_blank">
+                                {{phone}}
+                            </a>
                         </div>
                         {{/if}} {{#if location}}
                         <div class="mt-3">
                             {{#location}}
-                            <span class="font-light"> {{city}}, {{region}}, {{countryCode}} </span>
+                            <span class="text-md"> {{city}}, {{region}}, {{countryCode}} </span>
                             {{/location}}
                         </div>
                         {{/if}}
@@ -55,7 +58,7 @@
                             <a href="#about" class="section-headline"><h4 id="about">About</h4></a>
                             {{{toSocialIcon 'hash' 'w-5 h-5 external-link'}}}
                         </div>
-                        <div class="pl-5 py-5 font-light" itemprop="description">{{breaklines resume.basics.summary}}</div>
+                        <div class="pl-5 py-5" itemprop="description">{{breaklines resume.basics.summary}}</div>
                     </section>
 
                     <section id="work-projects-group">
@@ -104,7 +107,12 @@
                             </li>
                             {{/each}} {{#if resume.basics.projects_url}}
                             <li class="pl-5 py-5">
-                                <a href="{{resume.basics.projects_url}}" target="_blank" class="text-ms font-light border-b border-dashed">More Projects...</a>
+                                <a
+                                    href="{{resume.basics.projects_url}}"
+                                    target="_blank"
+                                    class="text-ms text-md text-zinc-500 border-b border-dashed border-zinc-400"
+                                    >More Projects...</a
+                                >
                             </li>
                             {{/if}}
                         </ul>
@@ -119,17 +127,17 @@
                             <li class="pl-5 py-5">
                                 <p>
                                     <strong
-                                        >{{#if website}}<a href="{{website}}" target="_blank" class="border-b border-dashed">{{company}}</a
+                                        >{{#if website}}<a href="{{website}}" target="_blank" class="border-b border-dashed border-zinc-400">{{company}}</a
                                         >{{else}}{{company}}{{/if}}</strong
                                     >
-                                    <span class="font-light" style="margin-left: 0.3em">{{position}}</span>
+                                    <span class="text-md text-zinc-500" style="margin-left: 0.3em">{{position}}</span>
                                 </p>
-                                <p class="font-light mb-2">
-                                    <small>{{startDate}} - {{#if endDate}}{{endDate}}{{else}}Present{{/if}} | {{location}}</small>
+                                <p class="mb-2 text-md text-zinc-500">
+                                    <small>{{startDate}} - {{#if endDate}}{{endDate}}{{else}}Present{{/if}}{{#if location}} | {{location}}{{/if}}</small>
                                 </p>
                                 <p>{{summary}}</p>
                                 {{#if highlights}}
-                                <ul class="list-disc ml-10">
+                                <ul class="list-disc ml-10 mt-2">
                                     {{#each highlights}}
                                     <li>{{.}}</li>
                                     {{/each}}
@@ -163,9 +171,13 @@
                         <ul class="list-none pl-5">
                             {{#each resume.education}}
                             <li class="my-5">
-                                <p><strong>{{#if area}} {{area}}, {{/if}}{{studyType}}</strong>,<span class="font-light">&nbsp; {{institution}}</span></p>
-                                <p class="font-light mb-2">
-                                    <small> {{startDate}} - {{#if endDate}} {{endDate}} {{else}} Currently Pursuing {{/if}} </small>
+                                <p>
+                                    <strong>{{#if area}} {{area}}, {{/if}}{{studyType}}</strong>,<span class="text-md text-zinc-500"
+                                        >&nbsp; {{institution}}</span
+                                    >
+                                </p>
+                                <p class="mb-2 text-md text-zinc-500">
+                                    <small>{{startDate}} - {{#if endDate}} {{endDate}} {{else}} Currently Pursuing {{/if}}</small>
                                 </p>
                                 <div>{{description}}</div>
                                 <i>{{gpa}}</i>
@@ -185,12 +197,12 @@
                             {{#each resume.publications}}
                             <li class="my-5">
                                 <p>
-                                    <strong>{{#if website}}<a href="{{website}}" target="_blank">{{name}}</a>{{else}}{{name}}{{/if}}</strong>,<span
-                                        class="font-light"
-                                        >&nbsp; {{publisher}}</span
-                                    >
+                                    <strong
+                                        >{{#if website}}<a href="{{website}}" target="_blank" class="border-b border-dashed border-zinc-400">{{name}}</a
+                                        >{{else}}{{name}}{{/if}}</strong
+                                    >,<span class="text-md text-zinc-500">&nbsp {{publisher}}</span>
                                 </p>
-                                <p class="font-light mb-2">
+                                <p class="mb-2 text-md text-zinc-500">
                                     <small>{{releaseDate}} {{dateNote}}</small>
                                     <small>{{#if slides}},&nbsp;<a href="{{slides}}" target="_blank">Slides</a>{{/if}}</small>
                                 </p>
@@ -209,10 +221,8 @@
                             {{#each resume.awards}}
                             <li class="my-5">
                                 <div>
-                                    <p itemprop="award"><strong>{{title}}</strong>,<span class="font-light">&nbsp; {{awarder}}</span></p>
-                                    <p class="font-light mb-2">
-                                        <small> {{date}} </small>
-                                    </p>
+                                    <p itemprop="award"><strong>{{title}}</strong>,<span class="text-md text-zinc-500">&nbsp; {{awarder}}</span></p>
+                                    <p class="mb-2 text-md text-zinc-500"><small>{{date}}</small></p>
                                     {{#if summary}}
                                     <p>{{summary}}</p>
                                     {{/if}}
@@ -231,9 +241,9 @@
                             {{#each resume.volunteer}}
                             <li class="my-5">
                                 <div>
-                                    <p><strong>{{position}}</strong>,<span class="font-light">&nbsp; {{organization}}</span></p>
-                                    <p class="font-light mb-2">
-                                        <small> {{startDate}} - {{#if endDate}} {{endDate}} {{else}} Present {{/if}} </small>
+                                    <p><strong>{{position}}</strong>,<span class="text-md text-zinc-500">&nbsp; {{organization}}</span></p>
+                                    <p class="mb-2 text-md text-zinc-500">
+                                        <small>{{startDate}} - {{#if endDate}} {{endDate}} {{else}} Present {{/if}}</small>
                                     </p>
                                     <p>{{summary}}</p>
                                     <ul>
@@ -254,16 +264,14 @@
                         </div>
                         <ul class="list-none pl-5">
                             {{#each resume.interests}}
-                            <li class="card-nested">
+                            <li class="my-5">
                                 <p>
                                     <strong>{{name}}</strong>
                                 </p>
 
-                                <div class="">
-                                    {{#keywords}}
-                                    <span class="">{{.}}</span>
-                                    {{/keywords}}
-                                </div>
+                                {{#keywords}}
+                                <span class="">{{.}}</span>
+                                {{/keywords}}
                             </li>
                             {{/each}}
                         </ul>
@@ -302,7 +310,7 @@
                     {{/if}}
 
                     <div class="my-5 px-2">
-                        <ul role="list" class="border border-gray-200 rounded-md divide-y divide-gray-200 print:hidden mb-5">
+                        <ul role="list" class="border border-zinc-200 rounded-md divide-y divide-gray-200 print:hidden mb-5">
                             <li class="pl-3 pr-4 py-5 flex items-center justify-between text-sm">
                                 <div class="w-0 flex-1 flex items-center">
                                     <!-- Heroicon name: solid/paper-clip -->
@@ -327,7 +335,7 @@
                             </li>
                         </ul>
 
-                        <div class="text-center mb-5 font-light text-xs print:hidden">Last updated at {{getBuildDate ''}}</div>
+                        <div class="text-center mb-5 text-md text-zinc-500 text-xs print:hidden">Last updated at {{getBuildDate ''}}</div>
                     </div>
                 </main>
             </div>

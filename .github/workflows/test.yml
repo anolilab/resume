@@ -54,9 +54,3 @@ jobs:
 
             - name: "test and coverage"
               run: "pnpm run test:coverage"
-
-            - name: "test stylelint config"
-              run: "pnpm run test:stylelint"
-
-            - name: "test babel config"
-              run: "pnpm run test:babel"

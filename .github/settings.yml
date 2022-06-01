@@ -126,4 +126,4 @@ repository:
 
     # https://developer.github.com/v3/repos/branches/#remove-branch-protection
 
-    topics: "anolilab, resume, resume-schema, pdf, html"
+    topics: "anolilab, resume, resume-schema, pdf, html, jsonresume-theme-boilerplate, json-resume, resume-creator, jsonresume, json-schema, json, template, tailwindcss, tailwind"

@@ -8,13 +8,17 @@
         "clean": "rm -rf node_modules && rm -rf dist",
         "commit": "cz",
         "dev": "vite",
+        "lint": "pnpm run lint:text && pnpm run lint:prettier && pnpm run lint:eslint",
         "lint:eslint": "cross-env NO_LOGS=true eslint . --ext js,jsx,ts,tsx --max-warnings=0 --config .eslintrc.cjs --cache --cache-strategy content .",
         "lint:eslint:fix": "pnpm run lint:eslint --fix",
+        "lint:prettier": "prettier --config=.prettierrc.cjs '**/*.{js,jsx,tsx,ts,less,md,json}'",
         "lint:prettier:fix": "prettier --config=.prettierrc.cjs --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
         "lint:text": "textlint ./.github/ISSUE_TEMPLATE/** ./README.md ./UPGRADE.md --parallel --experimental --dry-run",
         "lint:text:fix": "textlint ./.github/ISSUE_TEMPLATE/** ./README.md ./UPGRADE.md --parallel --experimental --fix",
         "prepare": "is-ci || (node verify-node-version.cjs && pnpx only-allow pnpm && husky install)",
-        "serve": "vite preview"
+        "serve": "vite preview",
+        "test": "vitest",
+        "test:coverage": "vitest run --coverage"
     },
     "dependencies": {
         "@anolilab/resume-schema": "2.0.2",
@@ -25,7 +29,8 @@
         "esno": "^0.16.3",
         "gravatar": "^1.8.2",
         "lodash.capitalize": "^4.2.1",
-        "puppeteer": "^14.1.2"
+        "puppeteer": "^14.1.2",
+        "resume-cli": "^3.0.7"
     },
     "devDependencies": {
         "@anolilab/eslint-config": "^4.0.7",

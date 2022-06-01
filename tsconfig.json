@@ -42,6 +42,6 @@
         "incremental": true,
         "tsBuildInfoFile": ".tsbuildinfo"
     },
-    "include": ["src/**/*.ts", "vitest.config.ts", "types.d.ts", "vite.config.ts", "bin/**/*.ts"],
+    "include": ["src/**/*.ts", "vitest.config.ts", "types.d.ts", "vite.config.ts", "bin/**/*.ts", "__tests__/**/*.ts"],
     "exclude": ["dist", "node_modules"]
 }
