@@ -18,7 +18,7 @@ This is the theme repository for the [Json Resume](https://jsonresume.org/) proj
 
 ## Installation
 
-This project uses [pnpm](https://pnpm.io/) and [resume-cli](https://github.com/jsonresume/resume-cli) for all its internal build processes. In theory, this project requires at lest Node v16 to run.
+This project uses [pnpm](https://pnpm.io/), [vitejs](https://vitejs.dev/) and [vitest](https://vitest.dev/) for all its internal build processes. In theory, this project requires at lest Node v16 to run.
 
 ## Quick Commands
 
