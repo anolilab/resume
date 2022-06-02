@@ -1,4 +1,5 @@
 import { ResumeSchema } from "@anolilab/resume-schema";
+import deepmerge from "deepmerge";
 // @ts-ignore
 import Handlebars from "handlebars";
 import { defineConfig, loadEnv } from "vite";
@@ -25,7 +26,7 @@ try {
     // resume-data.private.json does not exist
 }
 
-validate({ ...resumeData, ...privateResumeData });
+validate(deepmerge(resumeData, privateResumeData));
 
 export default defineConfig(async ({ mode }) => {
     Object.assign(process.env, loadEnv(mode, process.cwd()));
@@ -34,7 +35,7 @@ export default defineConfig(async ({ mode }) => {
         plugins: [
             handlebars({
                 context: {
-                    resume: await formatter({ ...resumeData, ...privateResumeData } as ResumeSchema),
+                    resume: await formatter(deepmerge(resumeData, privateResumeData) as ResumeSchema),
                 },
                 helpers: {
                     join(array) {
