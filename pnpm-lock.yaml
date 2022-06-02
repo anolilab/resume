@@ -46,7 +46,7 @@ specifiers:
   underscore.string: ^3.3.6
   vite: ^2.9.9
   vite-plugin-handlebars: ^1.6.0
-  vitest: ^0.12.9
+  vitest: ^0.13.0
 
 dependencies:
   '@anolilab/resume-schema': 2.0.3
@@ -96,7 +96,7 @@ devDependencies:
   underscore.string: 3.3.6
   vite: 2.9.9
   vite-plugin-handlebars: 1.6.0
-  vitest: 0.12.9_c8@7.11.3
+  vitest: 0.13.1_c8@7.11.3
 
 packages:
 
@@ -4987,7 +4987,7 @@ packages:
     engines: {node: 6.* || 8.* || >= 10.*}
 
   /get-func-name/2.0.0:
-    resolution: {integrity: sha1-6td0q+5y4gQJQzoGY2YCPdaIekE=}
+    resolution: {integrity: sha512-Hm0ixYtaSZ/V7C8FJrtZIuBBI+iSgL+1Aq82zSu8VQNB4S3Gk8e7Qs3VwBDJAhmRZcFqkl3tQu36g/Foh5I5ig==}
     dev: true
 
   /get-intrinsic/1.1.1:
@@ -9935,8 +9935,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.12.9_c8@7.11.3:
-    resolution: {integrity: sha512-1NtyUANS72Qw5PwYvoztk067NX4fSiis2xQxhByOWS33eL2er/yupHyLxlBCOkF2ANe0dLFRvT1GVb+nczL5aw==}
+  /vitest/0.13.1_c8@7.11.3:
+    resolution: {integrity: sha512-CfSBf7YFw/i8HumSUQRtZKs0aV91DC9WU8nAgIJAlawKHaFuPHQohDwOTPIFgrxySiuFYUa0Yohf9gDFfBwjxA==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
