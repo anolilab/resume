@@ -7,7 +7,6 @@
         "prettier --config=.prettierrc.cjs --write"
     ],
     "*.{md,mdx}": [
-        "prettier --config=.prettierrc.cjs --write",
-        "cross-env NO_LOGS=true eslint . --ext js,jsx,ts,tsx --max-warnings=0 --config .eslintrc.cjs --cache --cache-strategy content . --fix"
+        "prettier --config=.prettierrc.cjs --write"
     ]
 }

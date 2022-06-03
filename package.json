@@ -8,6 +8,7 @@
         "clean": "rm -rf node_modules && rm -rf dist",
         "commit": "cz",
         "dev": "vite",
+        "download:resume": "esno ./bin/download-resume-gist.ts",
         "lint": "pnpm run lint:text && pnpm run lint:prettier && pnpm run lint:eslint",
         "lint:eslint": "cross-env NO_LOGS=true eslint . --ext js,jsx,ts,tsx --max-warnings=0 --config .eslintrc.cjs --cache --cache-strategy content .",
         "lint:eslint:fix": "pnpm run lint:eslint --fix",

@@ -7,5 +7,6 @@ coverage/
 
 # Keep your personal resume.json private
 # resume.json
-
 resume.private.json
+
+dist
