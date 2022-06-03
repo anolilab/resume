@@ -21,7 +21,7 @@ export default async function formatter(resume: ResumeSchema) {
         resume.basics.picture = getGravatarUrl(email);
     }
 
-    if (resume.languages) {
+    if (resume?.languages) {
         // @TODO fix types in ResumeSchema
         /** @ts-ignore */
         resume.basics.languages = resume.languages.map((language) => language.language).join(", ");
@@ -50,6 +50,16 @@ export default async function formatter(resume: ResumeSchema) {
                     end: endDate.getTime(),
                 }),
             );
+        }
+
+        if (workInfo?.company) {
+            // @ts-ignore
+            workInfo.name = workInfo.company;
+        }
+
+        if (workInfo?.website) {
+            // @ts-ignore
+            workInfo.url = workInfo.website;
         }
 
         return workInfo;
