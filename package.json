@@ -21,7 +21,7 @@
         "test:coverage": "vitest run --coverage"
     },
     "dependencies": {
-        "@anolilab/resume-schema": "2.0.2",
+        "@anolilab/resume-schema": "2.0.3",
         "@octokit/rest": "^18.12.0",
         "ajv": "^8.11.0",
         "ajv-formats": "^2.1.1",
@@ -69,6 +69,6 @@
         "underscore.string": "^3.3.6",
         "vite": "^2.9.9",
         "vite-plugin-handlebars": "^1.6.0",
-        "vitest": "^0.12.9"
+        "vitest": "^0.13.0"
     }
 }
