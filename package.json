@@ -40,7 +40,6 @@
         "@anolilab/textlint-config": "^4.0.4",
         "@commitlint/cli": "^17.0.2",
         "@commitlint/config-conventional": "^17.0.2",
-        "@tailwindcss/typography": "^0.5.2",
         "@types/gravatar": "^1.8.3",
         "@types/lodash.capitalize": "^4.2.7",
         "@typescript-eslint/eslint-plugin": "^5.27.0",

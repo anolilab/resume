@@ -9,7 +9,6 @@ specifiers:
     "@commitlint/cli": ^17.0.2
     "@commitlint/config-conventional": ^17.0.2
     "@octokit/rest": ^18.12.0
-    "@tailwindcss/typography": ^0.5.2
     "@types/gravatar": ^1.8.3
     "@types/lodash.capitalize": ^4.2.7
     "@typescript-eslint/eslint-plugin": ^5.27.0
@@ -65,7 +64,6 @@ devDependencies:
     "@anolilab/textlint-config": 4.0.4_textlint@12.1.1
     "@commitlint/cli": 17.0.2
     "@commitlint/config-conventional": 17.0.2
-    "@tailwindcss/typography": 0.5.2_tailwindcss@3.0.24
     "@types/gravatar": 1.8.3
     "@types/lodash.capitalize": 4.2.7
     "@typescript-eslint/eslint-plugin": 5.27.0_kor2e3kwnnzugzo3aovmfcq2la
@@ -1097,17 +1095,6 @@ packages:
         engines: { node: ">=6" }
         dependencies:
             defer-to-connect: 1.1.3
-        dev: true
-
-    /@tailwindcss/typography/0.5.2_tailwindcss@3.0.24:
-        resolution: { integrity: sha512-coq8DBABRPFcVhVIk6IbKyyHUt7YTEC/C992tatFB+yEx5WGBQrCgsSFjxHUr8AWXphWckadVJbominEduYBqw== }
-        peerDependencies:
-            tailwindcss: ">=3.0.0 || >= 3.0.0-alpha.1 || insiders"
-        dependencies:
-            lodash.castarray: 4.4.0
-            lodash.isplainobject: 4.0.6
-            lodash.merge: 4.6.2
-            tailwindcss: 3.0.24
         dev: true
 
     /@testing-library/dom/8.13.0:
@@ -6140,10 +6127,6 @@ packages:
 
     /lodash.capitalize/4.2.1:
         resolution: { integrity: sha1-+CbJtOKoUR2E46yinbBeGk87cqk= }
-
-    /lodash.castarray/4.4.0:
-        resolution: { integrity: sha1-wCUTUV4wna3dTCTGDP3c9ZdtkRU= }
-        dev: true
 
     /lodash.difference/4.5.0:
         resolution: { integrity: sha512-dS2j+W26TQ7taQBGN8Lbbq04ssV3emRw4NY58WErlTO29pIqS0HmoT5aJ9+TUQ1N3G+JOZSji4eugsWwGp9yPA== }
