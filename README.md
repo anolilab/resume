@@ -135,8 +135,8 @@ If you would like to help take a look at the [list of issues](https://github.com
 
 ## License
 
-<!-- textlint-disable dead-link -->
+<!-- textlint-disable no-dead-link -->
 
 The anolilab resume is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT)
 
-<!-- textlint-enable dead-link -->
+<!-- textlint-enable no-dead-link -->
