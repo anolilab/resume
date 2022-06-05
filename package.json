@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "build": "tsc && vite build",
+        "build": "tsc && cross-env NODE_ENV='production' vite build",
         "build:pdf": "esno ./bin/build-pdf.ts",
         "clean": "rm -rf node_modules && rm -rf dist",
         "commit": "cz",
@@ -58,6 +58,7 @@
         "is-ci": "^3.0.1",
         "lint-staged": "^13.0.0",
         "postcss": "^8.4.14",
+        "postcss-import": "^14.1.0",
         "prettier": "^2.6.2",
         "puppeteer": "^14.2.1",
         "semantic-release": "^19.0.2",

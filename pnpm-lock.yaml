@@ -34,6 +34,7 @@ specifiers:
     lint-staged: ^13.0.0
     lodash.capitalize: ^4.2.1
     postcss: ^8.4.14
+    postcss-import: ^14.1.0
     prettier: ^2.6.2
     puppeteer: ^14.1.2
     semantic-release: ^19.0.2
@@ -82,6 +83,7 @@ devDependencies:
     is-ci: 3.0.1
     lint-staged: 13.0.0
     postcss: 8.4.14
+    postcss-import: 14.1.0_postcss@8.4.14
     prettier: 2.6.2
     semantic-release: 19.0.2
     tailwindcss: 3.0.24
@@ -7348,12 +7350,12 @@ packages:
         dev: true
 
     /pify/2.3.0:
-        resolution: { integrity: sha1-7RQaasBDqEnqWISY59yosVMw6Qw= }
+        resolution: { integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog== }
         engines: { node: ">=0.10.0" }
         dev: true
 
     /pify/3.0.0:
-        resolution: { integrity: sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY= }
+        resolution: { integrity: sha512-C3FsVNH1udSEX48gGX1xfvwTWfsYWj5U+8/uK15BGzIGrKoUpghX8hWZwa/OFnakBiiVNmBvemTJR5mcy7iPcg== }
         engines: { node: ">=4" }
         dev: true
 
@@ -7461,6 +7463,18 @@ packages:
             postcss: ^8.2.15
         dependencies:
             postcss: 8.4.14
+        dev: true
+
+    /postcss-import/14.1.0_postcss@8.4.14:
+        resolution: { integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw== }
+        engines: { node: ">=10.0.0" }
+        peerDependencies:
+            postcss: ^8.0.0
+        dependencies:
+            postcss: 8.4.14
+            postcss-value-parser: 4.2.0
+            read-cache: 1.0.0
+            resolve: 1.22.0
         dev: true
 
     /postcss-js/4.0.0_postcss@8.4.14:
@@ -7910,6 +7924,12 @@ packages:
         resolution: { integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w== }
         dev: true
         optional: true
+
+    /read-cache/1.0.0:
+        resolution: { integrity: sha1-5mTvMRYRZsl1HNvo28+GtftY93Q= }
+        dependencies:
+            pify: 2.3.0
+        dev: true
 
     /read-pkg-up/3.0.0:
         resolution: { integrity: sha1-PtSWaF26D4/hGNBpHcUfSh/5bwc= }
