@@ -1,7 +1,8 @@
 {
     "**/*.{js,jsx,tsx,ts}": [
         "prettier --config=.prettierrc.cjs --write",
-        "cross-env NO_LOGS=true eslint . --ext js,jsx,ts,tsx --max-warnings=0 --config .eslintrc.cjs --cache --cache-strategy content . --fix"
+        "cross-env NO_LOGS=true eslint . --ext js,jsx,ts,tsx --max-warnings=1 --config .eslintrc.cjs --cache --cache-strategy content . --fix
+        "
     ],
     "*.{json,yml,yaml,less,css,scss,sass}": [
         "prettier --config=.prettierrc.cjs --write"
