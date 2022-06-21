@@ -30,7 +30,7 @@ export default async function htmlToPdf(htmlPath: string, assets: string[], expo
             return `<style>${fs.readFileSync(asset).toString()}</style>`;
         }
 
-        return `<script>${fs.readFileSync(asset).toString()}</script>`;
+        return "";
     });
 
     // eslint-disable-next-line no-console
