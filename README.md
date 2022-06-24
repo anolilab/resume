@@ -1,6 +1,6 @@
-# Resume
+# Résumé
 
-This is the theme repository for the [Json Resume](https://jsonresume.org/) project. Unlike the [json-theme-boilerplate](https://github.com/jsonresume/jsonresume-theme-boilerplate) project, this environment has a much improved developer environment to make editing your theme super to do.
+This is the theme repository for the [Json Résumé](https://jsonresume.org/) project. Unlike the [json-theme-boilerplate](https://github.com/jsonresume/jsonresume-theme-boilerplate) project, this environment has a much improved developer environment to make editing your theme super to do.
 
 ---
 
@@ -26,12 +26,13 @@ This project uses [pnpm](https://pnpm.io/), [vitejs](https://vitejs.dev/) and [v
 -   `pnpm run build` - Builds the résumé into a `html` file
 -   `pnpm run build:pdf` - Builds the résumé into a `pdf` file
 -   `pnpm run download:resume` - Download your gist resume.json (and resume.private.jons)
+-   `pnpm run serve` - Locally preview the production build
 
 ## Creating your résumé.json
 
-This project comes with `resume-sample.json`, which is a sample json resume you can build from. If you don’t create a `resume.json` file, it will automatically be created against the `resume-sample.json` file.
+This project comes with `resume-sample.json`, which is a sample json résumé you can build from. If you don’t create a `resume.json` file, it will automatically be created against the `resume-sample.json` file.
 
-It’s highly **recommended** to create your own `resume.json` for your own resume. If you create a `resume.json`, this will automatically be used by the app instead. The `resume.private.json` file is automatically ignored from GIT to ensure you cannot check it in (since you’ll have personal information on there). If you do decide that you want to check it in, you can comment the following line in `.gitignore` like so:
+It’s highly **recommended** to create your own `resume.json` for your own résumé. If you create a `resume.json`, this will automatically be used by the app instead. The `resume.private.json` file is automatically ignored from GIT to ensure you cannot check it in (since you’ll have personal information on there). If you do decide that you want to check it in, you can comment the following line in `.gitignore` like so:
 
 ```
 # Keep your personal resume.json private
@@ -61,6 +62,7 @@ To generate an résumé locally:
     printing the résumé locally using Chrome will provide the most consistent
     result.
 -   Or you can use the `pnpm run build:pdf"` command, but before you can use this command you need to call `pnpm run build`
+-   To check the build résumé, call `pnpm run serve`
 
 ## Generating an résumé on netlify
 
@@ -137,6 +139,6 @@ If you would like to help take a look at the [list of issues](https://github.com
 
 <!-- textlint-disable no-dead-link -->
 
-The anolilab resume is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT)
+The anolilab résumé is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT)
 
 <!-- textlint-enable no-dead-link -->

@@ -6,10 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="noindex" />
         <meta name="googlebot" content="noindex" />
-        <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="./favicon.png" type="image/png" />
         <title>{{#resume.basics}}{{name}}{{/resume.basics}} - Résumé</title>
-        <link rel="stylesheet" href="./src/assets/style.css" type="text/css" />
+        <link rel="stylesheet" href="./assets/style.css" type="text/css" />
         <script type="module" src="/src/main.tsx"></script>
     </head>
     <body class="body-font font-noto-sans antialiased w-full dark:text-white dark:bg-zinc-900 scroll-smooth" itemscope itemtype="http://schema.org/Person">
@@ -357,6 +355,7 @@
                         </ul>
 
                         <div class="text-center mb-5 text-md text-zinc-500 text-xs print:hidden">Last updated at {{getBuildDate ''}}</div>
+                        <div class="text-center mb-5 text-md text-zinc-500 text-xs print:hidden">Résumé generated with the <a href="https://github.com/anolilab/resume" title="Anolilab resume generator" class="underline">Anolilab resume generator</a></div>
                     </div>
                 </main>
             </div>

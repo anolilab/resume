@@ -3,7 +3,11 @@ import deepmerge from "deepmerge";
 // @ts-ignore
 import Handlebars from "handlebars";
 import { defineConfig, loadEnv } from "vite";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { ViteFaviconsPlugin } from "vite-plugin-favicon2";
 import handlebars from "vite-plugin-handlebars";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 import formatter from "./src/formatter";
 import validate from "./src/validate";
@@ -98,6 +102,18 @@ export default defineConfig(async ({ mode }) => {
                         return "";
                     },
                 },
+            }),
+            ViteFaviconsPlugin({
+                logo: "assets/favicon.svg",
+                inject: true,
+            }),
+            viteStaticCopy({
+                targets: [
+                    {
+                        src: "assets/robots.txt",
+                        dest: "",
+                    },
+                ],
             }),
         ],
     };
