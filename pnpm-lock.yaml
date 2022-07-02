@@ -26,7 +26,7 @@ specifiers:
   deepmerge: ^4.2.2
   eslint: ^8.18.0
   eslint-define-config: ^1.5.1
-  eslint-plugin-editorconfig: ^3.2.0
+  eslint-plugin-editorconfig: ^4.0.0
   eslint-plugin-json: ^3.1.0
   esno: ^0.16.3
   gravatar: ^1.8.2
@@ -82,7 +82,7 @@ devDependencies:
   cssnano: 5.1.12_postcss@8.4.14
   eslint: 8.18.0
   eslint-define-config: 1.5.1
-  eslint-plugin-editorconfig: 3.2.0_treee22277sh3yq6pnqeflwlmi
+  eslint-plugin-editorconfig: 4.0.2
   eslint-plugin-json: 3.1.0
   handlebars: 4.7.7
   husky: 8.0.1
@@ -4582,17 +4582,15 @@ packages:
     dev: true
     optional: true
 
-  /eslint-plugin-editorconfig/3.2.0_treee22277sh3yq6pnqeflwlmi:
-    resolution: {integrity: sha512-XiUg69+qgv6BekkPCjP8+2DMODzPqtLV5i0Q9FO1v40P62pfodG1vjIihVbw/338hS5W26S+8MTtXaAlrg37QQ==}
+  /eslint-plugin-editorconfig/4.0.2:
+    resolution: {integrity: sha512-soh4tQsztLlX2c9xb+HjeaZiF6Os/S6An5ZsF1fYCm5mZYm+5m7f3y+eUWqJpT3sKi0JjxuRLtxE/VpmLtDzfA==}
+    engines: {node: '>=14', npm: '>=8'}
     dependencies:
-      '@typescript-eslint/eslint-plugin': 5.29.0_qqmbkyiaixvppdwswpytuf2hgm
       editorconfig: 0.15.3
       eslint: 8.18.0
       klona: 2.0.5
     transitivePeerDependencies:
-      - '@typescript-eslint/parser'
       - supports-color
-      - typescript
     dev: true
 
   /eslint-plugin-es/3.0.1_eslint@8.18.0:
@@ -8802,7 +8800,7 @@ packages:
     dev: false
 
   /pseudomap/1.0.2:
-    resolution: {integrity: sha1-8FKijacOYYkX7wqKw0wa5aaChrM=}
+    resolution: {integrity: sha512-b/YwNhb8lk1Zz2+bXXpS/LK9OisiZZ1SNsSLxN1x2OXVEhW2Ckr/7mWE5vrC1ZTiJlD9g19jWszTmJsB+oEpFQ==}
     dev: true
 
   /psl/1.8.0:
@@ -9638,7 +9636,7 @@ packages:
     dev: true
 
   /sigmund/1.0.1:
-    resolution: {integrity: sha1-P/IfGYytIXX587eBhT/ZTQ0ZtZA=}
+    resolution: {integrity: sha512-fCvEXfh6NWpm+YSuY2bpXb/VIihqWA6hLsgboC+0nl71Q7N7o2eaCW8mJa/NLvQhs6jpd3VZV4UiUQlV6+lc8g==}
     dev: true
 
   /signal-exit/3.0.7:
