@@ -48,7 +48,7 @@ specifiers:
   vite-plugin-favicon2: ^1.1.4
   vite-plugin-handlebars: ^1.6.0
   vite-plugin-static-copy: ^0.6.0
-  vitest: ^0.16.0
+  vitest: ^0.17.0
 
 dependencies:
   '@anolilab/resume-schema': 2.0.3
@@ -100,7 +100,7 @@ devDependencies:
   vite-plugin-favicon2: 1.1.4_vite@2.9.12
   vite-plugin-handlebars: 1.6.0
   vite-plugin-static-copy: 0.6.0_vite@2.9.12
-  vitest: 0.16.0_c8@7.11.3
+  vitest: 0.17.0_c8@7.11.3
 
 packages:
 
@@ -11129,16 +11129,19 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.16.0_c8@7.11.3:
-    resolution: {integrity: sha512-Ntp6jrM8wf2NMtamMBLkRBBdeqHkgAH/WMh5Xryts1j2ft2D8QZQbiSVFkSl4WmEQzcPP0YM069g/Ga1vtnEtg==}
+  /vitest/0.17.0_c8@7.11.3:
+    resolution: {integrity: sha512-5YO9ubHo0Zg35mea3+zZAr4sCku32C3usvIH5COeJB48TZV/R0J9aGNtGOOqEWZYfOKP0pGZUvTokne3x/QEFg==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
+      '@edge-runtime/vm': '*'
       '@vitest/ui': '*'
       c8: '*'
       happy-dom: '*'
       jsdom: '*'
     peerDependenciesMeta:
+      '@edge-runtime/vm':
+        optional: true
       '@vitest/ui':
         optional: true
       c8:
