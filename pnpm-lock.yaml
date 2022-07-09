@@ -48,7 +48,7 @@ specifiers:
   vite-plugin-favicon2: ^1.1.4
   vite-plugin-handlebars: ^1.6.0
   vite-plugin-static-copy: ^0.6.0
-  vitest: ^0.17.0
+  vitest: ^0.18.0
 
 dependencies:
   '@anolilab/resume-schema': 2.0.3
@@ -100,7 +100,7 @@ devDependencies:
   vite-plugin-favicon2: 1.1.4_vite@2.9.12
   vite-plugin-handlebars: 1.6.0
   vite-plugin-static-copy: 0.6.0_vite@2.9.12
-  vitest: 0.17.0_c8@7.11.3
+  vitest: 0.18.0_c8@7.11.3
 
 packages:
 
@@ -11129,8 +11129,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.17.0_c8@7.11.3:
-    resolution: {integrity: sha512-5YO9ubHo0Zg35mea3+zZAr4sCku32C3usvIH5COeJB48TZV/R0J9aGNtGOOqEWZYfOKP0pGZUvTokne3x/QEFg==}
+  /vitest/0.18.0_c8@7.11.3:
+    resolution: {integrity: sha512-ryAtlh5Gvg3+aLNuOQ8YOHxgQCCu46jx40X5MBL0K0/ejB9i5zsr8fV8LTGXbXex80UMHlzceI9F+ouGaiR+mQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
