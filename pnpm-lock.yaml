@@ -47,7 +47,7 @@ specifiers:
   vite: ^3.0.0
   vite-plugin-favicon2: ^1.1.4
   vite-plugin-handlebars: ^1.6.0
-  vite-plugin-static-copy: ^0.6.0
+  vite-plugin-static-copy: ^0.7.0
   vitest: ^0.18.0
 
 dependencies:
@@ -99,7 +99,7 @@ devDependencies:
   vite: 3.0.0
   vite-plugin-favicon2: 1.1.4_vite@3.0.0
   vite-plugin-handlebars: 1.6.0
-  vite-plugin-static-copy: 0.6.0_vite@3.0.0
+  vite-plugin-static-copy: 0.7.0_vite@3.0.0
   vitest: 0.18.0_c8@7.11.3
 
 packages:
@@ -11101,11 +11101,11 @@ packages:
       - stylus
     dev: true
 
-  /vite-plugin-static-copy/0.6.0_vite@3.0.0:
-    resolution: {integrity: sha512-KfNhy33p//M5Fq1RcZU+H+1KVagXR9JbAy6KIE8IiWj2j3wRtRPoyh8TYJvVgC+adyKj3Y+KiGUf0GwjI9JHtg==}
-    engines: {node: '>=12.2'}
+  /vite-plugin-static-copy/0.7.0_vite@3.0.0:
+    resolution: {integrity: sha512-BlzvdlO4MR5O7CB0IW4VzdwiVYixEwwUvNp7ZmRLS8U0c38axOacg0nwQXr+FZROO7x4qxabDF3m7WwbFjN65A==}
+    engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
-      vite: ^2.6.14
+      vite: ^3.0.0
     dependencies:
       chokidar: 3.5.3
       fast-glob: 3.2.11
