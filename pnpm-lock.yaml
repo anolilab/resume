@@ -38,7 +38,7 @@ specifiers:
   postcss: ^8.4.14
   postcss-import: ^15.0.0
   prettier: ^2.7.1
-  puppeteer: ^15.1.0
+  puppeteer: ^17.0.0
   semantic-release: ^19.0.3
   tailwindcss: ^3.1.4
   textlint: ^12.1.1
@@ -60,7 +60,7 @@ dependencies:
   esno: 0.16.3
   gravatar: 1.8.2
   lodash.capitalize: 4.2.1
-  puppeteer: 15.1.0
+  puppeteer: 17.0.0
 
 devDependencies:
   '@anolilab/eslint-config': 4.0.8_b5e7v2qnwxfo6hmiq56u52mz3e
@@ -3804,8 +3804,8 @@ packages:
       minimist: 1.2.6
     dev: true
 
-  /devtools-protocol/0.0.1011705:
-    resolution: {integrity: sha512-OKvTvu9n3swmgYshvsyVHYX0+aPzCoYUnyXUacfQMmFtBtBKewV/gT4I9jkAbpTqtTi2E4S9MXLlvzBDUlqg0Q==}
+  /devtools-protocol/0.0.1019158:
+    resolution: {integrity: sha512-wvq+KscQ7/6spEV7czhnZc9RM/woz1AY+/Vpd8/h2HFMwJSdTliu7f/yr1A6vDdJfKICZsShqsYpEQbdhg8AFQ==}
     dev: false
 
   /didyoumean/1.2.2:
@@ -8345,13 +8345,6 @@ packages:
       load-json-file: 4.0.0
     dev: true
 
-  /pkg-dir/4.2.0:
-    resolution: {integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==}
-    engines: {node: '>=8'}
-    dependencies:
-      find-up: 4.1.0
-    dev: false
-
   /pluralize/2.0.0:
     resolution: {integrity: sha1-crcmqm+sHt7uQiVsfY3CVrM1Z38=}
     dev: true
@@ -8853,23 +8846,22 @@ packages:
       escape-goat: 2.1.1
     dev: true
 
-  /puppeteer/15.1.0:
-    resolution: {integrity: sha512-AZLQs6QB7tcYV4r7SRh8tN1OyTGI1hUBy5FDyd9Ry5wyfo1h2Tgl1uhT49sG2T8jI6JFuBXr+ratj9+zvNlx2g==}
+  /puppeteer/17.0.0:
+    resolution: {integrity: sha512-T2rdzlPxnPezF218kywFP3O+0YI5/8Kl8riNUicGb+KuMyDTrqRjhSOSDp6coQ1T4QYPBARTFp4EMBepMOzAQA==}
     engines: {node: '>=14.1.0'}
     requiresBuild: true
     dependencies:
       cross-fetch: 3.1.5
       debug: 4.3.4
-      devtools-protocol: 0.0.1011705
+      devtools-protocol: 0.0.1019158
       extract-zip: 2.0.1
       https-proxy-agent: 5.0.1
-      pkg-dir: 4.2.0
       progress: 2.0.3
       proxy-from-env: 1.1.0
       rimraf: 3.0.2
       tar-fs: 2.1.1
       unbzip2-stream: 1.4.3
-      ws: 8.8.0
+      ws: 8.8.1
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -11375,8 +11367,8 @@ packages:
       mkdirp: 0.5.6
     dev: true
 
-  /ws/8.8.0:
-    resolution: {integrity: sha512-JDAgSYQ1ksuwqfChJusw1LSJ8BizJ2e/vVu5Lxjq3YvNJNlROv1ui4i+c/kUUrPheBvQl4c5UbERhTwKa6QBJQ==}
+  /ws/8.8.1:
+    resolution: {integrity: sha512-bGy2JzvzkPowEJV++hF07hAD6niYSr0JzBNo/J29WsB57A2r7Wlc1UFcTR9IzrPvuNVO4B8LGqF8qcpsVOhJCA==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
