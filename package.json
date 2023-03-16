@@ -40,7 +40,7 @@
         "puppeteer": "^18.0.0"
     },
     "devDependencies": {
-        "@anolilab/eslint-config": "^4.0.8",
+        "@anolilab/eslint-config": "^5.0.0",
         "@anolilab/prettier-config": "^3.0.1",
         "@anolilab/semantic-release-preset": "^2.0.6",
         "@anolilab/textlint-config": "^4.0.4",
@@ -72,7 +72,7 @@
         "semantic-release": "^19.0.3",
         "tailwindcss": "^3.1.4",
         "textlint": "^12.1.1",
-        "typescript": "^4.7.4",
+        "typescript": "^5.0.0",
         "underscore.string": "^3.3.6",
         "vite": "^3.0.0",
         "vite-plugin-favicon2": "^1.1.4",
