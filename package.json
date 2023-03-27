@@ -56,7 +56,7 @@
         "c8": "^7.11.3",
         "commitizen": "^4.2.4",
         "cross-env": "^7.0.3",
-        "cssnano": "^5.1.12",
+        "cssnano": "^6.0.0",
         "eslint": "^8.18.0",
         "eslint-define-config": "^1.5.1",
         "eslint-plugin-editorconfig": "^4.0.0",
