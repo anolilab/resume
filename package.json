@@ -41,7 +41,7 @@
     },
     "devDependencies": {
         "@anolilab/eslint-config": "^4.0.8",
-        "@anolilab/prettier-config": "^3.0.1",
+        "@anolilab/prettier-config": "^4.0.0",
         "@anolilab/semantic-release-preset": "^2.0.6",
         "@anolilab/textlint-config": "^4.0.4",
         "@commitlint/cli": "^17.0.2",
@@ -74,7 +74,7 @@
         "textlint": "^12.1.1",
         "typescript": "^4.7.4",
         "underscore.string": "^3.3.6",
-        "vite": "^3.0.0",
+        "vite": "^4.0.0",
         "vite-plugin-favicon2": "^1.1.4",
         "vite-plugin-handlebars": "^1.6.0",
         "vite-plugin-static-copy": "^0.7.0",
