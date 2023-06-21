@@ -18,7 +18,7 @@ specifiers:
   ajv: ^8.11.0
   ajv-formats: ^2.1.1
   autoprefixer: ^10.4.7
-  c8: ^7.11.3
+  c8: ^8.0.0
   commitizen: ^4.2.4
   cross-env: ^7.0.3
   cssnano: ^5.1.12
@@ -76,7 +76,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.29.0_qqmbkyiaixvppdwswpytuf2hgm
   '@typescript-eslint/parser': 5.29.0_b5e7v2qnwxfo6hmiq56u52mz3e
   autoprefixer: 10.4.7_postcss@8.4.14
-  c8: 7.11.3
+  c8: 8.0.0
   commitizen: 4.2.4
   cross-env: 7.0.3
   cssnano: 5.1.12_postcss@8.4.14
@@ -100,7 +100,7 @@ devDependencies:
   vite-plugin-favicon2: 1.1.4_vite@4.3.9
   vite-plugin-handlebars: 1.6.0
   vite-plugin-static-copy: 0.7.0_vite@4.3.9
-  vitest: 0.21.0_c8@7.11.3
+  vitest: 0.21.0_c8@8.0.0
 
 packages:
 
@@ -3165,9 +3165,9 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /c8/7.11.3:
-    resolution: {integrity: sha512-6YBmsaNmqRm9OS3ZbIiL2EZgi1+Xc4O24jL3vMYGE6idixYuGdy76rIfIdltSKDj9DpLNrcXSonUTR1miBD0wA==}
-    engines: {node: '>=10.12.0'}
+  /c8/8.0.0:
+    resolution: {integrity: sha512-XHA5vSfCLglAc0Xt8eLBZMv19lgiBSjnb1FLAQgnwkuhJYEonpilhEB4Ea3jPAbm0FhD6VVJrc0z73jPe7JyGQ==}
+    engines: {node: '>=12'}
     hasBin: true
     dependencies:
       '@bcoe/v8-coverage': 0.2.3
@@ -11613,7 +11613,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.21.0_c8@7.11.3:
+  /vitest/0.21.0_c8@8.0.0:
     resolution: {integrity: sha512-+BQB2swk4wQdw5loOoL8esIYh/1ifAliuwj2HWHNE2F8SAl/jF7/aoCJBoXGSf/Ws19k3pH4NrWeVtcSwM0j2w==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -11641,7 +11641,7 @@ packages:
       '@types/chai': 4.3.1
       '@types/chai-subset': 1.3.3
       '@types/node': 17.0.35
-      c8: 7.11.3
+      c8: 8.0.0
       chai: 4.3.6
       debug: 4.3.4
       local-pkg: 0.4.2
