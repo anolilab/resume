@@ -34,7 +34,7 @@
         "ajv-formats": "^2.1.1",
         "date-fns": "^2.28.0",
         "deepmerge": "^4.2.2",
-        "esno": "^0.16.3",
+        "esno": "^0.17.0",
         "gravatar": "^1.8.2",
         "lodash.capitalize": "^4.2.1",
         "puppeteer": "^20.0.0"
