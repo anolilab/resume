@@ -40,7 +40,7 @@
         "puppeteer": "^20.0.0"
     },
     "devDependencies": {
-        "@anolilab/eslint-config": "^4.0.8",
+        "@anolilab/eslint-config": "^10.0.0",
         "@anolilab/prettier-config": "^4.0.0",
         "@anolilab/semantic-release-preset": "^2.0.6",
         "@anolilab/textlint-config": "^4.0.4",
