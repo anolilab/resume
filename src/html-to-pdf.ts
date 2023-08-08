@@ -1,11 +1,12 @@
 import fs from "node:fs";
-import puppeteer, { Browser } from "puppeteer";
+import type { Browser } from "puppeteer";
+import puppeteer from "puppeteer";
 
-async function setupBrowser(): Promise<Browser> {
+const setupBrowser = async (): Promise<Browser> => {
     try {
         return await puppeteer.launch({
-            headless: true,
             args: [],
+            headless: "new",
         });
     } catch {
         // eslint-disable-next-line no-console
@@ -13,9 +14,9 @@ async function setupBrowser(): Promise<Browser> {
 
         return await setupBrowser();
     }
-}
+};
 
-export default async function htmlToPdf(htmlPath: string, assets: string[], exportPath: string) {
+export default async function htmlToPdf(htmlPath: string, assets: string[], exportPath: string): Promise<void> {
     // eslint-disable-next-line no-console
     console.log("Opening puppeteer...");
     const browser = await setupBrowser();
@@ -25,8 +26,8 @@ export default async function htmlToPdf(htmlPath: string, assets: string[], expo
     console.log("Adding styles and scripts...");
 
     const transformedAssets = assets.map((asset) => {
-        // eslint-disable-next-line no-await-in-loop
         if (asset.includes(".css")) {
+            // eslint-disable-next-line security/detect-non-literal-fs-filename
             return `<style>${fs.readFileSync(asset).toString()}</style>`;
         }
 
@@ -36,32 +37,34 @@ export default async function htmlToPdf(htmlPath: string, assets: string[], expo
     // eslint-disable-next-line no-console
     console.log("Opening page...");
     await page.setContent(
+        // eslint-disable-next-line security/detect-non-literal-fs-filename
         fs
             .readFileSync(htmlPath)
             .toString()
-            .replaceAll(/<link.*>/gm, "")
+            .replaceAll(/<link.*>/g, "")
             .replace("</title>", `</title>${transformedAssets.join("")}`),
-        { waitUntil: ["load", "domcontentloaded", "networkidle0", "networkidle2"] },
+        { waitUntil: ["domcontentloaded"] },
     );
     // eslint-disable-next-line no-console
     console.log("Generating PDF...");
 
     try {
         const pdf = await page.pdf({
-            format: "A4",
             displayHeaderFooter: false,
-            printBackground: true,
+            format: "A4",
             margin: {
-                top: "0.35in",
                 bottom: "0.4in",
                 left: "0.4in",
                 right: "0.4in",
+                top: "0.35in",
             },
+            printBackground: true,
         });
 
         // eslint-disable-next-line no-console
         console.log("Saving file...");
 
+        // eslint-disable-next-line security/detect-non-literal-fs-filename
         fs.writeFileSync(exportPath, pdf);
 
         // eslint-disable-next-line no-console

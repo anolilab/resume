@@ -1,35 +1,33 @@
-import { ResumeSchema } from "@anolilab/resume-schema";
+import type { ResumeSchema } from "@anolilab/resume-schema";
 import { format, formatDuration, intervalToDuration } from "date-fns";
+// eslint-disable-next-line no-restricted-imports
 import capitalize from "lodash.capitalize";
 
-import {
-    getGithubRepoStars, getNetwork, getUrlFromUsername, SocialSites,
-} from "./utils";
+import { SocialSites, getGithubRepoStars, getNetwork, getUrlFromUsername } from "./utils";
 import getGravatarUrl from "./utils/get-gravatar-url";
 
 const dateFormat = "MMM yyyy";
 
-// eslint-disable-next-line radar/cognitive-complexity
-export default async function formatter(resume: ResumeSchema) {
-    // @TODO fix types in ResumeSchema
-    // @ts-ignore
-    const { profiles, picture, email } = resume.basics;
+// eslint-disable-next-line sonarjs/cognitive-complexity
+const formatter = async (resume: ResumeSchema): Promise<ResumeSchema> => {
+    // @ts-expect-error TODO fix types in ResumeSchema
+    const { email, picture, profiles } = resume.basics;
 
     if (!picture && typeof email === "string") {
-        // @TODO fix types in ResumeSchema
-        /** @ts-ignore */
+        // @ts-expect-error TODO fix types in ResumeSchema
+        // eslint-disable-next-line no-param-reassign
         resume.basics.picture = getGravatarUrl(email);
     }
 
-    if (resume?.languages) {
-        // @TODO fix types in ResumeSchema
-        /** @ts-ignore */
+    if (resume.languages) {
+        // @ts-expect-error TODO fix types in ResumeSchema
+        // eslint-disable-next-line no-param-reassign
         resume.basics.languages = resume.languages.map((language) => language.language).join(", ");
     }
 
-    resume?.work?.map((workInfo) => {
+    resume.work?.map((workInfo) => {
         const startDate = workInfo.startDate && new Date(workInfo.startDate);
-        let endDate = workInfo.endDate && new Date(workInfo.endDate);
+        const endDate: Date | undefined = workInfo.endDate ? new Date(workInfo.endDate) : undefined;
 
         if (startDate) {
             // eslint-disable-next-line no-param-reassign
@@ -42,30 +40,31 @@ export default async function formatter(resume: ResumeSchema) {
         }
 
         if (startDate) {
-            endDate = endDate || new Date();
             // eslint-disable-next-line no-param-reassign
             workInfo.duration = formatDuration(
                 intervalToDuration({
+                    end: (endDate ?? new Date()).getTime(),
                     start: startDate.getTime(),
-                    end: endDate.getTime(),
                 }),
             );
         }
 
-        if (workInfo?.company) {
-            // @ts-ignore
+        if (workInfo.company) {
+            // @ts-expect-error TODO fix types in ResumeSchema
+            // eslint-disable-next-line no-param-reassign
             workInfo.name = workInfo.company;
         }
 
-        if (workInfo?.website) {
-            // @ts-ignore
+        if (workInfo.website) {
+            // @ts-expect-error TODO fix types in ResumeSchema
+            // eslint-disable-next-line no-param-reassign
             workInfo.url = workInfo.website;
         }
 
         return workInfo;
     });
 
-    resume?.skills?.map((skillInfo) => {
+    resume.skills?.map((skillInfo) => {
         const levels = ["Beginner", "Intermediate", "Advanced", "Master"];
 
         if (typeof skillInfo.level === "string" && skillInfo.level.trim() !== "") {
@@ -80,10 +79,11 @@ export default async function formatter(resume: ResumeSchema) {
         return skillInfo;
     });
 
-    resume?.education?.map((educationInfo) => {
+    resume.education?.map((educationInfo) => {
         ["startDate", "endDate"].forEach((date) => {
+            // eslint-disable-next-line security/detect-object-injection
             if (typeof educationInfo[date] === "string") {
-                // eslint-disable-next-line no-param-reassign
+                // eslint-disable-next-line no-param-reassign,security/detect-object-injection
                 educationInfo[date] = format(new Date(educationInfo[date] as string), dateFormat);
             }
         });
@@ -91,7 +91,7 @@ export default async function formatter(resume: ResumeSchema) {
         return educationInfo;
     });
 
-    resume?.awards?.map((awardInfo) => {
+    resume.awards?.map((awardInfo) => {
         if (typeof awardInfo.date === "string") {
             // eslint-disable-next-line no-param-reassign
             awardInfo.date = format(new Date(awardInfo.date), dateFormat);
@@ -100,7 +100,7 @@ export default async function formatter(resume: ResumeSchema) {
         return awardInfo;
     });
 
-    resume?.publications?.map((publicationInfo) => {
+    resume.publications?.map((publicationInfo) => {
         if (typeof publicationInfo.releaseDate === "string") {
             // eslint-disable-next-line no-param-reassign
             publicationInfo.releaseDate = format(new Date(publicationInfo.releaseDate), "MMM dd, yyyy");
@@ -109,10 +109,11 @@ export default async function formatter(resume: ResumeSchema) {
         return publicationInfo;
     });
 
-    resume?.volunteer?.map((volunteerInfo) => {
+    resume.volunteer?.map((volunteerInfo) => {
         ["startDate", "endDate"].forEach((date) => {
+            // eslint-disable-next-line security/detect-object-injection
             if (typeof volunteerInfo[date] === "string") {
-                // eslint-disable-next-line no-param-reassign
+                // eslint-disable-next-line no-param-reassign,security/detect-object-injection
                 volunteerInfo[date] = format(new Date(volunteerInfo[date] as string), dateFormat);
             }
         });
@@ -121,28 +122,31 @@ export default async function formatter(resume: ResumeSchema) {
     });
 
     SocialSites.forEach((site) => {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         const socialAccount = getNetwork(profiles, site);
 
         if (typeof socialAccount === "object") {
-            let url: string | undefined = socialAccount?.url;
+            let { url } = socialAccount;
 
             if (typeof socialAccount.username === "string") {
-                url = getUrlFromUsername(site, socialAccount.username) || undefined;
+                url = getUrlFromUsername(site, socialAccount.username) ?? undefined;
             }
 
-            // @TODO fix types in ResumeSchema
-            /** @ts-ignore */
+            // @ts-expect-error TODO fix types in ResumeSchema
+            // eslint-disable-next-line no-param-reassign
             resume.basics[`${site}_url`] = url;
         }
     });
 
     // eslint-disable-next-line no-restricted-syntax
-    for (const project of resume?.projects || []) {
+    for (const project of resume.projects ?? []) {
         if (project.githubUrl) {
-            // eslint-disable-next-line no-param-reassign,no-await-in-loop
+            // eslint-disable-next-line no-await-in-loop
             project.stars = await getGithubRepoStars(project.githubUrl as string);
         }
     }
 
     return resume;
-}
+};
+
+export default formatter;

@@ -5,18 +5,18 @@ import { getNetwork } from "../../src/utils";
 const profiles = [
     {
         network: "Twitter",
-        username: "siliconHBO",
         url: "https://twitter.com/siliconHBO",
+        username: "siliconHBO",
     },
     {
         network: "Facebook",
-        username: "SiliconHBO",
         url: "https://www.facebook.com/SiliconHBO",
+        username: "SiliconHBO",
     },
     {
         network: "Instagram",
-        username: "siliconhbo",
         url: "https://www.instagram.com/siliconhbo/",
+        username: "siliconhbo",
     },
 ];
 
@@ -24,8 +24,8 @@ describe("getNetwork", () => {
     it("returns network profile", () => {
         expect(getNetwork(profiles, "twitter")).toEqual({
             network: "Twitter",
-            username: "siliconHBO",
             url: "https://twitter.com/siliconHBO",
+            username: "siliconHBO",
         });
     });
 

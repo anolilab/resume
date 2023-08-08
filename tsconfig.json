@@ -1,7 +1,6 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
-    "display": "Node 16",
-    "baseUrl": ".",
+    "display": "Node 18",
     "compilerOptions": {
         "baseUrl": ".",
         "module": "ESNext",
@@ -13,26 +12,18 @@
         "declaration": true,
         "allowJs": true,
 
-        /* Additional Checks */
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noUncheckedIndexedAccess": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
 
-        // "strictNullChecks": true,
-        // "strictBindCallApply": true,
         "strictFunctionTypes": true,
-        // "strictPropertyInitialization": true,
-        // "noImplicitAny": true,
-        // "noImplicitThis": true,
         "useUnknownInCatchVariables": true,
         "stripInternal": true,
 
-        /* Module Resolution Options */
         "moduleResolution": "node",
         "isolatedModules": true,
-        //        "importsNotUsedAsValues": "error",
         "resolveJsonModule": true,
         "esModuleInterop": true,
         "skipLibCheck": true,

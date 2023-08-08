@@ -1,26 +1,26 @@
 export default function getUrlFromUsername(site: string, username: string): string | null {
-    const urlMap: { [key: string]: string } = {
-        github: "github.com",
-        twitter: "twitter.com",
-        soundcloud: "soundcloud.com",
-        pinterest: "pinterest.com",
-        vimeo: "vimeo.com",
-        behance: "behance.net",
-        codepen: "codepen.io",
-        foursquare: "foursquare.com",
-        reddit: "reddit.com",
-        spotify: "spotify.com",
-        dribble: "dribbble.com",
-        dribbble: "dribbble.com",
-        facebook: "facebook.com",
+    const urlMap: Record<string, string> = {
         angellist: "angel.co",
+        behance: "behance.net",
         bitbucket: "bitbucket.org",
+        codepen: "codepen.io",
+        dribbble: "dribbble.com",
+        dribble: "dribbble.com",
+        facebook: "facebook.com",
+        foursquare: "foursquare.com",
+        github: "github.com",
+        pinterest: "pinterest.com",
+        reddit: "reddit.com",
+        soundcloud: "soundcloud.com",
+        spotify: "spotify.com",
+        twitter: "twitter.com",
+        vimeo: "vimeo.com",
     };
 
     const lowerSiteName = site.toLowerCase();
 
+    // eslint-disable-next-line security/detect-object-injection
     if (!username || !urlMap[lowerSiteName]) {
-        // eslint-disable-next-line unicorn/no-null
         return null;
     }
 
@@ -29,8 +29,10 @@ export default function getUrlFromUsername(site: string, username: string): stri
     }
 
     if (lowerSiteName === "reddit" || lowerSiteName === "spotify") {
+        // eslint-disable-next-line security/detect-object-injection
         return `//open.${urlMap[site]}/user/${username}`;
     }
 
+    // eslint-disable-next-line security/detect-object-injection
     return `//${urlMap[site]}/${username}`;
 }

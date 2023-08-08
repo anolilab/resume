@@ -10,3 +10,4 @@ coverage/
 resume.private.json
 
 dist
+.idea

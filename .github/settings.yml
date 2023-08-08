@@ -115,7 +115,7 @@ repository:
     default_branch: "main"
     delete_branch_on_merge: true
     is_template: true
-    description: "Template to create your own resume."
+    description: "Template to create your own resume"
     has_downloads: true
     has_issues: true
     has_pages: false
