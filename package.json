@@ -43,6 +43,7 @@
         "prepare": "is-ci || (node verify-node-version.cjs && pnpx only-allow pnpm && husky install)",
         "serve": "vite preview",
         "test": "vitest",
+        "sort-package-json": "sort-package-json ./package.json",
         "test:coverage": "vitest run --coverage"
     },
     "dependencies": {
@@ -77,6 +78,7 @@
         "eslint-plugin-editorconfig": "^4.0.3",
         "eslint-plugin-import": "npm:eslint-plugin-i@2.28.0-2",
         "eslint-plugin-mdx": "^2.1.0",
+        "eslint-plugin-vitest": "^0.2.8",
         "eslint-plugin-tailwindcss": "^3.13.0",
         "handlebars": "^4.7.8",
         "husky": "^8.0.3",
@@ -91,6 +93,7 @@
         "tailwindcss": "^3.3.3",
         "textlint": "^13.3.3",
         "typescript": "^5.1.6",
+        "sort-package-json": "^2.5.1",
         "underscore.string": "^3.3.6",
         "vite": "^4.4.9",
         "vite-plugin-favicon2": "^1.1.5",
@@ -108,10 +111,17 @@
                 "eslint": {
                     "config": "./.eslintrc.js"
                 }
-            },
-            "plugin": {
-                "eslint-plugin-tsdoc": false
             }
+        },
+        "eslint-config": {
+            "plugin": {
+                "tsdoc": false,
+                "etc": false
+            },
+            "warn_on_unsupported_typescript_version": false,
+            "info_on_disabling_jsx_react_rule": false,
+            "info_on_disabling_prettier_conflict_rule": false,
+            "info_on_disabling_jsonc_sort_keys_rule": false
         }
     }
 }

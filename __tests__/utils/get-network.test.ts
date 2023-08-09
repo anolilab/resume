@@ -22,7 +22,7 @@ const profiles = [
 
 describe("getNetwork", () => {
     it("returns network profile", () => {
-        expect(getNetwork(profiles, "twitter")).toEqual({
+        expect(getNetwork(profiles, "twitter")).toStrictEqual({
             network: "Twitter",
             url: "https://twitter.com/siliconHBO",
             username: "siliconHBO",
@@ -30,6 +30,6 @@ describe("getNetwork", () => {
     });
 
     it("returns undefined", () => {
-        expect(getNetwork(profiles, "test")).toEqual(undefined);
+        expect(getNetwork(profiles, "test")).toBeUndefined();
     });
 });
