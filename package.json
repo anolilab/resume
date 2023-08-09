@@ -1,25 +1,43 @@
 {
-    "name": "@danielbannert/resume",
+    "name": "@anolilab/resume",
     "version": "0.0.0",
     "private": true,
     "description": "My personal resume",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/anolilab/resume.git"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/prisis"
+        },
+        {
+            "type": "consulting",
+            "url": "https://anolilab.com/support"
+        }
+    ],
+    "license": "MIT",
     "author": {
         "name": "Daniel Bannert",
         "email": "d.bannert@anolilab.de",
         "url": "https://www.danielbannert.com"
     },
+    "sideEffects": false,
     "scripts": {
         "build": "tsc && cross-env NODE_ENV='production' vite build",
         "build:pdf": "esno ./bin/build-pdf.ts",
-        "clean": "rm -rf node_modules && rm -rf dist",
+        "clean": "rimraf node_modules dist",
         "commit": "cz",
         "dev": "vite",
         "download:resume": "esno ./bin/download-resume-gist.ts",
         "lint": "pnpm run lint:text && pnpm run lint:prettier && pnpm run lint:eslint",
+        "lint:commits": "pnpm commitlint --from HEAD~1 --to HEAD --verbose",
         "lint:eslint": "cross-env NO_LOGS=true eslint . --ext js,cjs,mjs,ts,tsx,json,yaml,yml,md,mdx --max-warnings=0 --config .eslintrc.js --cache --cache-strategy content .",
         "lint:eslint:fix": "pnpm run lint:eslint --fix",
         "lint:prettier": "prettier --config=.prettierrc.js '**/*.{js,jsx,tsx,ts,less,md,json,html}'",
         "lint:prettier:fix": "prettier --config=.prettierrc.js --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+        "lint:secrets": "secretlint **/*",
         "lint:text": "textlint ./.github/ISSUE_TEMPLATE/** ./README.md ./UPGRADE.md --parallel --experimental --dry-run",
         "lint:text:fix": "textlint ./.github/ISSUE_TEMPLATE/** ./README.md ./UPGRADE.md --parallel --experimental --fix",
         "prepare": "is-ci || (node verify-node-version.cjs && pnpx only-allow pnpm && husky install)",
@@ -42,17 +60,17 @@
         "puppeteer": "^21.0.1"
     },
     "devDependencies": {
+        "@anolilab/commitlint-config": "^3.0.3",
         "@anolilab/eslint-config": "^11.2.1",
+        "@anolilab/lint-staged-config": "^2.0.3",
         "@anolilab/prettier-config": "^5.0.2",
-        "@anolilab/semantic-release-preset": "^6.0.3",
         "@anolilab/textlint-config": "^8.0.3",
         "@commitlint/cli": "^17.6.7",
-        "@commitlint/config-conventional": "^17.6.7",
+        "@secretlint/secretlint-rule-preset-recommend": "^7.0.6",
         "@types/gravatar": "^1.8.3",
         "@types/lodash.capitalize": "^4.2.7",
         "autoprefixer": "^10.4.14",
         "c8": "^8.0.1",
-        "commitizen": "^4.3.0",
         "cross-env": "^7.0.3",
         "cssnano": "^6.0.1",
         "eslint": "^8.46.0",
@@ -68,7 +86,8 @@
         "postcss-import": "^15.1.0",
         "prettier": "^3.0.1",
         "puppeteer": "^21.0.1",
-        "semantic-release": "^21.0.7",
+        "rimraf": "^5.0.1",
+        "secretlint": "7.0.6",
         "tailwindcss": "^3.3.3",
         "textlint": "^13.3.3",
         "typescript": "^5.1.6",
@@ -79,5 +98,20 @@
         "vite-plugin-static-copy": "^0.17.0",
         "vitest": "^0.34.1"
     },
-    "packageManager": "pnpm@8.6.12"
+    "packageManager": "pnpm@8.6.12",
+    "engines": {
+        "node": ">=18.16.* <=20.*"
+    },
+    "anolilab": {
+        "lint-staged-config": {
+            "settings": {
+                "eslint": {
+                    "config": "./.eslintrc.js"
+                }
+            },
+            "plugin": {
+                "eslint-plugin-tsdoc": false
+            }
+        }
+    }
 }

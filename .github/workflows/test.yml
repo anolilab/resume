@@ -17,12 +17,12 @@ jobs:
         strategy:
             matrix:
                 os: ["ubuntu-latest"]
-                node_version: ["16", "17"]
+                node_version: ["18", "19", "20"]
                 include:
                     - os: "macos-latest"
-                      node_version: "16"
+                      node_version: "18"
                     - os: "windows-latest"
-                      node_version: "16"
+                      node_version: "18"
             fail-fast: false
 
         name: "Build & Unit Test: node-${{ matrix.node_version }}, ${{ matrix.os }}"
@@ -30,25 +30,41 @@ jobs:
         runs-on: "${{ matrix.os }}"
 
         steps:
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@cba0d00b1fc9a034e1e642ea0f1103c282990604" # v2.5.0
+              with:
+                  egress-policy: "audit"
+
             - name: "Git checkout"
-              uses: "actions/checkout@v3"
+              uses: "actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9" # v3.5.3
               env:
                   GIT_COMMITTER_NAME: "GitHub Actions Shell"
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
-            - uses: "pnpm/action-setup@v2.2.2"
+            - uses: "pnpm/action-setup@d882d12c64e032187b2edb46d3a0d003b7a43598" # v2.4.0
               with:
-                  version: 6
+                  version: 8
+                  run_install: false
 
             - name: "Set node version to ${{ matrix.node_version }}"
-              uses: "actions/setup-node@v3"
+              uses: "actions/setup-node@e33196f7422957bea03ed53f6fbb155025ffc7b8" # v3.7.0
               with:
                   node-version: "${{ matrix.node_version }}"
                   cache: "pnpm"
 
+            - name: "Check npm version"
+              run: "npm -v"
+              env:
+                  SKIP_CHECK: "true"
+
             - name: "Install packages"
-              run: "pnpm install"
+              run: "pnpm install --frozen-lockfile"
+              env:
+                  SKIP_CHECK: "true"
+
+            - name: "Verify the integrity of provenance attestations and registry signatures for installed dependencies"
+              run: "npm audit signatures"
 
             - name: "test and coverage"
               run: "pnpm run test:coverage"

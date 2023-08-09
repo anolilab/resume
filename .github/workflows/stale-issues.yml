@@ -6,14 +6,23 @@ on: # yamllint disable-line rule:truthy
     schedule:
         - cron: "0 0 * * *"
 
+permissions:
+    contents: "read"
+
 jobs:
     default:
+        permissions:
+            issues: "write" # for actions/stale to close stale issues
+            pull-requests: "write" # for actions/stale to close stale PRs
         timeout-minutes: 1
-
         runs-on: "ubuntu-latest"
-
         steps:
-            - uses: "actions/stale@v5"
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@cba0d00b1fc9a034e1e642ea0f1103c282990604" # v2.5.0
+              with:
+                  egress-policy: "audit"
+
+            - uses: "actions/stale@6f05e4244c9a0b2ed3401882b05d701dd0a7289b" # v7.0.0
               with:
                   repo-token: "${{ secrets.GITHUB_TOKEN }}"
                   stale-issue-message: |
@@ -27,12 +36,18 @@ jobs:
                   days-before-close: 7
 
     invalid:
+        permissions:
+            issues: "write" # for actions/stale to close stale issues
+            pull-requests: "write" # for actions/stale to close stale PRs
         timeout-minutes: 1
-
         runs-on: "ubuntu-latest"
-
         steps:
-            - uses: "actions/stale@v5"
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@cba0d00b1fc9a034e1e642ea0f1103c282990604" # v2.5.0
+              with:
+                  egress-policy: "audit"
+
+            - uses: "actions/stale@6f05e4244c9a0b2ed3401882b05d701dd0a7289b" # v7.0.0
               with:
                   repo-token: "${{ secrets.GITHUB_TOKEN }}"
                   stale-issue-message: |
@@ -44,10 +59,18 @@ jobs:
                   days-before-close: 2
 
     duplicate:
+        permissions:
+            issues: "write" # for actions/stale to close stale issues
+            pull-requests: "write" # for actions/stale to close stale PRs
         timeout-minutes: 1
         runs-on: "ubuntu-latest"
         steps:
-            - uses: "actions/stale@v5"
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@cba0d00b1fc9a034e1e642ea0f1103c282990604" # v2.5.0
+              with:
+                  egress-policy: "audit"
+
+            - uses: "actions/stale@6f05e4244c9a0b2ed3401882b05d701dd0a7289b" # v7.0.0
               with:
                   repo-token: "${{ secrets.GITHUB_TOKEN }}"
                   stale-issue-message: |
@@ -59,12 +82,20 @@ jobs:
                   days-before-close: 2
 
     wontfix:
+        permissions:
+            issues: "write" # for actions/stale to close stale issues
+            pull-requests: "write" # for actions/stale to close stale PRs
         timeout-minutes: 1
 
         runs-on: "ubuntu-latest"
 
         steps:
-            - uses: "actions/stale@v5"
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@cba0d00b1fc9a034e1e642ea0f1103c282990604" # v2.5.0
+              with:
+                  egress-policy: "audit"
+
+            - uses: "actions/stale@6f05e4244c9a0b2ed3401882b05d701dd0a7289b" # v7.0.0
               with:
                   repo-token: "${{ secrets.GITHUB_TOKEN }}"
                   stale-issue-message: |

@@ -9,7 +9,7 @@
 echo --------------------------------------------
 echo Starting Git hook: commit-msg
 
-npx --no -- commitlint --config ./commitlint.config.cjs --edit $1 || exit $?
+pnpm commitlint --edit "${1}"
 
 echo Finished Git hook: commit-msg
 echo --------------------------------------------
