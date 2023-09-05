@@ -69,7 +69,7 @@ devDependencies:
     version: 2.0.6(@types/node@20.4.7)(husky@8.0.3)(lint-staged@14.0.1)(ts-node@10.9.1)
   '@anolilab/prettier-config':
     specifier: ^5.0.4
-    version: 5.0.4(prettier@3.0.2)
+    version: 5.0.4(prettier@3.0.3)
   '@anolilab/textlint-config':
     specifier: ^8.0.5
     version: 8.0.5(eslint-plugin-i@2.28.0-2)(eslint-plugin-jsx-a11y@6.7.1)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react@7.33.2)(textlint@13.3.3)
@@ -134,8 +134,8 @@ devDependencies:
     specifier: ^15.1.0
     version: 15.1.0(postcss@8.4.29)
   prettier:
-    specifier: ^3.0.2
-    version: 3.0.2
+    specifier: ^3.0.3
+    version: 3.0.3
   rimraf:
     specifier: ^5.0.1
     version: 5.0.1
@@ -348,7 +348,7 @@ packages:
       read-pkg-up: 7.0.1
     dev: true
 
-  /@anolilab/prettier-config@5.0.4(prettier@3.0.2):
+  /@anolilab/prettier-config@5.0.4(prettier@3.0.3):
     resolution: {integrity: sha512-xyCMRihZrnGYk4eftz6TgQBBD6xfbWAa02FL8r3YvAwou8fgHw0keqMn9DE7KfYTVp9YznlTe/j4VuokVKtP/Q==}
     engines: {node: '>=18'}
     requiresBuild: true
@@ -356,7 +356,7 @@ packages:
       prettier: 2.x || 3.x
     dependencies:
       '@anolilab/package-json-utils': 3.0.5
-      prettier: 3.0.2
+      prettier: 3.0.3
     dev: true
 
   /@anolilab/resume-schema@2.0.3:
@@ -12189,19 +12189,12 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier@3.0.2:
-    resolution: {integrity: sha512-o2YR9qtniXvwEZlOKbveKfDQVyqxbEIWn48Z8m3ZJjBjcCmUy3xZGIv+7AkaeuaTr6yPXJjwv07ZWlsWbEy1rQ==}
-    engines: {node: '>=14'}
-    hasBin: true
-    dev: true
-
   /prettier@3.0.3:
     resolution: {integrity: sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg==}
     engines: {node: '>=14'}
     hasBin: true
     requiresBuild: true
     dev: true
-    optional: true
 
   /pretty-format@29.6.2:
     resolution: {integrity: sha512-1q0oC8eRveTg5nnBEWMXAU2qpv65Gnuf2eCQzSjxpWFkPaPARwqZZDGuNE0zPAZfTCHzIk3A8dIjwlQKKLphyg==}
