@@ -53,9 +53,9 @@
         "@octokit/rest": "^20.0.1",
         "ajv": "^8.12.0",
         "ajv-formats": "^2.1.1",
-        "date-fns": "^2.30.0",
+        "date-fns": "^3.0.0",
         "deepmerge": "^4.3.1",
-        "esno": "^0.17.0",
+        "esno": "^4.0.0",
         "gravatar": "^1.8.2",
         "lodash.capitalize": "^4.2.1",
         "puppeteer": "^21.0.1"
