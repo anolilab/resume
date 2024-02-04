@@ -86,7 +86,7 @@
         "lint-staged": "^14.0.1",
         "postcss": "^8.4.30",
         "postcss-import": "^15.1.0",
-        "prettier": "^3.0.3",
+        "prettier": "^3.2.5",
         "puppeteer": "^21.3.1",
         "rimraf": "^5.0.1",
         "secretlint": "7.0.7",
