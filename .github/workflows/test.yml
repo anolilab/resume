@@ -17,7 +17,7 @@ jobs:
         strategy:
             matrix:
                 os: ["ubuntu-latest"]
-                node_version: ["18", "19", "20"]
+                node_version: ["18", "20", "21"]
                 include:
                     - os: "macos-latest"
                       node_version: "18"
@@ -64,7 +64,7 @@ jobs:
                   SKIP_CHECK: "true"
 
             - name: "Verify the integrity of provenance attestations and registry signatures for installed dependencies"
-              run: "pnpm audit signatures"
+              run: "pnpm dlx audit-ci@^6 --config ./audit-ci.jsonc --report-type=summary"
 
             - name: "test and coverage"
               run: "pnpm run test:coverage"

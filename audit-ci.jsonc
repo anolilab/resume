@@ -1,0 +1,11 @@
+{
+    // $schema provides code completion hints to IDEs.
+    "$schema": "https://github.com/IBM/audit-ci/raw/main/docs/schema.json",
+    "low": true,
+    "package-manager": "pnpm",
+    "report-type": "important",
+    "allowlist": [
+        // @TODO: check if node-ip will be updated to fix the vulnerability
+        "GHSA-78xj-cgh5-2h22|. > *",
+    ],
+}
