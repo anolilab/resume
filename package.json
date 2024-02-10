@@ -25,6 +25,7 @@
     },
     "sideEffects": false,
     "scripts": {
+        "audit": "pnpm dlx audit-ci@^6 --config ./audit-ci.jsonc",
         "build": "tsc && cross-env NODE_ENV='production' vite build",
         "build:pdf": "esno ./bin/build-pdf.ts",
         "clean": "rimraf node_modules dist",
