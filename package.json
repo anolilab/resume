@@ -59,7 +59,7 @@
         "esno": "^0.17.0",
         "gravatar": "^1.8.2",
         "lodash.capitalize": "^4.2.1",
-        "puppeteer": "^21.0.1"
+        "puppeteer": "^22.15.0"
     },
     "devDependencies": {
         "@anolilab/commitlint-config": "^3.0.6",
@@ -88,7 +88,7 @@
         "postcss": "^8.4.30",
         "postcss-import": "^15.1.0",
         "prettier": "^3.0.3",
-        "puppeteer": "^21.3.1",
+        "puppeteer": "^22.15.0",
         "rimraf": "^5.0.1",
         "secretlint": "7.0.7",
         "sort-package-json": "^2.5.1",
