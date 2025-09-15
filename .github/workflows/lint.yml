@@ -18,7 +18,7 @@ permissions:
 jobs:
     files-changed:
         name: Detect what files changed
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         timeout-minutes: 3
         # Map a step output to a job output
         outputs:
@@ -63,12 +63,12 @@ jobs:
             - uses: pnpm/action-setup@d882d12c64e032187b2edb46d3a0d003b7a43598 # v2.4.0
               with:
                   version: 8
-                  run_install: false
+                  run_install: "false"
 
-            - name: Use Node.js 18.x
+            - name: Use Node.js 20.x
               uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d # v3.8.1
               with:
-                  node-version: 18.x
+                  node-version: 20.x
                   cache: pnpm
 
             - name: Install packages
@@ -130,12 +130,12 @@ jobs:
             - uses: pnpm/action-setup@d882d12c64e032187b2edb46d3a0d003b7a43598 # v2.4.0
               with:
                   version: 8
-                  run_install: false
+                  run_install: "false"
 
-            - name: Use Node.js 18.x
+            - name: Use Node.js 20.x
               uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d # v3.8.1
               with:
-                  node-version: 18.x
+                  node-version: 20.x
                   cache: pnpm
 
             - name: Install packages
@@ -152,19 +152,23 @@ jobs:
 
             - name: skipping markdown lint for now
               run: exit 0
-
     # This check runs once all dependant jobs have passed
-    # It symbolizes that all required Frontend checks have succesfully passed (Or skipped)
-    # This check is the only required Github check
+    # It symbolizes that all required checks have successfully passed (Or skipped)
+    # This check is the only required GitHub check
     test-required-check:
-        needs: [files-changed, eslint, yaml-lint] # TODO add "markdown-lint"
+        needs: [files-changed, eslint, yaml-lint, markdown-lint] # TODO add "package-json-lint"
         name: Check Lint Run
         # This is necessary since a failed/skipped dependent job would cause this job to be skipped
         if: always()
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-latest
         steps:
             # If any jobs we depend on fail, we will fail since this is a required check
             # NOTE: A timeout is considered a failure
+            - name: Harden Runner
+              uses: step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6 # v2.8.1
+              with:
+                  egress-policy: audit
+
             - name: Check for failures
               if: "contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')"
               run: |

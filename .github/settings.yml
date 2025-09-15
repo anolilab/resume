@@ -8,13 +8,13 @@ branches:
 
       protection:
           # Required. Enforce all configured restrictions for administrators. Set to true to enforce required status checks for repository administrators. Set to null to disable.
-          enforce_admins: true
+          enforce_admins: "true"
 
           required_pull_request_reviews:
               # Dismiss approved reviews automatically when a new commit is pushed.
-              dismiss_stale_reviews: true
+              dismiss_stale_reviews: "true"
               # Blocks merge until code owners have reviewed.
-              require_code_owner_reviews: true
+              require_code_owner_reviews: "true"
               # The number of approvals required. (1-6)
               required_approving_review_count: 1
               # Specify which users and teams can dismiss pull request reviews. Pass an empty dismissal_restrictions object to disable. User and team dismissal_restrictions are only available for organization-owned repositories. Omit this parameter for personal repositories.
@@ -25,7 +25,7 @@ branches:
           required_status_checks:
               contexts: []
 
-              strict: false
+              strict: "false"
 
           # https://developer.github.com/v3/repos/branches/#parameters-10
           # Required. Restrict who can push to this branch. Team and user restrictions are only available for organization-owned repositories. Set to null to disable.
@@ -167,21 +167,21 @@ labels:
 # https://docs.github.com/en/rest/reference/repos#update-a-repository
 
 repository:
-    allow_merge_commit: true
-    allow_rebase_merge: false
-    allow_squash_merge: true
-    archived: false
+    allow_merge_commit: "true"
+    allow_rebase_merge: "false"
+    allow_squash_merge: "true"
+    archived: "false"
     default_branch: main
-    delete_branch_on_merge: true
-    is_template: true
+    delete_branch_on_merge: "true"
+    is_template: "true"
     description: Template to create your own resume
-    has_downloads: true
-    has_issues: true
-    has_pages: false
-    has_projects: false
-    has_wiki: false
+    has_downloads: "true"
+    has_issues: "true"
+    has_pages: "false"
+    has_projects: "false"
+    has_wiki: "false"
     name: resume
-    private: false
+    private: "false"
 
     # https://developer.github.com/v3/repos/branches/#remove-branch-protection
 

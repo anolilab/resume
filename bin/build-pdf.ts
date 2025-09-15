@@ -12,7 +12,6 @@ const buildPdf = async (): Promise<void> => {
 };
 
 buildPdf()
-
     .then(() => {
         // eslint-disable-next-line unicorn/no-process-exit
         process.exit(0);
