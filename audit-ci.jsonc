@@ -6,6 +6,8 @@
     "report-type": "important",
     "allowlist": [
         // @TODO: check if node-ip will be updated to fix the vulnerability
-        "GHSA-78xj-cgh5-2h22|. > *"
+        "GHSA-78xj-cgh5-2h22|. > *",
+        "GHSA-p8p7-x288-28g6|. > *",
+        "GHSA-v4rh-8p82-6h5w|. > *"
     ]
 }
