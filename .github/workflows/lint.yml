@@ -27,14 +27,14 @@ jobs:
             yaml_lintable: "${{ steps.changes.outputs.yaml_lintable }}"
         steps:
             - name: "Git checkout"
-              uses: "actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608" # v4.1.0
+              uses: "actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955" # v4.3.0
               env:
                   GIT_COMMITTER_NAME: "GitHub Actions Shell"
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "Check for file changes"
-              uses: "dorny/paths-filter@4512585405083f25c027a35db413c2b3b9006d50" # v2.11.1
+              uses: "dorny/paths-filter@7267a8516b6f92bdb098633497bad573efdbf271" # v2.12.0
               id: "changes"
               with:
                   token: "${{ github.token }}"
@@ -47,12 +47,12 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@f4a75cfd619ee5ce8d5b864b0d183aff3c69b55a" # v2.13.1
               with:
                   egress-policy: "audit"
 
             - name: "Git checkout ${{ env.HEAD_REPOSITORY }}:${{ env.HEAD_REF }}"
-              uses: "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683" # v4.2.2
+              uses: "actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955" # v4.3.0
               env:
                   GIT_COMMITTER_NAME: "GitHub Actions Shell"
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
@@ -77,12 +77,12 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@f4a75cfd619ee5ce8d5b864b0d183aff3c69b55a" # v2.13.1
               with:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608" # v4.1.0
+              uses: "actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955" # v4.3.0
               with:
                   fetch-depth: 0
               env:
@@ -104,12 +104,12 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@f4a75cfd619ee5ce8d5b864b0d183aff3c69b55a" # v2.13.1
               with:
                   egress-policy: "audit"
 
             - name: "Git checkout ${{ env.HEAD_REPOSITORY }}:${{ env.HEAD_REF }}"
-              uses: "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683" # v4.2.2
+              uses: "actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955" # v4.3.0
               env:
                   GIT_COMMITTER_NAME: "GitHub Actions Shell"
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
@@ -143,7 +143,7 @@ jobs:
             # If any jobs we depend on fail, we will fail since this is a required check
             # NOTE: A timeout is considered a failure
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6" # v2.8.1
+              uses: "step-security/harden-runner@f4a75cfd619ee5ce8d5b864b0d183aff3c69b55a" # v2.13.1
               with:
                   egress-policy: "audit"
 

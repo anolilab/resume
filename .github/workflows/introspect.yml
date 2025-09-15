@@ -21,12 +21,12 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+              uses: "step-security/harden-runner@f4a75cfd619ee5ce8d5b864b0d183aff3c69b55a" # v2.13.1
               with:
                   egress-policy: "audit"
 
             - name: "Git checkout"
-              uses: "actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608" # v4.1.0
+              uses: "actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955" # v4.3.0
               env:
                   GIT_COMMITTER_NAME: "GitHub Actions Shell"
                   GIT_AUTHOR_NAME: "GitHub Actions Shell"
