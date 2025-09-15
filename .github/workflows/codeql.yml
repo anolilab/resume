@@ -9,50 +9,50 @@
 # the `language` matrix defined below to confirm you have the correct set of
 # supported CodeQL languages.
 #
-name: "CodeQL"
+name: CodeQL
 
 on: # yamllint disable-line rule:truthy
     push:
-        branches: ["main"]
+        branches: [main]
     pull_request:
         # The branches below must be a subset of the branches above
-        branches: ["main"]
+        branches: [main]
     schedule:
         - cron: "0 0 * * 1"
 
 permissions:
-    contents: "read"
+    contents: read
 
 jobs:
     analyze:
-        name: "Analyze"
+        name: Analyze
 
-        runs-on: "ubuntu-latest"
+        runs-on: ubuntu-latest
 
         permissions:
-            actions: "read"
-            contents: "read"
-            security-events: "write"
+            actions: read
+            contents: read
+            security-events: write
 
         strategy:
             fail-fast: false
             matrix:
-                language: ["javascript", "typescript"]
+                language: [javascript, typescript]
                 # CodeQL supports [ $supported-codeql-languages ]
                 # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
         steps:
-            - name: "Harden Runner"
-              uses: "step-security/harden-runner@8ca2b8b2ece13480cda6dacd3511b49857a23c09" # v2.5.1
+            - name: Harden Runner
+              uses: step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6 # v2.8.1
               with:
-                  egress-policy: "audit"
+                  egress-policy: audit
 
-            - name: "Checkout repository"
-              uses: "actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608" # v4.1.0
+            - name: Checkout repository
+              uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
 
             # Initializes the CodeQL tools for scanning.
-            - name: "Initialize CodeQL"
-              uses: "github/codeql-action/init@379614612a29c9e28f31f39a59013eb8012a51f0" # v3.24.3
+            - name: Initialize CodeQL
+              uses: github/codeql-action/init@eb055d739abdc2e8de2e5f4ba1a8b246daa779aa # v3.26.0
               with:
                   languages: "${{ matrix.language }}"
                   # If you wish to specify custom queries, you can do so here or in a config file.
@@ -61,8 +61,8 @@ jobs:
 
             # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
             # If this step fails, then you should remove it and run the build manually (see below)
-            - name: "Autobuild"
-              uses: "github/codeql-action/autobuild@379614612a29c9e28f31f39a59013eb8012a51f0" # v3.24.3
+            - name: Autobuild
+              uses: github/codeql-action/autobuild@eb055d739abdc2e8de2e5f4ba1a8b246daa779aa # v3.26.0
 
             # ℹ️ Command-line programs to run using the OS shell.
             # 📚 See https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
@@ -74,7 +74,7 @@ jobs:
             #   echo "Run, Build Application using script"
             #   ./location_of_script_within_repo/buildscript.sh
 
-            - name: "Perform CodeQL Analysis"
-              uses: "github/codeql-action/analyze@379614612a29c9e28f31f39a59013eb8012a51f0" # v3.24.3
+            - name: Perform CodeQL Analysis
+              uses: github/codeql-action/analyze@eb055d739abdc2e8de2e5f4ba1a8b246daa779aa # v3.26.0
               with:
                   category: "/language:${{matrix.language}}"

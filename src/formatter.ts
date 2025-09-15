@@ -3,12 +3,11 @@ import { format, formatDuration, intervalToDuration } from "date-fns";
 // eslint-disable-next-line no-restricted-imports
 import capitalize from "lodash.capitalize";
 
-import { SocialSites, getGithubRepoStars, getNetwork, getUrlFromUsername } from "./utils";
+import { getGithubRepoStars, getNetwork, getUrlFromUsername, SocialSites } from "./utils";
 import getGravatarUrl from "./utils/get-gravatar-url";
 
 const dateFormat = "MMM yyyy";
 
-// eslint-disable-next-line sonarjs/cognitive-complexity
 const formatter = async (resume: ResumeSchema): Promise<ResumeSchema> => {
     // @ts-expect-error TODO fix types in ResumeSchema
     const { email, picture, profiles } = resume.basics;
@@ -81,9 +80,8 @@ const formatter = async (resume: ResumeSchema): Promise<ResumeSchema> => {
 
     resume.education?.map((educationInfo) => {
         ["startDate", "endDate"].forEach((date) => {
-            // eslint-disable-next-line security/detect-object-injection
             if (typeof educationInfo[date] === "string") {
-                // eslint-disable-next-line no-param-reassign,security/detect-object-injection
+                // eslint-disable-next-line no-param-reassign
                 educationInfo[date] = format(new Date(educationInfo[date] as string), dateFormat);
             }
         });
@@ -111,9 +109,8 @@ const formatter = async (resume: ResumeSchema): Promise<ResumeSchema> => {
 
     resume.volunteer?.map((volunteerInfo) => {
         ["startDate", "endDate"].forEach((date) => {
-            // eslint-disable-next-line security/detect-object-injection
             if (typeof volunteerInfo[date] === "string") {
-                // eslint-disable-next-line no-param-reassign,security/detect-object-injection
+                // eslint-disable-next-line no-param-reassign
                 volunteerInfo[date] = format(new Date(volunteerInfo[date] as string), dateFormat);
             }
         });
@@ -122,7 +119,6 @@ const formatter = async (resume: ResumeSchema): Promise<ResumeSchema> => {
     });
 
     SocialSites.forEach((site) => {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         const socialAccount = getNetwork(profiles, site);
 
         if (typeof socialAccount === "object") {
@@ -138,7 +134,6 @@ const formatter = async (resume: ResumeSchema): Promise<ResumeSchema> => {
         }
     });
 
-    // eslint-disable-next-line no-restricted-syntax
     for (const project of resume.projects ?? []) {
         if (project.githubUrl) {
             // eslint-disable-next-line no-await-in-loop

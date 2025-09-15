@@ -1,33 +1,35 @@
 # https://help.github.com/en/categories/automating-your-workflow-with-github-actions
 
-name: "Semantic Pull Request"
+name: Semantic Pull Request
 
 on: # yamllint disable-line rule:truthy
     pull_request_target:
         types:
-            - "opened"
-            - "reopened"
-            - "edited"
-            - "synchronize"
+            - opened
+            - reopened
+            - edited
+            - synchronize
+    merge_group: # yamllint disable-line rule:empty-values
 
-permissions: {}
+permissions:
+    contents: read
 
 jobs:
-    main:
+    semantic-pull-request:
         permissions:
-            pull-requests: "write" # to analyze PRs (amannn/action-semantic-pull-request)
-            statuses: "write" # to mark status of analyzed PR (amannn/action-semantic-pull-request)
-        runs-on: "ubuntu-latest"
-        name: "Semantic Pull Request"
+            pull-requests: write # to analyze PRs (amannn/action-semantic-pull-request)
+            statuses: write # to mark status of analyzed PR (amannn/action-semantic-pull-request)
+        runs-on: ubuntu-latest
+        name: Semantic Pull Request
         steps:
-            - name: "Harden Runner"
-              uses: "step-security/harden-runner@eb238b55efaa70779f274895e782ed17c84f2895" # v2.6.1
+            - name: Harden Runner
+              uses: step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6 # v2.8.1
               with:
-                  egress-policy: "audit"
+                  egress-policy: audit
 
-            - name: "Validate PR title"
-              id: "lint_pr_title"
-              uses: "amannn/action-semantic-pull-request@e9fabac35e210fea40ca5b14c0da95a099eff26f" # v5.4.0
+            - name: Validate PR title
+              id: lint_pr_title
+              uses: amannn/action-semantic-pull-request@0723387faaf9b38adef4775cd42cfd5155ed6017 # v5.5.3
               env:
                   GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
               with:
@@ -35,24 +37,21 @@ jobs:
                       build
                       chore
                       ci
-                      deps
                       docs
                       feat
                       fix
                       perf
+                      infra
                       refactor
                       revert
-                      security
-                      style
                       test
-                      translation
 
-            - uses: "marocchino/sticky-pull-request-comment@efaaab3fd41a9c3de579aba759d2552635e590fd" # v2.8.0
-              # When the previous steps fails, the workflow would stop. By adding this
+            - uses: marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31 # v2.9.0
+              # When the previous steps fail, the workflow would stop. By adding this
               # condition you can continue the execution with the populated error message.
               if: "always() && (steps.lint_pr_title.outputs.error_message != null)"
               with:
-                  header: "pr-title-lint-error"
+                  header: pr-title-lint-error
                   message: |
                       Hey there and thank you for opening this pull request! 👋🏼
 
@@ -66,8 +65,8 @@ jobs:
 
               # Delete a previous comment when the issue has been resolved
             - if: "${{ steps.lint_pr_title.outputs.error_message == null }}"
-              uses: "marocchino/sticky-pull-request-comment@efaaab3fd41a9c3de579aba759d2552635e590fd" # v2.8.0
+              uses: marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31 # v2.9.0
               with:
-                  header: "pr-title-lint-error"
+                  header: pr-title-lint-error
                   message: |
                       Thank you for following the naming conventions! 🙏

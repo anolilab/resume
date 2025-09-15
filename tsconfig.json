@@ -2,36 +2,35 @@
     "$schema": "https://json.schemastore.org/tsconfig",
     "display": "Node 18",
     "compilerOptions": {
-        "baseUrl": ".",
-        "module": "ESNext",
-        "target": "ESNext",
-
-        "noEmit": true,
-        "strict": true,
-        "alwaysStrict": true,
-        "declaration": true,
-        "allowJs": true,
-
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noUncheckedIndexedAccess": true,
-        "noImplicitReturns": true,
-        "noFallthroughCasesInSwitch": true,
-
-        "strictFunctionTypes": true,
-        "useUnknownInCatchVariables": true,
-        "stripInternal": true,
-
-        "moduleResolution": "node",
-        "isolatedModules": true,
-        "resolveJsonModule": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "inlineSources": false,
 
         "incremental": true,
-        "tsBuildInfoFile": ".tsbuildinfo"
+        "tsBuildInfoFile": ".tsbuildinfo",
+        "target": "ESNext",
+        "baseUrl": ".",
+        "module": "ESNext",
+
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "strict": true,
+
+        "strictFunctionTypes": true,
+        "alwaysStrict": true,
+
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "noUncheckedIndexedAccess": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "useUnknownInCatchVariables": true,
+        "declaration": true,
+        "inlineSources": false,
+        "noEmit": true,
+        "stripInternal": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+        "skipLibCheck": true
     },
     "include": ["src/**/*.ts", "src/main.tsx", "vitest.config.ts", "types.d.ts", "vite.config.ts", "bin/**/*.ts", "__tests__/**/*.ts"],
     "exclude": ["dist", "node_modules"]

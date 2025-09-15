@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import { env } from "node:process";
+
 import { Octokit } from "@octokit/rest";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { loadEnv } from "vite";
@@ -16,12 +17,11 @@ console.log("Downloading resume.json");
 // Compare: https://docs.github.com/rest/reference/gists#get-a-gist
 octokit.rest.gists
     .get({ gist_id: env.VITE_GITHUB_RESUME_GIST_ID as string })
-    // eslint-disable-next-line promise/always-return
+
     .then(({ data }) => {
         const { files } = data;
 
         Object.keys(files as object).forEach((key) => {
-            // eslint-disable-next-line security/detect-non-literal-fs-filename,security/detect-object-injection
             fs.writeFileSync(key, ((files as Record<string, object>)[key] as { content: string }).content as string, "utf8");
             // eslint-disable-next-line no-console
             console.log(`Wrote "${key}" to disk.`);

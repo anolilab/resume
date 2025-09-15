@@ -1,5 +1,5 @@
-import schema from "@anolilab/resume-schema/schema.json";
-import Ajv from "ajv";
+import schema from "@anolilab/resume-schema/schema.json" with { type: "json" };
+import { Ajv } from "ajv";
 import addFormats from "ajv-formats";
 
 const ajv = new Ajv({

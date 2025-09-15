@@ -1,3 +1,4 @@
+/* eslint-disable n/no-unsupported-features/node-builtins */
 import "@fontsource/nunito";
 import "@fontsource/noto-sans-sc";
 
@@ -6,7 +7,7 @@ const themeToggleDarkIcon = document.querySelector("#theme-toggle-dark-icon");
 const themeToggleLightIcon = document.querySelector("#theme-toggle-light-icon");
 
 // Change the icons inside the button based on previous settings
-if (localStorage.getItem(STORAGE_KEY) === "dark" || (!(STORAGE_KEY in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+if (localStorage.getItem(STORAGE_KEY) === "dark" || (!(STORAGE_KEY in localStorage) && globalThis.matchMedia("(prefers-color-scheme: dark)").matches)) {
     themeToggleLightIcon?.classList.remove("hidden");
 } else {
     themeToggleDarkIcon?.classList.remove("hidden");

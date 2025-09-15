@@ -1,33 +1,34 @@
+import { createRequire } from "node:module";
+
 import type { ResumeSchema } from "@anolilab/resume-schema";
 import deepmerge from "deepmerge";
 import Handlebars from "handlebars";
 import type { UserConfig } from "vite";
 import { defineConfig, loadEnv } from "vite";
-
 import { ViteFaviconsPlugin } from "vite-plugin-favicon2";
+// @ts-expect-error - no types available
 import handlebars from "vite-plugin-handlebars";
-
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
 import formatter from "./src/formatter";
 import validate from "./src/validate";
 
+const require = createRequire(import.meta.url);
+
 let resumeData: ResumeSchema = {};
 
 try {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports,global-require,@typescript-eslint/no-var-requires
     resumeData = require("./resume.json") as ResumeSchema;
 } catch {
     // eslint-disable-next-line no-console
     console.log("\nNo resume.json found. Using the resume-sample.json.\n");
-    // eslint-disable-next-line @typescript-eslint/no-require-imports,global-require,@typescript-eslint/no-var-requires
+
     resumeData = require("./resume-sample.json") as ResumeSchema;
 }
 
 let privateResumeData: ResumeSchema = {};
 
 try {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports,global-require,@typescript-eslint/no-var-requires
     privateResumeData = require("./resume.private.json") as ResumeSchema;
 } catch {
     // resume-data.private.json does not exist
@@ -51,26 +52,26 @@ export default defineConfig(async (config: UserConfig): Promise<Omit<UserConfig,
                     breaklines(text: string) {
                         let escapedText = Handlebars.Utils.escapeExpression(text);
 
-                        // eslint-disable-next-line regexp/no-unused-capturing-group
                         escapedText = escapedText.replaceAll(/(\r\n|\n|\r)/g, "<br>");
 
                         return new Handlebars.SafeString(escapedText);
                     },
+
                     /**
-                     * Register a debug helper for Handlebars to be able to log data or inspect data in the browser console
+                     * Register a debug helper for Handlebars to be able to log data or inspect data in the browser console.
                      *
                      * Usage:
-                     *   {{debug someObj.data}} => logs someObj.data to the console
-                     *   {{debug someObj.data true}} => logs someObj.data to the console and stops at a debugger point
-                     *
-                     * @param {any} data data to log to console
-                     * @param {boolean} breakpoint or not to set a breakpoint to inspect current state in debugger
+                     * {{debug someObj.data}} => logs someObj.data to the console
+                     * {{debug someObj.data true}} => logs someObj.data to the console and stops at a debugger point
+                     * @param data data to log to console
+                     * @param breakpoint or not to set a breakpoint to inspect current state in debugger
                      */
-                    debug(data, breakpoint) {
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    debug(data: any, breakpoint: boolean) {
                         // eslint-disable-next-line no-console
                         console.log(data);
 
-                        if (breakpoint === true) {
+                        if (breakpoint) {
                             // eslint-disable-next-line no-debugger
                             debugger;
                         }

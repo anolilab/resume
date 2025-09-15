@@ -1,4 +1,4 @@
-export default function getUrlFromUsername(site: string, username: string): string | null {
+export default function getUrlFromUsername(site: string, username: string): string | undefined {
     const urlMap: Record<string, string> = {
         angellist: "angel.co",
         behance: "behance.net",
@@ -19,9 +19,8 @@ export default function getUrlFromUsername(site: string, username: string): stri
 
     const lowerSiteName = site.toLowerCase();
 
-    // eslint-disable-next-line security/detect-object-injection
     if (!username || !urlMap[lowerSiteName]) {
-        return null;
+        return undefined;
     }
 
     if (lowerSiteName === "skype") {
@@ -29,10 +28,8 @@ export default function getUrlFromUsername(site: string, username: string): stri
     }
 
     if (lowerSiteName === "reddit" || lowerSiteName === "spotify") {
-        // eslint-disable-next-line security/detect-object-injection
-        return `//open.${urlMap[site]}/user/${username}`;
+        return `//open.${urlMap[site] as string}/user/${username}`;
     }
 
-    // eslint-disable-next-line security/detect-object-injection
-    return `//${urlMap[site]}/${username}`;
+    return `//${urlMap[site] as string}/${username}`;
 }

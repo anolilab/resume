@@ -1,4 +1,4 @@
-extends: "default"
+extends: default
 
 ignore: |
     .build/
@@ -34,7 +34,7 @@ rules:
         ignore-shebangs: true
         min-spaces-from-content: 1
         require-starting-space: true
-    comments-indentation: "enable"
+    comments-indentation: enable
     document-end:
         present: false
     document-start:
@@ -52,17 +52,17 @@ rules:
         forbid-in-flow-mappings: true
     hyphens:
         max-spaces-after: 4
-    key-duplicates: "enable"
-    key-ordering: "disable"
-    line-length: "disable"
-    new-line-at-end-of-file: "enable"
+    key-duplicates: enable
+    key-ordering: disable
+    line-length: disable
+    new-line-at-end-of-file: enable
     new-lines:
-        type: "unix"
+        type: unix
     octal-values:
         forbid-implicit-octal: true
     quoted-strings:
-        quote-type: "double"
-    trailing-spaces: "enable"
+        quote-type: double
+    trailing-spaces: enable
     truthy:
         allowed-values:
             - "false"

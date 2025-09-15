@@ -20,8 +20,10 @@ const profiles = [
     },
 ];
 
-describe("getNetwork", () => {
+describe(getNetwork, () => {
     it("returns network profile", () => {
+        expect.assertions(1);
+
         expect(getNetwork(profiles, "twitter")).toStrictEqual({
             network: "Twitter",
             url: "https://twitter.com/siliconHBO",
@@ -30,6 +32,8 @@ describe("getNetwork", () => {
     });
 
     it("returns undefined", () => {
+        expect.assertions(1);
+
         expect(getNetwork(profiles, "test")).toBeUndefined();
     });
 });
