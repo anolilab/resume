@@ -19,6 +19,7 @@ export default createConfig({
         "assets/style.css",
         "vite.config.ts",
         "verify-node-version.cjs",
+        "audit-ci.jsonc",
         ".lintstagedrc.js",
         "README.md",
         ".github",
