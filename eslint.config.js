@@ -21,6 +21,8 @@ export default createConfig({
         "verify-node-version.cjs",
         "audit-ci.jsonc",
         ".lintstagedrc.js",
+        ".yamllint.yaml",
+        ".github/FUNDING.yml",
         "README.md",
         ".github",
     ],
