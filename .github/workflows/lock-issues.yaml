@@ -1,4 +1,4 @@
-name: Lock inactive issues and pull requests
+name: "Lock inactive issues and pull requests"
 
 on: # yamllint disable-line rule:truthy
     schedule:

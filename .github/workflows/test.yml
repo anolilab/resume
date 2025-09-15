@@ -1,27 +1,27 @@
 # https://help.github.com/en/categories/automating-your-workflow-with-github-actions
 
-name: Test
+name: "Test"
 
 on: # yamllint disable-line rule:truthy
     pull_request:
         branches:
             - "([0-9])?(.{+([0-9]),x}).x"
-            - main
-            - next
-            - next-major
-            - alpha
-            - beta
+            - "main"
+            - "next"
+            - "next-major"
+            - "alpha"
+            - "beta"
 
 jobs:
     test:
         strategy:
             matrix:
-                os: [ubuntu-latest]
+                os: ["ubuntu-latest"]
                 node_version: ["20", "21"]
                 include:
-                    - os: macos-latest
+                    - os: "macos-latest"
                       node_version: "20"
-                    - os: windows-latest
+                    - os: "windows-latest"
                       node_version: "20"
             fail-fast: false
 
@@ -35,35 +35,19 @@ jobs:
               with:
                   egress-policy: audit
 
-            - name: Git checkout
+            - name: "Git checkout"
               uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4.1.0
               env:
                   GIT_COMMITTER_NAME: GitHub Actions Shell
                   GIT_AUTHOR_NAME: GitHub Actions Shell
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
-            - uses: pnpm/action-setup@d882d12c64e032187b2edb46d3a0d003b7a43598 # v2.4.0
+            - name: "Setup resources and environment"
+              id: "setup"
+              uses: "anolilab/workflows/step/setup@main"
               with:
-                  run_install: false
+                  node-version: "${{ matrix.node_version }}.x"
+                  cache-prefix: "test"
 
-            - name: "Set node version to ${{ matrix.node_version }}"
-              uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d # v3.8.1
-              with:
-                  node-version: "${{ matrix.node_version }}"
-                  cache: pnpm
-
-            - name: Check npm version
-              run: npm -v
-              env:
-                  SKIP_CHECK: "true"
-
-            - name: Install packages
-              run: pnpm install --frozen-lockfile
-              env:
-                  SKIP_CHECK: "true"
-
-            - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
-              run: pnpm dlx audit-ci@^6 --config ./audit-ci.jsonc --report-type=summary
-
-            - name: test and coverage
+            - name: "test and coverage"
               run: "pnpm run test:coverage"
