@@ -21,5 +21,6 @@ export default createConfig({
         "verify-node-version.cjs",
         ".lintstagedrc.js",
         "README.md",
+        ".github",
     ],
 });
