@@ -1,27 +1,27 @@
-name: Comment Issue
+name: "Comment Issue"
 
 on: # yamllint disable-line rule:truthy
     issues:
         types:
-            - labeled
+            - "labeled"
 
 permissions:
-    contents: read
+    contents: "read"
 
 jobs:
     add-comment-for-user-interest:
         if: "github.event.label.name == 's: waiting for user interest'"
-        runs-on: ubuntu-latest
+        runs-on: "ubuntu-latest"
         permissions:
-            issues: write
+            issues: "write"
         steps:
-            - name: Harden Runner
-              uses: step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6 # v2.8.1
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6" # v2.8.1
               with:
-                  egress-policy: audit
+                  egress-policy: "audit"
 
-            - name: Add Comment For User Interest
-              uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+            - name: "Add Comment For User Interest"
+              uses: "actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea" # v7.0.1
               with:
                   script: |
                       github.rest.issues.createComment({
@@ -56,8 +56,8 @@ jobs:
                           [View more issues which are waiting for user interest](https://github.com/anolilab/resume/issues?q=is%3Aissue+is%3Aopen+label%3A%22s%3A+waiting+for+user+interest%22+)`,
                       })
 
-            - name: React to Issue
-              uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+            - name: "React to Issue"
+              uses: "actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea" # v7.0.1
               with:
                   script: |
                       github.rest.reactions.createForIssue({

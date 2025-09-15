@@ -6,30 +6,30 @@
 # PRs introducing known-vulnerable packages will be blocked from merging.
 #
 # Source repository: https://github.com/actions/dependency-review-action
-name: Dependency Review
+name: "Dependency Review"
 
 on: # yamllint disable-line rule:truthy
     pull_request: # yamllint disable-line rule:empty-values
     merge_group: # yamllint disable-line rule:empty-values
 
 permissions:
-    contents: read
+    contents: "read"
 
 jobs:
     dependency-review:
-        runs-on: ubuntu-latest
+        runs-on: "ubuntu-latest"
         steps:
             - name: Harden Runner
-              uses: step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6 # v2.8.1
+              uses: "step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6" # v2.8.1
               with:
-                  egress-policy: audit
+                  egress-policy: "audit"
 
-            - name: Git checkout
-              uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+            - name: "Git checkout"
+              uses: "actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332" # v4.1.7
               env:
-                  GIT_COMMITTER_NAME: GitHub Actions Shell
-                  GIT_AUTHOR_NAME: GitHub Actions Shell
+                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
+                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
-            - name: Dependency Review
-              uses: actions/dependency-review-action@5a2ce3f5b92ee19cbb1541a4984c76d921601d7c # v4.3.4
+            - name: "Dependency Review"
+              uses: "actions/dependency-review-action@5a2ce3f5b92ee19cbb1541a4984c76d921601d7c" # v4.3.4

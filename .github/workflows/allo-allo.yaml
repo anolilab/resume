@@ -1,19 +1,19 @@
-name: AlloAllo
+name: "AlloAllo"
 
 on: # yamllint disable-line rule:truthy
     issues:
         types:
-            - opened
+            - "opened"
     pull_request_target:
         branches:
-            - main
+            - "main"
         types:
-            - opened
-            - closed
+            - "opened"
+            - "closed"
 
 jobs:
     allo-allo:
-        uses: anolilab/workflows/.github/workflows/allo-allo.yml@main
+        uses: "anolilab/workflows/.github/workflows/allo-allo.yml@main"
         with:
-            target-repo: anolilab/resume
-            onboarding-lead: prisis
+            target-repo: "anolilab/resume"
+            onboarding-lead: "prisis"

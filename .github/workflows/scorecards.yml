@@ -2,7 +2,7 @@
 # by a third-party and are governed by separate terms of service, privacy
 # policy, and support documentation.
 
-name: Scorecard supply-chain security
+name: "Scorecard supply-chain security"
 
 on: # yamllint disable-line rule:truthy
     # For Branch-Protection check. Only the default branch is supported. See
@@ -13,39 +13,39 @@ on: # yamllint disable-line rule:truthy
     schedule:
         - cron: "20 7 * * 2"
     push:
-        branches: [main]
+        branches: ["main"]
 
 # Declare default permissions as read only.
-permissions: read-all
+permissions: "read-all"
 
 jobs:
     analysis:
-        name: Scorecard analysis
-        runs-on: ubuntu-latest
+        name: "Scorecard analysis"
+        runs-on: "ubuntu-latest"
         permissions:
             # Needed to upload the results to code-scanning dashboard.
-            security-events: write
+            security-events: "write"
             # Needed to publish results and get a badge (see publish_results below).
-            id-token: write
-            contents: read
-            actions: read
+            id-token: "write"
+            contents: "read"
+            actions: "read"
 
         steps:
-            - name: Harden Runner
-              uses: step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6 # v2.8.1
+            - name: "Harden Runner"
+              uses: "step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6" # v2.8.1
               with:
-                  egress-policy: audit
+                  egress-policy: "audit"
 
-            - name: Checkout code
-              uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+            - name: "Checkout code"
+              uses: "actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332" # v4.1.7
               with:
                   persist-credentials: false
 
-            - name: Run analysis
-              uses: ossf/scorecard-action@dc50aa9510b46c811795eb24b2f1ba02a914e534 # v2.3.3
+            - name: "Run analysis"
+              uses: "ossf/scorecard-action@dc50aa9510b46c811795eb24b2f1ba02a914e534" # v2.3.3
               with:
-                  results_file: results.sarif
-                  results_format: sarif
+                  results_file: "results.sarif"
+                  results_format: "sarif"
                   # (Optional) "write" PAT token. Uncomment the `repo_token` line below if:
                   # - you want to enable the Branch-Protection check on a *public* repository, or
                   # - you are installing Scorecards on a *private* repository
@@ -63,15 +63,15 @@ jobs:
 
             # Upload the results as artifacts (optional). Commenting out will disable uploads of run results in SARIF
             # format to the repository Actions tab.
-            - name: Upload artifact
-              uses: actions/upload-artifact@834a144ee995460fba8ed112a2fc961b36a5ec5a # v4.3.6
+            - name: "Upload artifact"
+              uses: "actions/upload-artifact@834a144ee995460fba8ed112a2fc961b36a5ec5a" # v4.3.6
               with:
-                  name: SARIF file
-                  path: results.sarif
+                  name: "SARIF file"
+                  path: "results.sarif"
                   retention-days: 5
 
             # Upload the results to GitHub's code scanning dashboard.
-            - name: Upload to code-scanning
-              uses: github/codeql-action/upload-sarif@eb055d739abdc2e8de2e5f4ba1a8b246daa779aa # v3.26.0
+            - name: "Upload to code-scanning"
+              uses: "github/codeql-action/upload-sarif@eb055d739abdc2e8de2e5f4ba1a8b246daa779aa" # v3.26.0
               with:
-                  sarif_file: results.sarif
+                  sarif_file: "results.sarif"

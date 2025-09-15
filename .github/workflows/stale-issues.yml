@@ -1,4 +1,4 @@
-name: Label Idle Issues
+name: "Label Idle Issues"
 
 on: # yamllint disable-line rule:truthy
     schedule:
@@ -6,6 +6,6 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     stale-issues:
-        uses: anolilab/workflows/.github/workflows/stale-issues.yml@main
+        uses: "anolilab/workflows/.github/workflows/stale-issues.yml@main"
         with:
-            target-repo: anolilab/resume
+            target-repo: "anolilab/resume"

@@ -1,12 +1,12 @@
-name: Cleanup caches by a branch
+name: "Cleanup caches by a branch"
 
 on: # yamllint disable-line rule:truthy
     pull_request:
         types:
-            - closed
+            - "closed"
 
 jobs:
     cleanup-branch-cache:
-        uses: anolilab/workflows/.github/workflows/cleanup-branch-cache.yaml@main
+        uses: "anolilab/workflows/.github/workflows/cleanup-branch-cache.yaml@main"
         with:
-            target-repo: anolilab/resume
+            target-repo: "anolilab/resume"

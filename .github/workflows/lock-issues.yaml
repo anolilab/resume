@@ -6,6 +6,6 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     lock-closed:
-        uses: anolilab/workflows/.github/workflows/lock-closed.yml@main
+        uses: "anolilab/workflows/.github/workflows/lock-closed.yml@main"
         with:
-            target-repo: anolilab/resume
+            target-repo: "anolilab/resume"
