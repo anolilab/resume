@@ -27,11 +27,11 @@ importers:
         specifier: 2.0.3
         version: 2.0.3
       '@fontsource/noto-sans-sc':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource/nunito':
         specifier: ^5.2.7
         version: 5.2.7
-      '@fontsource/nunito':
-        specifier: ^5.2.6
-        version: 5.2.6
       '@octokit/rest':
         specifier: ^22.0.0
         version: 22.0.0
@@ -619,11 +619,11 @@ packages:
     resolution: {integrity: sha512-Z5kJ+wU3oA7MMIqVR9tyZRtjYPr4OC004Q4Rw7pgOKUOKkJfZ3O24nz3WYfGRpMDNmcOi3TwQOmgm7B7Tpii0w==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fontsource/noto-sans-sc@5.2.7':
-    resolution: {integrity: sha512-woVR2wa1UsXLxjEIl5OdaucQSRYwfouOiJAMayh9FUxvqaRRgOXrX3L8tCHvL99zg4DGsZjmgKe9usCnMRX7qQ==}
+  '@fontsource/noto-sans-sc@5.2.8':
+    resolution: {integrity: sha512-8T8HxIS3uAMCfaQawKRH/6yYZ1oRnJZB/CrGwfxGgJa+zAOBgx2lqZMiTY/WbQpLGlPRqX4zHXJYI09CI2q6tA==}
 
-  '@fontsource/nunito@5.2.6':
-    resolution: {integrity: sha512-FjSPmzBFZ3za4w2USmCWrxDaZ1fTWowSpV9DXfs7Ll/150BI48epE6E69MtOx8GqOPimHNkVUkES22lqDw+bug==}
+  '@fontsource/nunito@5.2.7':
+    resolution: {integrity: sha512-pmtBq0H9ex9nk+RtJYEJOD9pag393iHETnl/PVKleF4i06cd0ttngK5ZCTgYb5eOqR3Xdlrjtev8m7bmgYprew==}
 
   '@html-eslint/eslint-plugin@0.46.2':
     resolution: {integrity: sha512-aVn+qo7Akpc/FiJSIg0GbZnlh7Por0xVlxg8lv777xfgRrnvi9JSDir7jJHjYG1LxUyWQwYktnzXwkdquQBXAg==}
@@ -5932,6 +5932,7 @@ packages:
   phin@3.7.1:
     resolution: {integrity: sha512-GEazpTWwTZaEQ9RhL7Nyz0WwqilbqgLahDM3D0hxWwmVDI52nXEybHqiN6/elwpkJBhcuj+WbBu+QfT0uhPGfQ==}
     engines: {node: '>= 8'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -8348,9 +8349,9 @@ snapshots:
       '@eslint/core': 0.15.2
       levn: 0.4.1
 
-  '@fontsource/noto-sans-sc@5.2.7': {}
+  '@fontsource/noto-sans-sc@5.2.8': {}
 
-  '@fontsource/nunito@5.2.6': {}
+  '@fontsource/nunito@5.2.7': {}
 
   '@html-eslint/eslint-plugin@0.46.2(eslint@9.35.0(jiti@2.5.1))(jiti@2.5.1)':
     dependencies:

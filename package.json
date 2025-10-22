@@ -49,8 +49,8 @@
     },
     "dependencies": {
         "@anolilab/resume-schema": "2.0.3",
-        "@fontsource/noto-sans-sc": "^5.2.7",
-        "@fontsource/nunito": "^5.2.6",
+        "@fontsource/noto-sans-sc": "^5.2.8",
+        "@fontsource/nunito": "^5.2.7",
         "@octokit/rest": "^22.0.0",
         "ajv": "^8.17.1",
         "ajv-formats": "^3.0.1",
