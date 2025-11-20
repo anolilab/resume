@@ -51,7 +51,7 @@
         "@anolilab/resume-schema": "2.0.3",
         "@fontsource/noto-sans-sc": "^5.2.7",
         "@fontsource/nunito": "^5.2.6",
-        "@octokit/rest": "^22.0.0",
+        "@octokit/rest": "^22.0.1",
         "ajv": "^8.17.1",
         "ajv-formats": "^3.0.1",
         "date-fns": "^4.1.0",
