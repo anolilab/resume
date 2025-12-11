@@ -1,6 +1,25 @@
-# Résumé
+<a href="https://github.com/anolilab/semantic-release" align="center">
+
+  <img src=".github/assets/package-og.svg" alt="resume" />
+
+</a>
+
+<h3 align="center">
 
 This is the theme repository for the [Json Résumé](https://jsonresume.org/) project. Unlike the [json-theme-boilerplate](https://github.com/jsonresume/jsonresume-theme-boilerplate) project, this environment has a much improved developer environment to make editing your theme super to do.
+
+</h3>
+
+<br />
+
+<div align="center">
+
+[![typescript-image][typescript-badge]][typescript-url]
+[![mit licence][license-badge]][license]
+[![Chat][chat-badge]][chat]
+[![PRs Welcome][prs-welcome-badge]][prs-welcome]
+
+</div>
 
 ---
 
@@ -18,7 +37,7 @@ This is the theme repository for the [Json Résumé](https://jsonresume.org/) pr
 
 ## Installation
 
-This project uses [pnpm](https://pnpm.io/), [vitejs](https://vitejs.dev/) and [vitest](https://vitest.dev/) for all its internal build processes. In theory, this project requires at lest Node v20 to run.
+This project uses [pnpm](https://pnpm.io/), [vitejs](https://vite.dev/) and [vitest](https://vitest.dev/) for all its internal build processes. In theory, this project requires at lest Node v20 to run.
 
 ## Quick Commands
 
@@ -105,10 +124,21 @@ If you would like to help take a look at the [list of issues](https://github.com
 - [Daniel Bannert](https://github.com/prisis)
 - [All Contributors](https://github.com/anolilab/resume/graphs/contributors)
 
+## Made with ❤️ at Anolilab
+
+This is an open source project and will always remain free to use. If you think it’s cool, please star it 🌟. [Anolilab](https://www.anolilab.com/open-source) is a Development and AI Studio. Contact at [hello@anolilab.com](mailto:hello@anolilab.com) if you need any help with these technologies or want to say hi!
+
 ## License
 
-<!-- textlint-disable no-dead-link -->
+The anolilab résumé is open-sourced software licensed under the [MIT license][license]
 
-The anolilab résumé is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT)
+<!-- badges -->
 
-<!-- textlint-enable no-dead-link -->
+[license-badge]: https://img.shields.io/npm/l/@anolilab/resume?style=for-the-badge
+[license]: https://github.com/anolilab/resume/blob/main/LICENSE
+[prs-welcome-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge
+[prs-welcome]: https://github.com/anolilab/resume/blob/main/.github/CONTRIBUTING.md
+[chat-badge]: https://img.shields.io/discord/902465130518949899.svg?style=for-the-badge
+[chat]: https://discord.com/invite/TtFJY8xkFK
+[typescript-badge]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
+[typescript-url]: https://www.typescriptlang.org/
