@@ -14,26 +14,15 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     test:
-        strategy:
-            matrix:
-                os: ["ubuntu-latest"]
-                node_version: ["20", "21"]
-                include:
-                    - os: "macos-latest"
-                      node_version: "20"
-                    - os: "windows-latest"
-                      node_version: "20"
-            fail-fast: false
+        name: "Build & Unit Test: node-22, ubuntu-latest"
 
-        name: "Build & Unit Test: node-${{ matrix.node_version }}, ${{ matrix.os }}"
-
-        runs-on: "${{ matrix.os }}"
+        runs-on: "ubuntu-latest"
 
         steps:
             - name: "Harden Runner"
               uses: "step-security/harden-runner@f4a75cfd619ee5ce8d5b864b0d183aff3c69b55a" # v2.13.1
               with:
-                  egress-policy: audit
+                  egress-policy: "audit"
 
             - name: "Git checkout"
               uses: "actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8" # v5.0.0
@@ -46,7 +35,7 @@ jobs:
               id: "setup"
               uses: "anolilab/workflows/step/setup@main"
               with:
-                  node-version: "${{ matrix.node_version }}.x"
+                  node-version: "22.x"
                   cache-prefix: "test"
 
             - name: "test and coverage"
