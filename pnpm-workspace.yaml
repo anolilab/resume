@@ -1,27 +1,10 @@
+catalog:
+  '@tailwindcss/postcss': ^4.1.17
+  tailwindcss: ^4.1.17
+
 catalogMode: prefer
 
 cleanupUnusedCatalogs: true
-
-onlyBuiltDependencies:
-  - puppeteer
-  - sharp
-  - unrs-resolver
-
-overrides:
-  body-parser@>=2.2.0 <2.2.1: '>=2.2.1'
-  min-document@<=2.19.0: '>=2.19.1'
-  semver: '7.7.3'
-  vite: '7.2.7'
-
-shellEmulator: true
-
-trustPolicy: no-downgrade
-
-preferWorkspacePackages: true
-
-saveWorkspaceProtocol: true
-
-sharedWorkspaceLockfile: true
 
 dedupeInjectedDeps: true
 
@@ -41,3 +24,24 @@ minimumReleaseAgeExclude:
   - typescript
   - '@types/*'
   - '@anolilab/*'
+
+onlyBuiltDependencies:
+  - puppeteer
+  - sharp
+  - unrs-resolver
+
+overrides:
+  body-parser@>=2.2.0 <2.2.1: '>=2.2.1'
+  min-document@<=2.19.0: '>=2.19.1'
+  semver: 7.7.3
+  vite: 7.2.7
+
+preferWorkspacePackages: true
+
+saveWorkspaceProtocol: true
+
+sharedWorkspaceLockfile: true
+
+shellEmulator: true
+
+trustPolicy: no-downgrade
