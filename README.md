@@ -134,8 +134,8 @@ The anolilab résumé is open-sourced software licensed under the [MIT license][
 
 <!-- badges -->
 
-[license-badge]: https://img.shields.io/npm/l/@anolilab/resume?style=for-the-badge
-[license]: https://github.com/anolilab/resume/blob/main/LICENSE
+[license-badge]: https://img.shields.io/github/license/anolilab/resume?style=for-the-badge
+[license]: https://github.com/anolilab/resume/blob/main/LICENSE.md
 [prs-welcome-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge
 [prs-welcome]: https://github.com/anolilab/resume/blob/main/.github/CONTRIBUTING.md
 [chat-badge]: https://img.shields.io/discord/902465130518949899.svg?style=for-the-badge
