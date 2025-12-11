@@ -3,6 +3,7 @@ let requiredVersion = require("node:fs").readFileSync(".nvmrc", { encoding: "utf
 if (!requiredVersion.includes("v")) {
     requiredVersion = `v${requiredVersion}`;
 }
+
 // eslint-disable-next-line dot-notation
 if (process.env["SKIP_CHECK"] !== undefined) {
     // eslint-disable-next-line unicorn/no-process-exit

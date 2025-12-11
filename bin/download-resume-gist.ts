@@ -33,7 +33,7 @@ octokit.rest.gists
         process.exit(0);
     })
     // eslint-disable-next-line unicorn/prefer-top-level-await
-    .catch((error) => {
+    .catch((error: unknown) => {
         // eslint-disable-next-line no-console
         console.error(error);
         // eslint-disable-next-line unicorn/no-process-exit

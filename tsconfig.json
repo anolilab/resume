@@ -4,7 +4,6 @@
         "incremental": true,
         "tsBuildInfoFile": ".tsbuildinfo",
         "target": "ESNext",
-        "baseUrl": ".",
         "module": "ESNext",
 
         "moduleResolution": "node",
