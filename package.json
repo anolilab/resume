@@ -60,7 +60,7 @@
         "esno": "^4.8.0",
         "gravatar": "^1.8.2",
         "lodash.capitalize": "^4.2.1",
-        "puppeteer": "^24.32.1"
+        "puppeteer": "^24.34.0"
     },
     "devDependencies": {
         "@anolilab/eslint-config": "^17.0.2",
