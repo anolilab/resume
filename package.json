@@ -94,7 +94,7 @@
         "vite-plugin-favicon2": "^1.1.5",
         "vite-plugin-handlebars": "^2.0.0",
         "vite-plugin-static-copy": "^3.1.4",
-        "vitest": "^4.0.15",
+        "vitest": "^4.0.16",
         "@vitest/coverage-v8": "4.0.15"
     },
     "packageManager": "pnpm@10.25.0",
