@@ -3,6 +3,7 @@ catalog:
   tailwindcss: ^4.1.17
 
 catalogMode: prefer
+minimumReleaseAge: 1440
 
 cleanupUnusedCatalogs: true
 
@@ -24,6 +25,7 @@ minimumReleaseAgeExclude:
   - typescript
   - '@types/*'
   - '@anolilab/*'
+  - '@commitlint/*'
 
 onlyBuiltDependencies:
   - puppeteer
@@ -57,3 +59,8 @@ sharedWorkspaceLockfile: true
 shellEmulator: true
 
 trustPolicy: no-downgrade
+
+trustPolicyExclude:
+    - 'cached-factory@0.1.0'
+    - 'undici-types@6.21.0'
+    - 'undici@5.29.0'

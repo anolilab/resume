@@ -60,15 +60,15 @@
         "esno": "^4.8.0",
         "gravatar": "^1.8.2",
         "lodash.capitalize": "^4.2.1",
-        "puppeteer": "^24.32.1"
+        "puppeteer": "^24.34.0"
     },
     "devDependencies": {
-        "@anolilab/eslint-config": "^17.0.2",
-        "@anolilab/prettier-config": "^7.0.0",
-        "@anolilab/semantic-release-preset": "^12.1.2",
-        "@anolilab/textlint-config": "^10.0.0",
-        "@commitlint/cli": "^20.2.0",
-        "@commitlint/config-conventional": "^20.2.0",
+        "@anolilab/eslint-config": "^19.0.0",
+        "@anolilab/prettier-config": "^8.0.1",
+        "@anolilab/semantic-release-preset": "^13.0.0",
+        "@anolilab/textlint-config": "^11.1.0",
+        "@commitlint/cli": "^20.3.1",
+        "@commitlint/config-conventional": "^20.3.1",
         "@eslint/css": "^0.14.1",
         "@tailwindcss/postcss": "catalog:",
         "@types/gravatar": "^1.8.6",
@@ -78,7 +78,7 @@
         "commitizen": "^4.3.1",
         "cross-env": "^10.1.0",
         "cssnano": "^7.1.2",
-        "eslint": "9.39.1",
+        "eslint": "9.39.2",
         "handlebars": "^4.7.8",
         "husky": "^9.1.7",
         "is-ci": "^4.1.0",
@@ -86,18 +86,18 @@
         "postcss": "^8.5.6",
         "prettier": "^3.7.4",
         "semantic-release": "^25.0.2",
-        "sort-package-json": "^3.5.1",
+        "sort-package-json": "^3.6.0",
         "tailwindcss": "catalog:",
         "textlint": "^15.5.0",
         "typescript": "^5.9.3",
-        "vite": "^7.2.7",
+        "vite": "^7.3.1",
         "vite-plugin-favicon2": "^1.1.5",
         "vite-plugin-handlebars": "^2.0.0",
         "vite-plugin-static-copy": "^3.1.4",
-        "vitest": "^4.0.15",
-        "@vitest/coverage-v8": "4.0.15"
+        "vitest": "^4.0.16",
+        "@vitest/coverage-v8": "4.0.16"
     },
-    "packageManager": "pnpm@10.25.0",
+    "packageManager": "pnpm@10.27.0",
     "engines": {
         "node": ">=20.19"
     }
