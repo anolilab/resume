@@ -63,7 +63,7 @@
         "puppeteer": "^24.34.0"
     },
     "devDependencies": {
-        "@anolilab/eslint-config": "^19.0.0",
+        "@anolilab/eslint-config": "^20.0.0",
         "@anolilab/prettier-config": "^8.0.1",
         "@anolilab/semantic-release-preset": "^13.0.0",
         "@anolilab/textlint-config": "^11.1.0",
