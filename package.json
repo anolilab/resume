@@ -53,7 +53,7 @@
         "@fontsource/noto-sans-sc": "^5.2.8",
         "@fontsource/nunito": "^5.2.7",
         "@octokit/rest": "^22.0.1",
-        "ajv": "^8.17.1",
+        "ajv": "^8.20.0",
         "ajv-formats": "^3.0.1",
         "date-fns": "^4.1.0",
         "deepmerge": "^4.3.1",
@@ -65,7 +65,7 @@
     "devDependencies": {
         "@anolilab/eslint-config": "^19.0.0",
         "@anolilab/prettier-config": "^8.0.1",
-        "@anolilab/semantic-release-preset": "^13.0.0",
+        "@anolilab/semantic-release-preset": "^13.4.9",
         "@anolilab/textlint-config": "^11.1.0",
         "@commitlint/cli": "^20.3.1",
         "@commitlint/config-conventional": "^20.3.1",
@@ -82,7 +82,7 @@
         "handlebars": "^4.7.8",
         "husky": "^9.1.7",
         "is-ci": "^4.1.0",
-        "lint-staged": "^16.2.7",
+        "lint-staged": "^16.4.0",
         "postcss": "^8.5.6",
         "prettier": "^3.7.4",
         "semantic-release": "^25.0.2",
@@ -93,11 +93,11 @@
         "vite": "^7.3.1",
         "vite-plugin-favicon2": "^1.1.5",
         "vite-plugin-handlebars": "^2.0.0",
-        "vite-plugin-static-copy": "^3.1.4",
+        "vite-plugin-static-copy": "^3.4.0",
         "vitest": "^4.0.16",
         "@vitest/coverage-v8": "4.0.16"
     },
-    "packageManager": "pnpm@10.27.0",
+    "packageManager": "pnpm@10.33.2",
     "engines": {
         "node": ">=20.19"
     }
