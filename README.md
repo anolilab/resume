@@ -126,7 +126,7 @@ If you would like to help take a look at the [list of issues](https://github.com
 
 ## Made with ❤️ at Anolilab
 
-This is an open source project and will always remain free to use. If you think it’s cool, please star it 🌟. [Anolilab](https://www.anolilab.com/open-source) is a Development and AI Studio. Contact at [hello@anolilab.com](mailto:hello@anolilab.com) if you need any help with these technologies or want to say hi!
+This is an open source project and will always remain free to use. If you think it’s cool, please star it 🌟. [Anolilab](https://anolilab.com/open-source) is a Development and AI Studio. Contact at [hello@anolilab.com](mailto:hello@anolilab.com) if you need any help with these technologies or want to say hi!
 
 ## License
 
