@@ -1,153 +1,21 @@
-# https://help.github.com/en/categories/automating-your-workflow-with-github-actions
-
 name: "Lint"
-
-on: # yamllint disable-line rule:truthy
-    push:
-        branches:
-            - "main"
-    pull_request: # yamllint disable-line rule:empty-values
-
-concurrency:
-    group: "ci-lint-${{ github.ref }}-1"
-    cancel-in-progress: true
-
-permissions:
-    contents: "read" # to fetch code (actions/checkout)
-
+on:
+    pull_request:
+        branches: ["main"]
+permissions: {}
 jobs:
-    files-changed:
-        name: "Detect what files changed"
-        runs-on: "ubuntu-latest"
-        timeout-minutes: 3
-        # Map a step output to a job output
-        outputs:
-            frontend_lintable: "${{ steps.changes.outputs.frontend_lintable }}"
-            markdown_lintable: "${{ steps.changes.outputs.markdown_lintable }}"
-            yaml_lintable: "${{ steps.changes.outputs.yaml_lintable }}"
-        steps:
-            - name: "Git checkout"
-              uses: "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd" # v6.0.2
-              env:
-                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
-                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
-                  EMAIL: "github-actions[bot]@users.noreply.github.com"
-
-            - name: "Check for file changes"
-              uses: "dorny/paths-filter@fbd0ab8f3e69293af611ebaee6363fc25e6d187d" # v4.0.1
-              id: "changes"
-              with:
-                  token: "${{ github.token }}"
-                  filters: ".github/file-filters.yml"
-
-    eslint:
-        if: "needs.files-changed.outputs.frontend_lintable == 'true'"
-        needs: "files-changed"
-        name: "Lint (eslint)"
-        runs-on: "ubuntu-latest"
-        steps:
-            - name: "Harden Runner"
-              uses: "step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411" # v2.19.4
-              with:
-                  egress-policy: "audit"
-
-            - name: "Git checkout ${{ env.HEAD_REPOSITORY }}:${{ env.HEAD_REF }}"
-              uses: "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd" # v6.0.2
-              env:
-                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
-                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
-                  EMAIL: "github-actions[bot]@users.noreply.github.com"
-              with:
-                  fetch-depth: 0
-
-            - name: "Setup resources and environment"
-              id: "setup"
-              uses: "anolilab/workflows/step/setup@5b10e6a2e712406be0b8317df4d437c69b1221ad" # main
-              with:
-                  node-version: "20.x"
-                  cache-prefix: "lint"
-
-            - name: "lint"
-              run: "pnpm run lint:eslint"
-
-    yaml-lint:
-        if: "needs.files-changed.outputs.yaml_lintable == 'true'"
-        needs: "files-changed"
-        name: "Lint (yaml)"
-        runs-on: "ubuntu-latest"
-        steps:
-            - name: "Harden Runner"
-              uses: "step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411" # v2.19.4
-              with:
-                  egress-policy: "audit"
-
-            - name: "Git checkout"
-              uses: "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd" # v6.0.2
-              with:
-                  fetch-depth: 0
-              env:
-                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
-                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
-                  EMAIL: "github-actions[bot]@users.noreply.github.com"
-
-            - name: "Lint YAML files"
-              uses: "ibiqlik/action-yamllint@2576378a8e339169678f9939646ee3ee325e845c" # v3.1.1
-              with:
-                  config_file: ".yamllint.yaml"
-                  file_or_dir: "."
-                  strict: true
-
-    markdown-lint:
-        if: "needs.files-changed.outputs.markdown_lintable == 'true'"
-        needs: "files-changed"
-        name: "Lint (markdown)"
-        runs-on: "ubuntu-latest"
-        steps:
-            - name: "Harden Runner"
-              uses: "step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411" # v2.19.4
-              with:
-                  egress-policy: "audit"
-
-            - name: "Git checkout ${{ env.HEAD_REPOSITORY }}:${{ env.HEAD_REF }}"
-              uses: "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd" # v6.0.2
-              env:
-                  GIT_COMMITTER_NAME: "GitHub Actions Shell"
-                  GIT_AUTHOR_NAME: "GitHub Actions Shell"
-                  EMAIL: "github-actions[bot]@users.noreply.github.com"
-              with:
-                  fetch-depth: 0
-
-            - name: "Setup resources and environment"
-              id: "setup"
-              uses: "anolilab/workflows/step/setup@5b10e6a2e712406be0b8317df4d437c69b1221ad" # main
-              with:
-                  node-version: "20.x"
-                  cache-prefix: "lint"
-
-            - name: "lint"
-              run: "pnpm run lint:text"
-              continue-on-error: true
-
-            - name: "skipping markdown lint for now"
-              run: "exit 0"
-    # This check runs once all dependant jobs have passed
-    # It symbolizes that all required checks have successfully passed (Or skipped)
-    # This check is the only required GitHub check
-    test-required-check:
-        needs: ["files-changed", "eslint", "yaml-lint", "markdown-lint"] # TODO add "package-json-lint"
-        name: "Check Lint Run"
-        # This is necessary since a failed/skipped dependent job would cause this job to be skipped
-        if: "always()"
-        runs-on: "ubuntu-latest"
-        steps:
-            # If any jobs we depend on fail, we will fail since this is a required check
-            # NOTE: A timeout is considered a failure
-            - name: "Harden Runner"
-              uses: "step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411" # v2.19.4
-              with:
-                  egress-policy: "audit"
-
-            - name: "Check for failures"
-              if: "contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')"
-              run: |
-                  echo "One of the dependent jobs have failed. You may need to re-run it." && exit 1
+    lint:
+        permissions:
+            contents: "read"
+            pull-requests: "read"
+        uses: "anolilab/workflows/.github/workflows/lint.yml@3bd9e3be8b2c419cf0e9237c1e78ab9a5e68bafa" # v15.1.3+
+        with:
+            lint_eslint: true
+            lint_types: false
+            lint_attw: false
+            lint_package_json: false
+            lint_markdown: true
+            lint_yaml: true
+            lint_actionlint: false
+            lint_rust: false
+            node_version: "22"
