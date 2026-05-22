@@ -33,10 +33,10 @@
         "dev": "vite",
         "download:resume": "esno ./bin/download-resume-gist.ts",
         "lint": "pnpm run lint:text && pnpm run lint:prettier && pnpm run lint:eslint",
-        "lint:fix": "pnpm run lint:text:fix && pnpm run lint:prettier:fix && pnpm run lint:eslint:fix",
         "lint:commits": "pnpm commitlint --from HEAD~1 --to HEAD --verbose",
         "lint:eslint": "eslint .",
         "lint:eslint:fix": "eslint . --fix",
+        "lint:fix": "pnpm run lint:text:fix && pnpm run lint:prettier:fix && pnpm run lint:eslint:fix",
         "lint:prettier": "prettier --config=.prettierrc.cjs '**/*.{js,jsx,tsx,ts,less,md,json,html}'",
         "lint:prettier:fix": "prettier --config=.prettierrc.cjs --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
         "lint:secrets": "secretlint **/*",
@@ -63,7 +63,9 @@
         "puppeteer": "catalog:"
     },
     "devDependencies": {
+        "@anolilab/commitlint-config": "catalog:",
         "@anolilab/eslint-config": "catalog:",
+        "@anolilab/lint-staged-config": "catalog:",
         "@anolilab/prettier-config": "catalog:",
         "@anolilab/semantic-release-preset": "catalog:",
         "@anolilab/textlint-config": "catalog:",
