@@ -1,21 +1,27 @@
+allowBuilds:
+    esbuild: true
+    puppeteer: true
+    sharp: true
+    unrs-resolver: true
+
 catalog:
     "@anolilab/commitlint-config": ^10.0.1
     "@anolilab/eslint-config": ^27.0.2
     "@anolilab/lint-staged-config": ^11.0.1
     "@anolilab/prettier-config": ^10.0.1
     "@anolilab/resume-schema": 2.0.3
-    "@anolilab/semantic-release-preset": ^13.4.15
+    "@anolilab/semantic-release-preset": ^13.4.16
     "@anolilab/textlint-config": ^13.0.1
-    "@commitlint/cli": ^21.0.1
-    "@commitlint/config-conventional": ^21.0.1
-    "@eslint/css": ^1.2.0
+    "@commitlint/cli": ^21.0.2
+    "@commitlint/config-conventional": ^21.0.2
+    "@eslint/css": ^1.3.0
     "@fontsource/noto-sans-sc": ^5.2.9
     "@fontsource/nunito": ^5.2.7
     "@octokit/rest": ^22.0.1
     "@tailwindcss/postcss": ^4.3.0
     "@types/gravatar": ^1.8.6
     "@types/lodash.capitalize": ^4.2.9
-    "@vitest/coverage-v8": 4.1.7
+    "@vitest/coverage-v8": 4.1.8
     ajv: ^8.20.0
     ajv-formats: ^3.0.1
     audit-ci: ^7.1.0
@@ -23,29 +29,29 @@ catalog:
     commitizen: ^4.3.1
     cross-env: ^10.1.0
     cssnano: ^8.0.1
-    date-fns: ^4.2.1
+    date-fns: ^4.4.0
     deepmerge: ^4.3.1
-    eslint: 10.4.0
+    eslint: 10.4.1
     esno: ^4.8.0
     gravatar: ^1.8.2
     handlebars: ^4.7.9
     husky: ^9.1.7
     is-ci: ^4.1.0
-    lint-staged: ^17.0.5
+    lint-staged: ^17.0.7
     lodash.capitalize: ^4.2.1
     postcss: ^8.5.15
     prettier: ^3.8.3
-    puppeteer: ^25.0.4
+    puppeteer: ^25.1.0
     semantic-release: ^25.0.3
     sort-package-json: ^3.6.1
     tailwindcss: ^4.3.0
     textlint: ^15.7.1
     typescript: ^6.0.3
-    vite: 8.0.13
+    vite: 8.0.15
     vite-plugin-favicon2: ^1.1.5
     vite-plugin-handlebars: ^2.0.3
     vite-plugin-static-copy: ^4.1.0
-    vitest: ^4.1.7
+    vitest: ^4.1.8
 
 catalogMode: prefer
 

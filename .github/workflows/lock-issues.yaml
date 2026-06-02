@@ -12,6 +12,6 @@ permissions:
 
 jobs:
     lock-closed:
-        uses: "anolilab/workflows/.github/workflows/lock-closed.yml@fb949a57450041b1d899f1436d17dae2701ba9ec" # main
+        uses: "anolilab/workflows/.github/workflows/lock-closed.yml@0a43f1373be806fe25f390a7119dfd7292c6850f" # v18.0.2 # main
         with:
             target-repo: "anolilab/resume"
