@@ -4,6 +4,8 @@ allowBuilds:
     sharp: true
     unrs-resolver: true
 
+blockExoticSubdeps: true
+
 catalog:
     "@anolilab/commitlint-config": ^10.0.1
     "@anolilab/eslint-config": ^27.0.2
