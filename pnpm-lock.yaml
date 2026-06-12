@@ -112,8 +112,8 @@ catalogs:
       specifier: ^8.5.15
       version: 8.5.15
     prettier:
-      specifier: ^3.8.3
-      version: 3.8.3
+      specifier: ^3.8.4
+      version: 3.8.4
     puppeteer:
       specifier: ^25.1.0
       version: 25.1.0
@@ -225,10 +225,10 @@ importers:
         version: 27.0.2(@eslint/css@1.3.0)(@types/node@22.18.3)(@typescript-eslint/eslint-plugin@8.59.1(@typescript-eslint/parser@8.59.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(@typescript-eslint/utils@8.59.4(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)(vitest@4.1.8)(yaml@2.9.0)
       '@anolilab/lint-staged-config':
         specifier: 'catalog:'
-        version: 11.0.1(@types/node@22.18.3)(eslint@10.4.1(jiti@2.7.0))(husky@9.1.7)(lint-staged@17.0.7)(prettier@3.8.3)(vitest@4.1.8)(yaml@2.9.0)
+        version: 11.0.1(@types/node@22.18.3)(eslint@10.4.1(jiti@2.7.0))(husky@9.1.7)(lint-staged@17.0.7)(prettier@3.8.4)(vitest@4.1.8)(yaml@2.9.0)
       '@anolilab/prettier-config':
         specifier: 'catalog:'
-        version: 10.0.1(prettier@3.8.3)
+        version: 10.0.1(prettier@3.8.4)
       '@anolilab/semantic-release-preset':
         specifier: 'catalog:'
         version: 13.4.16(@semantic-release/npm@13.1.5(semantic-release@25.0.3(typescript@6.0.3)))(semantic-release@25.0.3(typescript@6.0.3))(yaml@2.9.0)
@@ -291,7 +291,7 @@ importers:
         version: 8.5.15
       prettier:
         specifier: 'catalog:'
-        version: 3.8.3
+        version: 3.8.4
       semantic-release:
         specifier: 'catalog:'
         version: 25.0.3(typescript@6.0.3)
@@ -6444,8 +6444,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier@3.8.3:
-    resolution: {integrity: sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw==}
+  prettier@3.8.4:
+    resolution: {integrity: sha512-N2MylSdi48+5N/6S5j+maeHbUSIzzZ5uOcX5Hm4QpV8Dkb1HFjfAKTKX6yNPJQD9AhcT3ifHNB66tWTTJDi11Q==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -8170,7 +8170,7 @@ snapshots:
       - vitest
       - yaml
 
-  '@anolilab/lint-staged-config@11.0.1(@types/node@22.18.3)(eslint@10.4.1(jiti@2.7.0))(husky@9.1.7)(lint-staged@17.0.7)(prettier@3.8.3)(vitest@4.1.8)(yaml@2.9.0)':
+  '@anolilab/lint-staged-config@11.0.1(@types/node@22.18.3)(eslint@10.4.1(jiti@2.7.0))(husky@9.1.7)(lint-staged@17.0.7)(prettier@3.8.4)(vitest@4.1.8)(yaml@2.9.0)':
     dependencies:
       '@visulima/fs': 4.1.0(yaml@2.9.0)
       '@visulima/package': 4.1.7(@types/node@22.18.3)
@@ -8180,15 +8180,15 @@ snapshots:
     optionalDependencies:
       eslint: 10.4.1(jiti@2.7.0)
       lint-staged: 17.0.7
-      prettier: 3.8.3
+      prettier: 3.8.4
       vitest: 4.1.8(@types/node@22.18.3)(@vitest/coverage-v8@4.1.8)(vite@8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
     transitivePeerDependencies:
       - '@types/node'
       - yaml
 
-  '@anolilab/prettier-config@10.0.1(prettier@3.8.3)':
+  '@anolilab/prettier-config@10.0.1(prettier@3.8.4)':
     dependencies:
-      prettier: 3.8.3
+      prettier: 3.8.4
 
   '@anolilab/resume-schema@2.0.3': {}
 
@@ -15122,7 +15122,7 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier@3.8.3: {}
+  prettier@3.8.4: {}
 
   pretty-ms@9.3.0:
     dependencies:
