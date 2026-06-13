@@ -172,8 +172,8 @@ overrides:
   tough-cookie@<4.1.3: '>=6.0.1'
   url-regex@<=5.0.0: npm:url-regex-safe@^4.0.0
   uuid@<11.1.1: '>=14.0.0'
-  vite@>=7.0.0 <=7.3.1: '>=7.3.2'
-  vite@>=7.1.0 <=7.3.1: '>=7.3.2'
+  vite@>=7.0.0 <=7.3.1: '>=8.0.16'
+  vite@>=7.1.0 <=7.3.1: '>=8.0.16'
   xml2js@<0.5.0: '>=0.6.2'
 
 importers:
@@ -2393,7 +2393,7 @@ packages:
     resolution: {integrity: sha512-LEiN/xe4OSIbKe9HQIp5OC24agGD9J5CnmMgsLohVVoOPWL9a2sBoR6VBx43jQZb7Kr1l4RCuyCJzcAa0+dojw==}
     peerDependencies:
       msw: ^2.4.9
-      vite: '>=7.3.2'
+      vite: '>=8.0.16'
     peerDependenciesMeta:
       msw:
         optional: true
@@ -7742,18 +7742,18 @@ packages:
   vite-plugin-favicon2@1.1.5:
     resolution: {integrity: sha512-cI47pXLsrboI6/w5JHQF0/z6/Z5QtLadCvQBKMWa156pEGJzNTXAPkf4B4cBDg0Qfyo2h2cJsmoKUeXQWjbDiA==}
     peerDependencies:
-      vite: '>=7.3.2'
+      vite: '>=8.0.16'
 
   vite-plugin-handlebars@2.0.3:
     resolution: {integrity: sha512-LnzLfYtmHfK66R5M3yL/2EAYmsZh+/0SrlBStRPJYhww0pBDQBDzDgxmxHl9JV2UHZ/21uOx5+kPPZiEp2gMCQ==}
     peerDependencies:
-      vite: '>=7.3.2'
+      vite: '>=8.0.16'
 
   vite-plugin-static-copy@4.1.1:
     resolution: {integrity: sha512-GrlA8YklrAfSyxJ4M3fdQLOo9oNkp56IM9FYgX/WtEgeIFkPwhu4wzpufBCIuNKCa6Fn77FkRdYxkHqV0FwjAw==}
     engines: {node: ^22.0.0 || >=24.0.0}
     peerDependencies:
-      vite: '>=7.3.2'
+      vite: '>=8.0.16'
 
   vite@8.0.15:
     resolution: {integrity: sha512-qpgllRxrLqwsMAGRdLhsEr9bepaOQk1rxH1xT2coBXLaEB/bfkqQj1j7RMxwMfnYrvO1ZnFMiwX+wBVgnsyn0g==}
@@ -7814,7 +7814,7 @@ packages:
       '@vitest/ui': 4.1.8
       happy-dom: '*'
       jsdom: '*'
-      vite: '>=7.3.2'
+      vite: '>=8.0.16'
     peerDependenciesMeta:
       '@edge-runtime/vm':
         optional: true
