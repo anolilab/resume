@@ -8,12 +8,12 @@ blockExoticSubdeps: true
 
 catalog:
     "@anolilab/commitlint-config": ^10.0.1
-    "@anolilab/eslint-config": ^27.0.2
-    "@anolilab/lint-staged-config": ^11.0.1
+    "@anolilab/eslint-config": ^27.0.10
+    "@anolilab/lint-staged-config": ^11.0.9
     "@anolilab/prettier-config": ^10.0.1
     "@anolilab/resume-schema": 2.0.3
     "@anolilab/semantic-release-preset": ^13.4.16
-    "@anolilab/textlint-config": ^13.0.1
+    "@anolilab/textlint-config": ^13.0.2
     "@commitlint/cli": ^21.0.2
     "@commitlint/config-conventional": ^21.0.2
     "@eslint/css": ^1.3.0
@@ -28,9 +28,9 @@ catalog:
     ajv-formats: ^3.0.1
     audit-ci: ^7.1.0
     c8: ^11.0.0
-    commitizen: ^4.3.1
+    commitizen: ^4.3.2
     cross-env: ^10.1.0
-    cssnano: ^8.0.1
+    cssnano: ^8.0.2
     date-fns: ^4.4.0
     deepmerge: ^4.3.1
     eslint: 10.4.1
@@ -42,14 +42,14 @@ catalog:
     lint-staged: ^17.0.7
     lodash.capitalize: ^4.2.1
     postcss: ^8.5.15
-    prettier: ^3.8.3
+    prettier: ^3.8.4
     puppeteer: ^25.1.0
     semantic-release: ^25.0.5
     sort-package-json: ^4.0.0
     tailwindcss: ^4.3.1
     textlint: ^15.7.1
     typescript: ^6.0.3
-    vite: 8.0.15
+    vite: 8.0.16
     vite-plugin-favicon2: ^1.1.5
     vite-plugin-handlebars: ^2.0.3
     vite-plugin-static-copy: ^4.1.1
@@ -93,7 +93,7 @@ overrides:
     body-parser@>=2.2.0 <2.2.1: ">=2.2.2"
     chrono-node@<2.2.4: ">=2.9.1"
     file-type@>=13.0.0 <21.3.1: ">=22.0.1"
-    form-data@<2.5.4: ">=4.0.5"
+    form-data@<2.5.4: ">=4.0.6"
     jpeg-js@<0.4.0: ">=0.4.4"
     jpeg-js@<0.4.4: ">=0.4.4"
     lodash@<=4.17.23: ">=4.18.0"
@@ -105,11 +105,11 @@ overrides:
     phin@<3.7.1: ">=3.7.1"
     qs@<6.14.1: ">=6.15.2"
     request@<=2.88.2: npm:@cypress/request@^4.0.1
-    semver: 7.8.2
+    semver: 7.8.4
     sharp@<0.30.5: ">=0.34.5"
     sharp@<0.32.6: ">=0.34.5"
     shell-quote@>=1.1.0 <=1.8.3: ^1.8.4
-    tmp@<0.2.6: ">=0.2.6"
+    tmp@<0.2.6: ">=0.2.7"
     tough-cookie@<4.1.3: ">=6.0.1"
     url-regex@<=5.0.0: npm:url-regex-safe@^4.0.0
     uuid@<11.1.1: ">=14.0.0"
