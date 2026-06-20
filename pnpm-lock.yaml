@@ -112,8 +112,8 @@ catalogs:
       specifier: ^8.5.15
       version: 8.5.15
     prettier:
-      specifier: ^3.8.4
-      version: 3.8.4
+      specifier: ^3.8.3
+      version: 3.8.3
     puppeteer:
       specifier: ^25.1.0
       version: 25.1.0
@@ -133,8 +133,8 @@ catalogs:
       specifier: ^6.0.3
       version: 6.0.3
     vite:
-      specifier: 8.0.15
-      version: 8.0.15
+      specifier: 8.0.16
+      version: 8.0.16
     vite-plugin-favicon2:
       specifier: ^1.1.5
       version: 1.1.5
@@ -172,8 +172,8 @@ overrides:
   tough-cookie@<4.1.3: '>=6.0.1'
   url-regex@<=5.0.0: npm:url-regex-safe@^4.0.0
   uuid@<11.1.1: '>=14.0.0'
-  vite@>=7.0.0 <=7.3.1: '>=7.3.2'
-  vite@>=7.1.0 <=7.3.1: '>=7.3.2'
+  vite@>=7.0.0 <=7.3.1: '>=7.3.5'
+  vite@>=7.1.0 <=7.3.1: '>=7.3.5'
   xml2js@<0.5.0: '>=0.6.2'
 
 importers:
@@ -225,10 +225,10 @@ importers:
         version: 27.0.2(@eslint/css@1.3.0)(@types/node@22.18.3)(@typescript-eslint/eslint-plugin@8.59.1(@typescript-eslint/parser@8.59.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(@typescript-eslint/utils@8.59.4(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)(vitest@4.1.8)(yaml@2.9.0)
       '@anolilab/lint-staged-config':
         specifier: 'catalog:'
-        version: 11.0.1(@types/node@22.18.3)(eslint@10.4.1(jiti@2.7.0))(husky@9.1.7)(lint-staged@17.0.7)(prettier@3.8.4)(vitest@4.1.8)(yaml@2.9.0)
+        version: 11.0.1(@types/node@22.18.3)(eslint@10.4.1(jiti@2.7.0))(husky@9.1.7)(lint-staged@17.0.7)(prettier@3.8.3)(vitest@4.1.8)(yaml@2.9.0)
       '@anolilab/prettier-config':
         specifier: 'catalog:'
-        version: 10.0.1(prettier@3.8.4)
+        version: 10.0.1(prettier@3.8.3)
       '@anolilab/semantic-release-preset':
         specifier: 'catalog:'
         version: 13.4.16(@semantic-release/npm@13.1.5(semantic-release@25.0.3(typescript@6.0.3)))(semantic-release@25.0.3(typescript@6.0.3))(yaml@2.9.0)
@@ -291,7 +291,7 @@ importers:
         version: 8.5.15
       prettier:
         specifier: 'catalog:'
-        version: 3.8.4
+        version: 3.8.3
       semantic-release:
         specifier: 'catalog:'
         version: 25.0.3(typescript@6.0.3)
@@ -309,19 +309,19 @@ importers:
         version: 6.0.3
       vite:
         specifier: 'catalog:'
-        version: 8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)
+        version: 8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)
       vite-plugin-favicon2:
         specifier: 'catalog:'
-        version: 1.1.5(vite@8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
+        version: 1.1.5(vite@8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
       vite-plugin-handlebars:
         specifier: 'catalog:'
-        version: 2.0.3(vite@8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
+        version: 2.0.3(vite@8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
       vite-plugin-static-copy:
         specifier: 'catalog:'
-        version: 4.1.1(vite@8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
+        version: 4.1.1(vite@8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
       vitest:
         specifier: 'catalog:'
-        version: 4.1.8(@types/node@22.18.3)(@vitest/coverage-v8@4.1.8)(vite@8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
+        version: 4.1.8(@types/node@22.18.3)(@vitest/coverage-v8@4.1.8)(vite@8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
 
 packages:
 
@@ -2393,7 +2393,7 @@ packages:
     resolution: {integrity: sha512-LEiN/xe4OSIbKe9HQIp5OC24agGD9J5CnmMgsLohVVoOPWL9a2sBoR6VBx43jQZb7Kr1l4RCuyCJzcAa0+dojw==}
     peerDependencies:
       msw: ^2.4.9
-      vite: '>=7.3.2'
+      vite: '>=7.3.5'
     peerDependenciesMeta:
       msw:
         optional: true
@@ -6444,8 +6444,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier@3.8.4:
-    resolution: {integrity: sha512-N2MylSdi48+5N/6S5j+maeHbUSIzzZ5uOcX5Hm4QpV8Dkb1HFjfAKTKX6yNPJQD9AhcT3ifHNB66tWTTJDi11Q==}
+  prettier@3.8.3:
+    resolution: {integrity: sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -7742,21 +7742,21 @@ packages:
   vite-plugin-favicon2@1.1.5:
     resolution: {integrity: sha512-cI47pXLsrboI6/w5JHQF0/z6/Z5QtLadCvQBKMWa156pEGJzNTXAPkf4B4cBDg0Qfyo2h2cJsmoKUeXQWjbDiA==}
     peerDependencies:
-      vite: '>=7.3.2'
+      vite: '>=7.3.5'
 
   vite-plugin-handlebars@2.0.3:
     resolution: {integrity: sha512-LnzLfYtmHfK66R5M3yL/2EAYmsZh+/0SrlBStRPJYhww0pBDQBDzDgxmxHl9JV2UHZ/21uOx5+kPPZiEp2gMCQ==}
     peerDependencies:
-      vite: '>=7.3.2'
+      vite: '>=7.3.5'
 
   vite-plugin-static-copy@4.1.1:
     resolution: {integrity: sha512-GrlA8YklrAfSyxJ4M3fdQLOo9oNkp56IM9FYgX/WtEgeIFkPwhu4wzpufBCIuNKCa6Fn77FkRdYxkHqV0FwjAw==}
     engines: {node: ^22.0.0 || >=24.0.0}
     peerDependencies:
-      vite: '>=7.3.2'
+      vite: '>=7.3.5'
 
-  vite@8.0.15:
-    resolution: {integrity: sha512-qpgllRxrLqwsMAGRdLhsEr9bepaOQk1rxH1xT2coBXLaEB/bfkqQj1j7RMxwMfnYrvO1ZnFMiwX+wBVgnsyn0g==}
+  vite@8.0.16:
+    resolution: {integrity: sha512-h9bXPmJichP5fLmVQo3PyaGSDE2n3aPuomeAlVRm0JLmt4rY6zmPKd59HYI4LNW8oTK7tlTsuC7l/m7awx9Jcw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -7814,7 +7814,7 @@ packages:
       '@vitest/ui': 4.1.8
       happy-dom: '*'
       jsdom: '*'
-      vite: '>=7.3.2'
+      vite: '>=7.3.5'
     peerDependenciesMeta:
       '@edge-runtime/vm':
         optional: true
@@ -8170,7 +8170,7 @@ snapshots:
       - vitest
       - yaml
 
-  '@anolilab/lint-staged-config@11.0.1(@types/node@22.18.3)(eslint@10.4.1(jiti@2.7.0))(husky@9.1.7)(lint-staged@17.0.7)(prettier@3.8.4)(vitest@4.1.8)(yaml@2.9.0)':
+  '@anolilab/lint-staged-config@11.0.1(@types/node@22.18.3)(eslint@10.4.1(jiti@2.7.0))(husky@9.1.7)(lint-staged@17.0.7)(prettier@3.8.3)(vitest@4.1.8)(yaml@2.9.0)':
     dependencies:
       '@visulima/fs': 4.1.0(yaml@2.9.0)
       '@visulima/package': 4.1.7(@types/node@22.18.3)
@@ -8180,15 +8180,15 @@ snapshots:
     optionalDependencies:
       eslint: 10.4.1(jiti@2.7.0)
       lint-staged: 17.0.7
-      prettier: 3.8.4
-      vitest: 4.1.8(@types/node@22.18.3)(@vitest/coverage-v8@4.1.8)(vite@8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
+      prettier: 3.8.3
+      vitest: 4.1.8(@types/node@22.18.3)(@vitest/coverage-v8@4.1.8)(vite@8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
     transitivePeerDependencies:
       - '@types/node'
       - yaml
 
-  '@anolilab/prettier-config@10.0.1(prettier@3.8.4)':
+  '@anolilab/prettier-config@10.0.1(prettier@3.8.3)':
     dependencies:
-      prettier: 3.8.4
+      prettier: 3.8.3
 
   '@anolilab/resume-schema@2.0.3': {}
 
@@ -10340,7 +10340,7 @@ snapshots:
       obug: 2.1.1
       std-env: 4.1.0
       tinyrainbow: 3.1.0
-      vitest: 4.1.8(@types/node@22.18.3)(@vitest/coverage-v8@4.1.8)(vite@8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
+      vitest: 4.1.8(@types/node@22.18.3)(@vitest/coverage-v8@4.1.8)(vite@8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
 
   '@vitest/eslint-plugin@1.6.16(@typescript-eslint/eslint-plugin@8.59.1(@typescript-eslint/parser@8.59.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)(vitest@4.1.8)':
     dependencies:
@@ -10350,7 +10350,7 @@ snapshots:
     optionalDependencies:
       '@typescript-eslint/eslint-plugin': 8.59.1(@typescript-eslint/parser@8.59.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
       typescript: 6.0.3
-      vitest: 4.1.8(@types/node@22.18.3)(@vitest/coverage-v8@4.1.8)(vite@8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
+      vitest: 4.1.8(@types/node@22.18.3)(@vitest/coverage-v8@4.1.8)(vite@8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
     transitivePeerDependencies:
       - supports-color
 
@@ -10363,13 +10363,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.0
 
-  '@vitest/mocker@4.1.8(vite@8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))':
+  '@vitest/mocker@4.1.8(vite@8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))':
     dependencies:
       '@vitest/spy': 4.1.8
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)
+      vite: 8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)
 
   '@vitest/pretty-format@4.1.8':
     dependencies:
@@ -15122,7 +15122,7 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier@3.8.4: {}
+  prettier@3.8.3: {}
 
   pretty-ms@9.3.0:
     dependencies:
@@ -16885,32 +16885,32 @@ snapshots:
       remove-trailing-separator: 1.1.0
       replace-ext: 1.0.1
 
-  vite-plugin-favicon2@1.1.5(vite@8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)):
+  vite-plugin-favicon2@1.1.5(vite@8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)):
     dependencies:
       favicons: 6.2.2
       find-root: 1.1.0
       parse-author: 2.0.0
       parse5: 6.0.1
-      vite: 8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)
+      vite: 8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)
     transitivePeerDependencies:
       - debug
       - re2
       - supports-color
 
-  vite-plugin-handlebars@2.0.3(vite@8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)):
+  vite-plugin-handlebars@2.0.3(vite@8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)):
     dependencies:
       handlebars: 4.7.9
-      vite: 8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)
+      vite: 8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)
 
-  vite-plugin-static-copy@4.1.1(vite@8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)):
+  vite-plugin-static-copy@4.1.1(vite@8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)):
     dependencies:
       chokidar: 3.6.0
       p-map: 7.0.4
       picocolors: 1.1.1
       tinyglobby: 0.2.17
-      vite: 8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)
+      vite: 8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)
 
-  vite@8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0):
+  vite@8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
@@ -16925,10 +16925,10 @@ snapshots:
       tsx: 4.22.3
       yaml: 2.9.0
 
-  vitest@4.1.8(@types/node@22.18.3)(@vitest/coverage-v8@4.1.8)(vite@8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)):
+  vitest@4.1.8(@types/node@22.18.3)(@vitest/coverage-v8@4.1.8)(vite@8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)):
     dependencies:
       '@vitest/expect': 4.1.8
-      '@vitest/mocker': 4.1.8(vite@8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
+      '@vitest/mocker': 4.1.8(vite@8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0))
       '@vitest/pretty-format': 4.1.8
       '@vitest/runner': 4.1.8
       '@vitest/snapshot': 4.1.8
@@ -16945,7 +16945,7 @@ snapshots:
       tinyexec: 1.2.4
       tinyglobby: 0.2.17
       tinyrainbow: 3.1.0
-      vite: 8.0.15(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)
+      vite: 8.0.16(@types/node@22.18.3)(esbuild@0.28.0)(jiti@2.7.0)(tsx@4.22.3)(yaml@2.9.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.18.3
