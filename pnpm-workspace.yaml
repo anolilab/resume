@@ -7,16 +7,16 @@ allowBuilds:
 blockExoticSubdeps: true
 
 catalog:
-    "@anolilab/commitlint-config": ^10.0.1
+    "@anolilab/commitlint-config": ^10.1.0
     "@anolilab/eslint-config": ^27.0.10
-    "@anolilab/lint-staged-config": ^11.0.9
+    "@anolilab/lint-staged-config": ^11.1.2
     "@anolilab/prettier-config": ^10.0.1
     "@anolilab/resume-schema": 2.0.3
     "@anolilab/semantic-release-preset": ^13.4.16
     "@anolilab/textlint-config": ^13.0.2
     "@commitlint/cli": ^21.0.2
     "@commitlint/config-conventional": ^21.0.2
-    "@eslint/css": ^1.3.0
+    "@eslint/css": ^1.4.0
     "@fontsource/noto-sans-sc": ^5.2.9
     "@fontsource/nunito": ^5.2.7
     "@octokit/rest": ^22.0.1
@@ -39,7 +39,7 @@ catalog:
     handlebars: ^4.7.9
     husky: ^9.1.7
     is-ci: ^4.1.0
-    lint-staged: ^17.0.7
+    lint-staged: ^17.3.0
     lodash.capitalize: ^4.2.1
     postcss: ^8.5.15
     prettier: ^3.8.4
@@ -90,16 +90,16 @@ onlyBuiltDependencies:
     - unrs-resolver
 
 overrides:
-    body-parser@>=2.2.0 <2.2.1: ">=2.2.2"
-    chrono-node@<2.2.4: ">=2.9.1"
+    body-parser@>=2.2.0 <2.2.1: ">=2.3.0"
+    chrono-node@<2.2.4: ">=2.10.1"
     esbuild@>=0.27.3 <0.28.1: ">=0.28.1"
     file-type@>=13.0.0 <21.3.1: ">=22.0.1"
     form-data@<2.5.4: ">=4.0.6"
     form-data@>=4.0.0 <4.0.6: ">=4.0.6"
-    hono@<4.12.25: ">=4.12.25"
+    hono@<4.12.25: ">=4.13.1"
     jpeg-js@<0.4.0: ">=0.4.4"
     jpeg-js@<0.4.4: ">=0.4.4"
-    js-yaml@<=4.1.1: ">=4.1.2"
+    js-yaml@<=4.1.1: ">=4.3.1"
     lodash@<=4.17.23: ">=4.18.0"
     lodash@>=4.0.0 <=4.17.22: ">=4.18.1"
     lodash@>=4.0.0 <=4.17.23: ">=4.18.0"
@@ -110,13 +110,13 @@ overrides:
     qs@<6.14.1: ">=6.15.2"
     request@<=2.88.2: npm:@cypress/request@^4.0.1
     semver: 7.8.4
-    sharp@<0.30.5: ">=0.34.5"
-    sharp@<0.32.6: ">=0.34.5"
-    shell-quote@>=1.1.0 <=1.8.3: ^1.8.4
+    sharp@<0.30.5: ">=0.35.3"
+    sharp@<0.32.6: ">=0.35.3"
+    shell-quote@>=1.1.0 <=1.8.3: ^1.10.0
     tmp@<0.2.6: ">=0.2.7"
     tough-cookie@<4.1.3: ">=6.0.1"
-    undici@<6.27.0: ">=6.27.0"
-    undici@>=7.0.0 <7.28.0: ">=7.28.0"
+    undici@<6.27.0: ">=6.28.0"
+    undici@>=7.0.0 <7.28.0: ">=7.29.0"
     url-regex@<=5.0.0: npm:url-regex-safe@^4.0.0
     uuid@<11.1.1: ">=14.0.0"
     vite@>=7.0.0 <=7.3.1: ">=8.0.16"
