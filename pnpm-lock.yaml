@@ -127,7 +127,7 @@ catalogs:
       specifier: ^4.3.3
       version: 4.3.3
     textlint:
-      specifier: ^15.7.1
+      specifier: ^15.8.0
       version: 15.8.0
     typescript:
       specifier: ^6.0.3
