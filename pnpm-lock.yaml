@@ -145,7 +145,7 @@ catalogs:
       specifier: ^4.1.1
       version: 4.1.1
     vitest:
-      specifier: ^4.1.9
+      specifier: ^4.1.10
       version: 4.1.10
 
 overrides:
