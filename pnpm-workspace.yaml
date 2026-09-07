@@ -1,59 +1,59 @@
 allowBuilds:
-  esbuild: true
-  puppeteer: true
-  sharp: true
-  unrs-resolver: true
+    esbuild: true
+    puppeteer: true
+    sharp: true
+    unrs-resolver: true
 
 blockExoticSubdeps: true
 
 catalog:
-  "@anolilab/commitlint-config": ^10.1.2
-  "@anolilab/eslint-config": ^28.1.5
-  "@anolilab/lint-staged-config": ^11.1.3
-  "@anolilab/prettier-config": ^10.0.3
-  "@anolilab/resume-schema": 2.0.3
-  "@anolilab/semantic-release-preset": ^13.4.22
-  "@anolilab/textlint-config": ^13.0.6
-  "@commitlint/cli": ^21.2.2
-  "@commitlint/config-conventional": ^21.2.2
-  "@eslint/css": ^1.4.0
-  "@fontsource/noto-sans-sc": ^5.3.0
-  "@fontsource/nunito": ^5.3.0
-  "@octokit/rest": ^22.0.1
-  "@tailwindcss/postcss": ^4.3.3
-  "@types/gravatar": ^1.8.6
-  "@types/lodash.capitalize": ^4.2.9
-  "@vitest/coverage-v8": 4.1.10
-  ajv: ^8.20.0
-  ajv-formats: ^3.0.1
-  audit-ci: ^7.1.0
-  c8: ^11.0.0
-  commitizen: ^4.3.2
-  cross-env: ^10.1.0
-  cssnano: ^8.0.10
-  date-fns: ^4.4.0
-  deepmerge: ^4.3.1
-  eslint: 10.8.1
-  esno: ^4.8.0
-  gravatar: ^1.8.2
-  handlebars: ^4.7.9
-  husky: ^9.1.7
-  is-ci: ^4.1.0
-  lint-staged: ^17.4.1
-  lodash.capitalize: ^4.2.1
-  postcss: ^8.5.15
-  prettier: ^3.9.6
-  puppeteer: ^25.10.0
-  semantic-release: ^25.0.9
-  sort-package-json: ^4.0.0
-  tailwindcss: ^4.3.3
-  textlint: ^15.8.0
-  typescript: ^6.0.3
-  vite: 8.0.16
-  vite-plugin-favicon2: ^1.1.5
-  vite-plugin-handlebars: ^2.0.3
-  vite-plugin-static-copy: ^4.1.1
-  vitest: ^4.1.11
+    "@anolilab/commitlint-config": ^10.1.2
+    "@anolilab/eslint-config": ^28.1.5
+    "@anolilab/lint-staged-config": ^11.1.3
+    "@anolilab/prettier-config": ^10.0.3
+    "@anolilab/resume-schema": 2.0.3
+    "@anolilab/semantic-release-preset": ^13.4.22
+    "@anolilab/textlint-config": ^13.0.6
+    "@commitlint/cli": ^21.2.2
+    "@commitlint/config-conventional": ^21.2.2
+    "@eslint/css": ^1.4.0
+    "@fontsource/noto-sans-sc": ^5.3.0
+    "@fontsource/nunito": ^5.3.0
+    "@octokit/rest": ^22.0.1
+    "@tailwindcss/postcss": ^4.3.3
+    "@types/gravatar": ^1.8.6
+    "@types/lodash.capitalize": ^4.2.9
+    "@vitest/coverage-v8": 4.1.10
+    ajv: ^8.20.0
+    ajv-formats: ^3.0.1
+    audit-ci: ^7.1.0
+    c8: ^11.0.0
+    commitizen: ^4.3.2
+    cross-env: ^10.1.0
+    cssnano: ^8.0.10
+    date-fns: ^4.4.0
+    deepmerge: ^4.3.1
+    eslint: 10.8.1
+    esno: ^4.8.0
+    gravatar: ^1.8.2
+    handlebars: ^4.7.9
+    husky: ^9.1.7
+    is-ci: ^4.1.0
+    lint-staged: ^17.4.1
+    lodash.capitalize: ^4.2.1
+    postcss: ^8.5.15
+    prettier: ^3.9.6
+    puppeteer: ^25.10.0
+    semantic-release: ^25.0.9
+    sort-package-json: ^4.0.0
+    tailwindcss: ^4.3.3
+    textlint: ^15.8.0
+    typescript: ^6.0.3
+    vite: 8.0.16
+    vite-plugin-favicon2: ^1.1.5
+    vite-plugin-handlebars: ^2.0.3
+    vite-plugin-static-copy: ^4.1.1
+    vitest: ^4.1.11
 
 catalogMode: prefer
 
@@ -74,74 +74,72 @@ linkWorkspacePackages: true
 minimumReleaseAge: 1440
 
 minimumReleaseAgeExclude:
-  - vitest
-  - "@vitest/*"
-  - typescript
-  - "@types/*"
-  - "@anolilab/*"
-  - "@commitlint/*"
-  - url-regex-safe@4.0.0
-  - "@cypress/request@4.0.1"
-  - shell-quote@1.8.4
-  # Renovate security update: qs@6.16.0
-  - qs@6.16.0
+    - vitest
+    - "@vitest/*"
+    - typescript
+    - "@types/*"
+    - "@anolilab/*"
+    - "@commitlint/*"
+    - url-regex-safe@4.0.0
+    - "@cypress/request@4.0.1"
+    - shell-quote@1.8.4
 
 onlyBuiltDependencies:
-  - puppeteer
-  - sharp
-  - unrs-resolver
+    - puppeteer
+    - sharp
+    - unrs-resolver
 
 overrides:
-  body-parser@>=2.2.0 <2.2.1: ">=2.3.0"
-  chrono-node@<2.2.4: ">=2.10.1"
-  esbuild@>=0.27.3 <0.28.1: ">=0.28.2"
-  file-type@>=13.0.0 <21.3.1: ">=22.0.2"
-  form-data@<2.5.4: ">=4.0.6"
-  form-data@>=4.0.0 <4.0.6: ">=4.0.6"
-  hono@<4.12.25: ">=4.13.5"
-  jpeg-js@<0.4.0: ">=0.4.4"
-  jpeg-js@<0.4.4: ">=0.4.4"
-  js-yaml@<=4.1.1: ">=5.4.1"
-  lodash@<=4.17.23: ">=4.18.0"
-  lodash@>=4.0.0 <=4.17.22: ">=4.18.1"
-  lodash@>=4.0.0 <=4.17.23: ">=4.18.0"
-  min-document@<=2.19.0: ">=2.19.2"
-  minimist@<0.2.1: ">=1.2.8"
-  minimist@<0.2.4: ">=1.2.8"
-  phin@<3.7.1: ">=3.7.1"
-  qs@<6.14.1: ">=6.16.0"
-  request@<=2.88.2: npm:@cypress/request@^4.0.1
-  semver: 7.8.5
-  sharp@<0.30.5: ">=0.35.4"
-  sharp@<0.32.6: ">=0.35.4"
-  shell-quote@>=1.1.0 <=1.8.3: ^1.10.0
-  tmp@<0.2.6: ">=0.2.7"
-  tough-cookie@<4.1.3: ">=6.0.2"
-  undici@<6.27.0: ">=8.10.1"
-  undici@>=7.0.0 <7.28.0: ">=8.10.1"
-  url-regex@<=5.0.0: npm:url-regex-safe@^4.0.0
-  uuid@<11.1.1: ">=14.0.2"
-  vite@>=7.0.0 <=7.3.1: ">=8.0.16"
-  vite@>=7.1.0 <=7.3.1: ">=8.0.16"
-  xml2js@<0.5.0: ">=0.6.2"
-  brace-expansion@<1.1.17: ">=3.0.6"
-  brace-expansion@>=2.0.0 <2.1.2: ">=2.1.4"
-  brace-expansion@>=4.0.0 <5.0.9: ">=5.0.9"
-  fast-uri@>=3.0.0 <3.1.3: ">=3.1.5 <4"
-  fast-uri@>=3.0.0 <=3.1.3: ">=3.1.5 <4"
-  fast-uri@>=3.0.0 <3.1.5: ">=3.1.5 <4"
-  postcss@<=8.5.22: ">=8.5.23"
-  ip-address@>=10.1.1 <=10.2.0: ">=10.7.0"
-  ip-address@>=10.1.1 <=10.2.1: ">=10.7.0"
-  ip-address@<=10.3.0: ">=10.7.0"
-  nanoid@<3.3.17: ">=3.3.18"
-  "@hono/node-server@<2.0.5": ">=2.1.1"
+    body-parser@>=2.2.0 <2.2.1: ">=2.3.0"
+    chrono-node@<2.2.4: ">=2.10.1"
+    esbuild@>=0.27.3 <0.28.1: ">=0.28.2"
+    file-type@>=13.0.0 <21.3.1: ">=22.0.2"
+    form-data@<2.5.4: ">=4.0.6"
+    form-data@>=4.0.0 <4.0.6: ">=4.0.6"
+    hono@<4.12.25: ">=4.13.5"
+    jpeg-js@<0.4.0: ">=0.4.4"
+    jpeg-js@<0.4.4: ">=0.4.4"
+    js-yaml@<=4.1.1: ">=5.4.1"
+    lodash@<=4.17.23: ">=4.18.0"
+    lodash@>=4.0.0 <=4.17.22: ">=4.18.1"
+    lodash@>=4.0.0 <=4.17.23: ">=4.18.0"
+    min-document@<=2.19.0: ">=2.19.2"
+    minimist@<0.2.1: ">=1.2.8"
+    minimist@<0.2.4: ">=1.2.8"
+    phin@<3.7.1: ">=3.7.1"
+    qs@<6.14.1: ">=6.15.3"
+    request@<=2.88.2: npm:@cypress/request@^4.0.1
+    semver: 7.8.5
+    sharp@<0.30.5: ">=0.35.4"
+    sharp@<0.32.6: ">=0.35.4"
+    shell-quote@>=1.1.0 <=1.8.3: ^1.10.0
+    tmp@<0.2.6: ">=0.2.7"
+    tough-cookie@<4.1.3: ">=6.0.2"
+    undici@<6.27.0: ">=8.10.1"
+    undici@>=7.0.0 <7.28.0: ">=8.10.1"
+    url-regex@<=5.0.0: npm:url-regex-safe@^4.0.0
+    uuid@<11.1.1: ">=14.0.2"
+    vite@>=7.0.0 <=7.3.1: ">=8.0.16"
+    vite@>=7.1.0 <=7.3.1: ">=8.0.16"
+    xml2js@<0.5.0: ">=0.6.2"
+    brace-expansion@<1.1.17: ">=3.0.6"
+    brace-expansion@>=2.0.0 <2.1.2: ">=3.0.6"
+    brace-expansion@>=4.0.0 <5.0.9: ">=5.0.9"
+    fast-uri@>=3.0.0 <3.1.3: ">=3.1.5 <4"
+    fast-uri@>=3.0.0 <=3.1.3: ">=3.1.5 <4"
+    fast-uri@>=3.0.0 <3.1.5: ">=3.1.5 <4"
+    postcss@<=8.5.22: ">=8.5.23"
+    ip-address@>=10.1.1 <=10.2.0: ">=10.7.0"
+    ip-address@>=10.1.1 <=10.2.1: ">=10.7.0"
+    ip-address@<=10.3.0: ">=10.7.0"
+    nanoid@<3.3.17: ">=3.3.18"
+    "@hono/node-server@<2.0.5": ">=2.1.1"
 
 auditConfig:
-  ignoreGhsas:
-    # image-size ICNS/JXL/HEIF DoS — no patched release (2.0.2 latest; 2.0.3 unreleased).
-    - GHSA-w3rx-r6r6-pgpr
-    - GHSA-5p2g-fcmc-qvqq
+    ignoreGhsas:
+        # image-size ICNS/JXL/HEIF DoS — no patched release (2.0.2 latest; 2.0.3 unreleased).
+        - GHSA-w3rx-r6r6-pgpr
+        - GHSA-5p2g-fcmc-qvqq
 
 preferWorkspacePackages: true
 
@@ -154,6 +152,6 @@ shellEmulator: true
 trustPolicy: no-downgrade
 
 trustPolicyExclude:
-  - cached-factory@0.1.0
-  - undici-types@6.21.0
-  - undici@5.29.0
+    - cached-factory@0.1.0
+    - undici-types@6.21.0
+    - undici@5.29.0
