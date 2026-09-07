@@ -30,7 +30,7 @@ catalog:
     c8: ^11.0.0
     commitizen: ^4.3.2
     cross-env: ^10.1.0
-    cssnano: ^8.0.10
+    cssnano: ^9.0.2
     date-fns: ^4.4.0
     deepmerge: ^4.3.1
     eslint: 10.8.1
