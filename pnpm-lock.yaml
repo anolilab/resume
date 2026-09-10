@@ -103,7 +103,7 @@ catalogs:
       specifier: ^4.1.0
       version: 4.1.0
     lint-staged:
-      specifier: ^17.4.1
+      specifier: ^17.5.0
       version: 17.5.0
     lodash.capitalize:
       specifier: ^4.2.1
@@ -155,7 +155,7 @@ overrides:
   file-type@>=13.0.0 <21.3.1: '>=22.0.2'
   form-data@<2.5.4: '>=4.0.6'
   form-data@>=4.0.0 <4.0.6: '>=4.0.6'
-  hono@<4.12.25: '>=4.13.5'
+  hono@<4.12.25: '>=4.13.7'
   jpeg-js@<0.4.0: '>=0.4.4'
   jpeg-js@<0.4.4: '>=0.4.4'
   js-yaml@<=4.1.1: '>=5.4.1'
