@@ -191,7 +191,7 @@ overrides:
   ip-address@>=10.1.1 <=10.2.0: '>=10.7.0'
   ip-address@>=10.1.1 <=10.2.1: '>=10.7.0'
   ip-address@<=10.3.0: '>=10.7.0'
-  nanoid@<3.3.17: '>=3.3.18'
+  nanoid@<3.3.17: '>=6.0.1'
   '@hono/node-server@<2.0.5': '>=2.1.1'
 
 importers:
@@ -2928,6 +2928,7 @@ packages:
   clone-buffer@1.0.0:
     resolution: {integrity: sha512-KLLTJWrvwIP+OPfMn0x2PheDEP20RPUcGXj/ERegTgdmPEZylALQldygiqrPPu8P45uNuPs7ckmReLY6v/iA5g==}
     engines: {node: '>= 0.10'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   clone-regexp@2.2.0:
     resolution: {integrity: sha512-beMpP7BOtTipFuW8hrJvREQ2DrRu3BE7by0ZpibtfBA+qfHYvMGTc2Yb1JMYPKg/JUw0CHYvpg796aNTSW9z7Q==}
