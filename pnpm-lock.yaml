@@ -185,7 +185,7 @@ overrides:
   brace-expansion@>=2.0.0 <2.1.2: '>=5.0.9'
   brace-expansion@>=4.0.0 <5.0.9: '>=5.0.9'
   fast-uri@>=3.0.0 <3.1.3: '>=3.1.5 <4'
-  fast-uri@>=3.0.0 <=3.1.3: '>=3.1.5 <4'
+  fast-uri@>=3.0.0 <=3.1.3: '>=3.1.5 <5'
   fast-uri@>=3.0.0 <3.1.5: '>=3.1.5 <4'
   postcss@<=8.5.22: '>=8.5.28'
   ip-address@>=10.1.1 <=10.2.0: '>=10.7.0'
@@ -2928,6 +2928,7 @@ packages:
   clone-buffer@1.0.0:
     resolution: {integrity: sha512-KLLTJWrvwIP+OPfMn0x2PheDEP20RPUcGXj/ERegTgdmPEZylALQldygiqrPPu8P45uNuPs7ckmReLY6v/iA5g==}
     engines: {node: '>= 0.10'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   clone-regexp@2.2.0:
     resolution: {integrity: sha512-beMpP7BOtTipFuW8hrJvREQ2DrRu3BE7by0ZpibtfBA+qfHYvMGTc2Yb1JMYPKg/JUw0CHYvpg796aNTSW9z7Q==}
