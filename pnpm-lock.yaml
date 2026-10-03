@@ -103,7 +103,7 @@ catalogs:
       specifier: ^4.1.0
       version: 4.1.0
     lint-staged:
-      specifier: ^17.4.1
+      specifier: ^17.6.0
       version: 17.6.0
     lodash.capitalize:
       specifier: ^4.2.1
@@ -152,7 +152,7 @@ overrides:
   body-parser@>=2.2.0 <2.2.1: '>=2.3.0'
   chrono-node@<2.2.4: '>=2.10.1'
   esbuild@>=0.27.3 <0.28.1: '>=0.28.2'
-  file-type@>=13.0.0 <21.3.1: '>=22.0.2'
+  file-type@>=13.0.0 <21.3.1: '>=22.1.1'
   form-data@<2.5.4: '>=4.0.6'
   form-data@>=4.0.0 <4.0.6: '>=4.0.6'
   hono@<4.12.25: '>=4.13.11'
@@ -169,13 +169,13 @@ overrides:
   qs@<6.14.1: '>=6.16.0'
   request@<=2.88.2: npm:@cypress/request@^4.0.1
   semver: 7.8.5
-  sharp@<0.30.5: '>=0.35.5'
-  sharp@<0.32.6: '>=0.35.5'
-  shell-quote@>=1.1.0 <=1.8.3: ^1.10.0
+  sharp@<0.30.5: '>=0.35.4'
+  sharp@<0.32.6: '>=0.35.4'
+  shell-quote@>=1.1.0 <=1.8.3: ^1.11.0
   tmp@<0.2.6: '>=0.2.7'
   tough-cookie@<4.1.3: '>=6.0.2'
-  undici@<6.27.0: '>=8.10.2'
-  undici@>=7.0.0 <7.28.0: '>=8.10.2'
+  undici@<6.27.0: '>=8.11.2'
+  undici@>=7.0.0 <7.28.0: '>=8.11.2'
   url-regex@<=5.0.0: npm:url-regex-safe@^4.0.0
   uuid@<11.1.1: '>=14.0.2'
   vite@>=7.0.0 <=7.3.1: '>=8.0.16'
@@ -243,7 +243,7 @@ importers:
         version: 29.0.1(@eslint/css@1.4.0)(@typescript-eslint/eslint-plugin@8.66.0(@typescript-eslint/parser@8.66.0(eslint@10.8.1(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.8.1(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(@typescript-eslint/utils@8.70.1(eslint@10.8.1(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.8.1(jiti@2.7.0)(supports-color@9.4.0))(json5@2.2.3)(jsonc-parser@3.3.1)(supports-color@9.4.0)(typescript@6.0.3)(vitest@4.1.11)(yaml@2.9.1)
       '@anolilab/lint-staged-config':
         specifier: 'catalog:'
-        version: 11.1.3(eslint@10.8.1(jiti@2.7.0)(supports-color@9.4.0))(husky@9.1.7)(json5@2.2.3)(jsonc-parser@3.3.1)(lint-staged@17.6.0)(prettier@3.9.9)(vitest@4.1.11)(yaml@2.9.1)
+        version: 11.1.3(eslint@10.8.1(jiti@2.7.0)(supports-color@9.4.0))(husky@9.1.7)(json5@2.2.3)(jsonc-parser@3.3.1)(lint-staged@17.6.0)(prettier@3.9.6)(vitest@4.1.11)(yaml@2.9.0)
       '@anolilab/prettier-config':
         specifier: 'catalog:'
         version: 10.0.3(prettier@3.9.9)
@@ -8084,7 +8084,7 @@ snapshots:
       - vitest
       - yaml
 
-  '@anolilab/lint-staged-config@11.1.3(eslint@10.8.1(jiti@2.7.0)(supports-color@9.4.0))(husky@9.1.7)(json5@2.2.3)(jsonc-parser@3.3.1)(lint-staged@17.6.0)(prettier@3.9.9)(vitest@4.1.11)(yaml@2.9.1)':
+  '@anolilab/lint-staged-config@11.1.3(eslint@10.8.1(jiti@2.7.0)(supports-color@9.4.0))(husky@9.1.7)(json5@2.2.3)(jsonc-parser@3.3.1)(lint-staged@17.6.0)(prettier@3.9.6)(vitest@4.1.11)(yaml@2.9.0)':
     dependencies:
       '@visulima/fs': 5.0.5(json5@2.2.3)(jsonc-parser@3.3.1)(yaml@2.9.1)
       '@visulima/package': 5.0.28(jsonc-parser@3.3.1)
@@ -8094,8 +8094,8 @@ snapshots:
     optionalDependencies:
       eslint: 10.8.1(jiti@2.7.0)(supports-color@9.4.0)
       lint-staged: 17.6.0
-      prettier: 3.9.9
-      vitest: 4.1.11(@types/node@26.6.3)(@vitest/coverage-v8@4.1.10)(vite@8.0.16(@types/node@26.6.3)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+      prettier: 3.9.6
+      vitest: 4.1.11(@types/node@26.5.0)(@vitest/coverage-v8@4.1.10)(vite@8.0.16(@types/node@26.5.0)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.13)(yaml@2.9.0))
     transitivePeerDependencies:
       - '@visulima/yaml'
       - ini
@@ -16841,7 +16841,8 @@ snapshots:
 
   yaml@2.9.0: {}
 
-  yaml@2.9.1: {}
+  yaml@2.9.1:
+    optional: true
 
   yargs-parser@18.1.3:
     dependencies:
