@@ -115,7 +115,7 @@ catalogs:
       specifier: ^3.9.6
       version: 3.9.9
     puppeteer:
-      specifier: ^25.10.0
+      specifier: ^25.12.0
       version: 25.12.0
     semantic-release:
       specifier: ^25.0.9
