@@ -95,6 +95,9 @@ overrides:
     esbuild@>=0.27.3 <0.28.1: ">=0.28.2"
     file-type@>=13.0.0 <21.3.1: ">=22.1.1"
     form-data@<2.5.4: ">=4.0.6"
+    # GHSA-ch52-4w7c-c8xp (max-stale cross-user cache disclosure), fixed in 4.3.0.
+    # cacheable-request@10 depends on ^4.1.1, so this stays in range.
+    http-cache-semantics@<=4.2.0: ">=4.3.0 <5"
     form-data@>=4.0.0 <4.0.6: ">=4.0.6"
     hono@<4.12.25: ">=4.13.11"
     jpeg-js@<0.4.0: ">=0.4.4"
@@ -140,6 +143,10 @@ auditConfig:
         # image-size ICNS/JXL/HEIF DoS — no patched release (2.0.2 latest; 2.0.3 unreleased).
         - GHSA-w3rx-r6r6-pgpr
         - GHSA-5p2g-fcmc-qvqq
+        # GHSA-vfj7-8cjw-p6xm (braces stack exhaustion on deeply nested patterns) — no patched
+        # release: the advisory covers <=3.0.3 and 3.0.3 is the latest on npm. Reached only through
+        # micromatch@4 and chokidar@3 in devDependencies; the patterns are ours, not attacker input.
+        - GHSA-vfj7-8cjw-p6xm
 
 preferWorkspacePackages: true
 

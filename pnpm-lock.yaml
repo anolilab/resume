@@ -154,6 +154,7 @@ overrides:
   esbuild@>=0.27.3 <0.28.1: '>=0.28.2'
   file-type@>=13.0.0 <21.3.1: '>=22.1.1'
   form-data@<2.5.4: '>=4.0.6'
+  http-cache-semantics@<=4.2.0: '>=4.3.0 <5'
   form-data@>=4.0.0 <4.0.6: '>=4.0.6'
   hono@<4.12.25: '>=4.13.11'
   jpeg-js@<0.4.0: '>=0.4.4'
@@ -4286,8 +4287,8 @@ packages:
   htmlparser2@10.1.0:
     resolution: {integrity: sha512-VTZkM9GWRAtEpveh7MSF6SjjrpNVNNVJfFup7xTY3UpFtm67foy9HDVXneLtFVt4pMz5kZtgNcvCniNFb1hlEQ==}
 
-  http-cache-semantics@4.2.0:
-    resolution: {integrity: sha512-dTxcvPXqPvXBQpq5dUr6mEMJX4oIEFv6bwom3FDwKRDsuIjjJGANqhBuoAn9c1RQJIdAKav33ED65E2ys+87QQ==}
+  http-cache-semantics@4.3.0:
+    resolution: {integrity: sha512-M5t5LlJpS1UHMjvwRQVdFHvPISGeLAxNcrWuJkeGh0KxsqCHZ1O3NXZU/8x7cD0BDcGW8kapxMKTvwlqrNkHkA==}
 
   http-proxy-agent@9.1.0:
     resolution: {integrity: sha512-2NxoveTT58mjYT4n3RPTEfCZGLMbidoO8XEieXfpSYxu+PQJ1qpx4ypwH6N+uF9twBPIvRRgvkvW5HUTYWENig==}
@@ -10577,7 +10578,7 @@ snapshots:
     dependencies:
       '@types/http-cache-semantics': 4.2.0
       get-stream: 6.0.1
-      http-cache-semantics: 4.2.0
+      http-cache-semantics: 4.3.0
       keyv: 4.5.4
       mimic-response: 4.0.0
       normalize-url: 8.1.1
@@ -12432,7 +12433,7 @@ snapshots:
       domutils: 3.2.2
       entities: 7.0.1
 
-  http-cache-semantics@4.2.0: {}
+  http-cache-semantics@4.3.0: {}
 
   http-proxy-agent@9.1.0(supports-color@9.4.0):
     dependencies:
