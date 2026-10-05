@@ -11,6 +11,11 @@ on: # yamllint disable-line rule:truthy
             - "opened"
             - "closed"
 
+permissions:
+    contents: "read" # to read the repository
+    issues: "write" # for the shared workflow to comment on and label issues
+    pull-requests: "write" # for the shared workflow to comment on and label pull requests
+
 jobs:
     allo-allo:
         uses: "anolilab/workflows/.github/workflows/allo-allo.yml@13fa35fefde7f2ad64dbaa108f6421ae3062d711" # v18.0.4 # main
