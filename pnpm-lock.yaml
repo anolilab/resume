@@ -112,7 +112,7 @@ catalogs:
       specifier: ^8.5.28
       version: 8.5.28
     prettier:
-      specifier: ^3.9.6
+      specifier: ^3.9.9
       version: 3.9.9
     puppeteer:
       specifier: ^25.10.0
