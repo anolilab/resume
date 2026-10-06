@@ -150,7 +150,7 @@ catalogs:
 
 overrides:
   body-parser@>=2.2.0 <2.2.1: '>=2.3.0'
-  chrono-node@<2.2.4: '>=2.10.1'
+  chrono-node@<2.2.4: '>=2.10.2'
   esbuild@>=0.27.3 <0.28.1: '>=0.28.2'
   file-type@>=13.0.0 <21.3.1: '>=22.1.1'
   form-data@<2.5.4: '>=4.0.6'
@@ -2881,8 +2881,8 @@ packages:
     peerDependencies:
       devtools-protocol: '*'
 
-  chrono-node@2.10.1:
-    resolution: {integrity: sha512-tPOsBzYVAK5zth+CiHCgp5NGeqRc4mMD8FPthQ5IxkgjPWWxIFdM5odnmfw//IRAzl6C++Xy8olQW7wn5qBR1g==}
+  chrono-node@2.10.2:
+    resolution: {integrity: sha512-xBCwGGmodF2YVtzE7/8ewNDajbCg72jgZHyOXvhkuQiYhIQ1KbqyXJJJw2fLaQ603LL4oMVhOyjckEBve45S4w==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
   ci-info@3.9.0:
@@ -10701,7 +10701,7 @@ snapshots:
       mitt: 3.0.1
       zod: 3.25.76
 
-  chrono-node@2.10.1: {}
+  chrono-node@2.10.2: {}
 
   ci-info@3.9.0: {}
 
@@ -15878,7 +15878,7 @@ snapshots:
 
   textlint-rule-date-weekday-mismatch@1.1.1(supports-color@9.4.0):
     dependencies:
-      chrono-node: 2.10.1
+      chrono-node: 2.10.2
       moment: 2.31.0
       textlint-tester: 12.6.1(supports-color@9.4.0)
     transitivePeerDependencies:

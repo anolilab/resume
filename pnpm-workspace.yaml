@@ -91,7 +91,7 @@ onlyBuiltDependencies:
 
 overrides:
     body-parser@>=2.2.0 <2.2.1: ">=2.3.0"
-    chrono-node@<2.2.4: ">=2.10.1"
+    chrono-node@<2.2.4: ">=2.10.2"
     esbuild@>=0.27.3 <0.28.1: ">=0.28.2"
     file-type@>=13.0.0 <21.3.1: ">=22.1.1"
     form-data@<2.5.4: ">=4.0.6"
