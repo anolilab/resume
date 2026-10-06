@@ -115,7 +115,7 @@ overrides:
     semver: 7.8.5
     sharp@<0.30.5: ">=0.35.5"
     sharp@<0.32.6: ">=0.35.5"
-    shell-quote@>=1.1.0 <=1.8.3: ^1.11.0
+    shell-quote@>=1.1.0 <=1.8.3: ^1.12.0
     # GHSA-68fv-2mgg-jv7q (event-loop DoS via indexed source-map section offsets),
     # fixed in 1.2.2. Every consumer depends on ^1.0.x, so this stays in range.
     source-map-js@<1.2.2: ">=1.2.2"
