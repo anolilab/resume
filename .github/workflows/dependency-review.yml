@@ -8,4 +8,4 @@ jobs:
         permissions:
             contents: "read"
             pull-requests: "write"
-        uses: "anolilab/workflows/.github/workflows/dependency-review.yml@13fa35fefde7f2ad64dbaa108f6421ae3062d711" # v18.0.4
+        uses: "anolilab/workflows/.github/workflows/dependency-review.yml@382cb6ceef0cc355d67ce923e0173ac7d4a9d135" # v24.0.8
