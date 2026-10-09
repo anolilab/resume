@@ -99,7 +99,7 @@
         "vite-plugin-static-copy": "catalog:",
         "vitest": "catalog:"
     },
-    "packageManager": "pnpm@12.9.1",
+    "packageManager": "pnpm@12.10.0",
     "engines": {
         "node": ">=22"
     }
