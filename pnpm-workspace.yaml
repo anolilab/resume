@@ -41,7 +41,7 @@ catalog:
     is-ci: ^4.1.0
     lint-staged: ^17.6.0
     lodash.capitalize: ^4.2.1
-    postcss: ^8.5.28
+    postcss: ^8.5.29
     prettier: ^3.9.6
     puppeteer: ^25.10.0
     semantic-release: ^25.0.9
@@ -49,7 +49,7 @@ catalog:
     tailwindcss: ^4.3.3
     textlint: ^15.8.0
     typescript: ^6.0.3
-    vite: 8.0.16
+    vite: 8.3.3
     vite-plugin-favicon2: ^1.1.5
     vite-plugin-handlebars: ^2.0.3
     vite-plugin-static-copy: ^4.1.1
@@ -125,8 +125,8 @@ overrides:
     undici@>=7.0.0 <7.28.0: ">=8.11.2"
     url-regex@<=5.0.0: npm:url-regex-safe@^4.0.0
     uuid@<11.1.1: ">=14.0.2"
-    vite@>=7.0.0 <=7.3.1: ">=8.0.16"
-    vite@>=7.1.0 <=7.3.1: ">=8.0.16"
+    vite@>=7.0.0 <=7.3.1: ">=8.3.3"
+    vite@>=7.1.0 <=7.3.1: ">=8.3.3"
     xml2js@<0.5.0: ">=0.6.2"
     brace-expansion@<1.1.17: ">=3.0.9"
     brace-expansion@>=2.0.0 <2.1.2: ">=5.0.12"
@@ -134,7 +134,7 @@ overrides:
     fast-uri@>=3.0.0 <3.1.3: ">=3.1.5 <5"
     fast-uri@>=3.0.0 <=3.1.3: ">=3.1.5 <5"
     fast-uri@>=3.0.0 <3.1.5: ">=3.1.5 <5"
-    postcss@<=8.5.22: ">=8.5.28"
+    postcss@<=8.5.22: ">=8.5.29"
     ip-address@>=10.1.1 <=10.2.0: ">=10.7.3"
     ip-address@>=10.1.1 <=10.2.1: ">=10.7.3"
     ip-address@<=10.3.0: ">=10.7.3"
@@ -165,3 +165,4 @@ trustPolicyExclude:
     - cached-factory@0.1.0
     - undici-types@6.21.0
     - undici@5.29.0
+    - chromium-bidi@157.0.8090-0
