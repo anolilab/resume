@@ -165,3 +165,4 @@ trustPolicyExclude:
     - cached-factory@0.1.0
     - undici-types@6.21.0
     - undici@5.29.0
+    - chromium-bidi@157.0.8090-0
