@@ -35,7 +35,7 @@ jobs:
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "Check workflow files"
-              uses: "jdx/jactionlint@2462f925040c2aa1c88714dc85bc12d869cc4998" # v2.0.2
+              uses: "jdx/jactionlint@a0bb9f012b6b5760c17c9ccd040001d08002a10e" # v2.1.0
               with:
                   profile: "correctness"
                   args: "--shellcheck="
