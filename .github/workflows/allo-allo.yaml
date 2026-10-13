@@ -18,7 +18,7 @@ permissions:
 
 jobs:
     allo-allo:
-        uses: "anolilab/workflows/.github/workflows/allo-allo.yml@b338ef3e3435901b0368f00f8d7d414b0c59a51b" # v24.0.10 # main
+        uses: "anolilab/workflows/.github/workflows/allo-allo.yml@b5d611c5dda8645e93f2407e3d3fee250a9f5376" # v24.1.0 # main
         with:
             target-repo: "anolilab/resume"
             onboarding-lead: "prisis"
