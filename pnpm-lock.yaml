@@ -303,7 +303,7 @@ catalogs:
       specifier: ^4.1.1
       version: 4.1.1
     vitest:
-      specifier: ^5.0.3
+      specifier: ^5.0.4
       version: 5.0.4
 
 overrides:
