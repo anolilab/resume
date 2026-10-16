@@ -195,7 +195,7 @@ catalogs:
       specifier: ^1.4.0
       version: 1.4.0
     '@fontsource/noto-sans-sc':
-      specifier: ^5.3.0
+      specifier: ^5.3.1
       version: 5.3.1
     '@fontsource/nunito':
       specifier: ^5.3.0
