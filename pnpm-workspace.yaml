@@ -9,21 +9,21 @@ blockExoticSubdeps: true
 catalog:
     "@anolilab/commitlint-config": ^10.1.5
     "@anolilab/eslint-config": ^29.0.1
-    "@anolilab/lint-staged-config": ^11.1.3
+    "@anolilab/lint-staged-config": ^13.0.0
     "@anolilab/prettier-config": ^10.0.3
     "@anolilab/resume-schema": 2.0.3
-    "@anolilab/semantic-release-preset": ^13.4.34
+    "@anolilab/semantic-release-preset": ^13.4.35
     "@anolilab/textlint-config": ^13.0.6
     "@commitlint/cli": ^21.2.2
     "@commitlint/config-conventional": ^21.2.2
     "@eslint/css": ^1.4.0
-    "@fontsource/noto-sans-sc": ^5.3.0
+    "@fontsource/noto-sans-sc": ^5.3.1
     "@fontsource/nunito": ^5.3.0
     "@octokit/rest": ^22.0.1
     "@tailwindcss/postcss": ^4.3.3
     "@types/gravatar": ^1.8.6
     "@types/lodash.capitalize": ^4.2.9
-    "@vitest/coverage-v8": 5.0.3
+    "@vitest/coverage-v8": 5.0.4
     ajv: ^8.20.0
     ajv-formats: ^3.0.1
     audit-ci: ^7.1.0
@@ -43,7 +43,7 @@ catalog:
     lodash.capitalize: ^4.2.1
     postcss: ^8.5.29
     prettier: ^3.9.10
-    puppeteer: ^25.10.0
+    puppeteer: ^25.13.0
     semantic-release: ^25.0.9
     sort-package-json: ^4.0.0
     tailwindcss: ^4.3.3
@@ -53,7 +53,7 @@ catalog:
     vite-plugin-favicon2: ^1.1.5
     vite-plugin-handlebars: ^2.0.3
     vite-plugin-static-copy: ^4.1.1
-    vitest: ^5.0.3
+    vitest: ^5.0.4
 
 catalogMode: prefer
 
@@ -91,7 +91,7 @@ onlyBuiltDependencies:
 
 overrides:
     body-parser@>=2.2.0 <2.2.1: ">=2.3.0"
-    chrono-node@<2.2.4: ">=2.10.2"
+    chrono-node@<2.2.4: ">=2.10.3"
     esbuild@>=0.27.3 <0.28.1: ">=0.28.2"
     file-type@>=13.0.0 <21.3.1: ">=22.1.1"
     form-data@<2.5.4: ">=4.0.6"
@@ -135,11 +135,11 @@ overrides:
     fast-uri@>=3.0.0 <=3.1.3: ">=3.1.5 <5"
     fast-uri@>=3.0.0 <3.1.5: ">=3.1.5 <5"
     postcss@<=8.5.22: ">=8.5.29"
-    ip-address@>=10.1.1 <=10.2.0: ">=10.7.3"
-    ip-address@>=10.1.1 <=10.2.1: ">=10.7.3"
-    ip-address@<=10.3.0: ">=10.7.3"
+    ip-address@>=10.1.1 <=10.2.0: ">=10.7.4"
+    ip-address@>=10.1.1 <=10.2.1: ">=10.7.4"
+    ip-address@<=10.3.0: ">=10.7.4"
     nanoid@<3.3.17: ">=6.0.2"
-    "@hono/node-server@<2.0.5": ">=2.1.4"
+    "@hono/node-server@<2.0.5": ">=2.1.5"
 
 auditConfig:
     ignoreGhsas:
