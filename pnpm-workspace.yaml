@@ -9,10 +9,10 @@ blockExoticSubdeps: true
 catalog:
     "@anolilab/commitlint-config": ^10.1.5
     "@anolilab/eslint-config": ^29.0.1
-    "@anolilab/lint-staged-config": ^13.0.0
-    "@anolilab/prettier-config": ^10.0.3
+    "@anolilab/lint-staged-config": ^13.0.1
+    "@anolilab/prettier-config": ^10.0.4
     "@anolilab/resume-schema": 2.0.3
-    "@anolilab/semantic-release-preset": ^13.4.35
+    "@anolilab/semantic-release-preset": ^13.4.37
     "@anolilab/textlint-config": ^13.0.6
     "@commitlint/cli": ^21.2.2
     "@commitlint/config-conventional": ^21.2.2
@@ -23,7 +23,7 @@ catalog:
     "@tailwindcss/postcss": ^4.3.3
     "@types/gravatar": ^1.8.6
     "@types/lodash.capitalize": ^4.2.9
-    "@vitest/coverage-v8": 5.0.4
+    "@vitest/coverage-v8": 5.0.5
     ajv: ^8.20.0
     ajv-formats: ^3.0.1
     audit-ci: ^7.1.0
@@ -33,7 +33,7 @@ catalog:
     cssnano: ^8.0.10
     date-fns: ^4.4.0
     deepmerge: ^4.3.1
-    eslint: 10.8.1
+    eslint: 10.13.0
     esno: ^4.8.0
     gravatar: ^1.8.2
     handlebars: ^4.7.10
@@ -41,19 +41,19 @@ catalog:
     is-ci: ^4.1.0
     lint-staged: ^17.6.0
     lodash.capitalize: ^4.2.1
-    postcss: ^8.5.29
+    postcss: ^8.5.31
     prettier: ^3.9.10
-    puppeteer: ^25.13.0
+    puppeteer: ^25.15.0
     semantic-release: ^25.0.9
-    sort-package-json: ^4.0.0
+    sort-package-json: ^4.1.0
     tailwindcss: ^4.3.3
     textlint: ^15.8.0
     typescript: ^6.0.3
-    vite: 8.3.3
+    vite: 8.3.4
     vite-plugin-favicon2: ^1.1.5
     vite-plugin-handlebars: ^2.0.3
     vite-plugin-static-copy: ^4.1.1
-    vitest: ^5.0.4
+    vitest: ^5.0.5
 
 catalogMode: prefer
 
@@ -93,7 +93,7 @@ overrides:
     body-parser@>=2.2.0 <2.2.1: ">=2.3.0"
     chrono-node@<2.2.4: ">=2.10.3"
     esbuild@>=0.27.3 <0.28.1: ">=0.28.2"
-    file-type@>=13.0.0 <21.3.1: ">=22.1.1"
+    file-type@>=13.0.0 <21.3.1: ">=22.2.0"
     form-data@<2.5.4: ">=4.0.6"
     # GHSA-ch52-4w7c-c8xp (max-stale cross-user cache disclosure), fixed in 4.3.0.
     # cacheable-request@10 depends on ^4.1.1, so this stays in range.
@@ -102,7 +102,7 @@ overrides:
     hono@<4.12.25: ">=4.13.13"
     jpeg-js@<0.4.0: ">=0.4.4"
     jpeg-js@<0.4.4: ">=0.4.4"
-    js-yaml@<=4.1.1: ">=5.4.3"
+    js-yaml@<=4.1.1: ">=5.5.0"
     lodash@<=4.17.23: ">=4.18.0"
     lodash@>=4.0.0 <=4.17.22: ">=4.18.1"
     lodash@>=4.0.0 <=4.17.23: ">=4.18.0"
@@ -110,7 +110,7 @@ overrides:
     minimist@<0.2.1: ">=1.2.8"
     minimist@<0.2.4: ">=1.2.8"
     phin@<3.7.1: ">=3.7.1"
-    qs@<6.14.1: ">=6.16.0"
+    qs@<6.14.1: ">=6.16.1"
     request@<=2.88.2: npm:@cypress/request@^4.0.1
     semver: 7.8.5
     sharp@<0.30.5: ">=0.35.5"
@@ -121,20 +121,23 @@ overrides:
     source-map-js@<1.2.2: ">=1.2.2"
     tmp@<0.2.6: ">=0.2.7"
     tough-cookie@<4.1.3: ">=6.0.2"
-    undici@<6.27.0: ">=8.11.2"
-    undici@>=7.0.0 <7.28.0: ">=8.11.2"
+    undici@<6.27.0: ">=8.12.3"
+    undici@>=7.0.0 <7.28.0: ">=8.12.3"
     url-regex@<=5.0.0: npm:url-regex-safe@^4.0.0
     uuid@<11.1.1: ">=14.0.3"
-    vite@>=7.0.0 <=7.3.1: ">=8.3.3"
-    vite@>=7.1.0 <=7.3.1: ">=8.3.3"
+    vite@>=7.0.0 <=7.3.1: ">=8.3.4"
+    vite@>=7.1.0 <=7.3.1: ">=8.3.4"
     xml2js@<0.5.0: ">=0.6.2"
     brace-expansion@<1.1.17: ">=3.0.9"
     brace-expansion@>=2.0.0 <2.1.2: ">=5.0.12"
     brace-expansion@>=4.0.0 <5.0.9: ">=5.0.12"
-    fast-uri@>=3.0.0 <3.1.3: ">=3.1.5 <5"
-    fast-uri@>=3.0.0 <=3.1.3: ">=3.1.5 <5"
-    fast-uri@>=3.0.0 <3.1.5: ">=3.1.5 <5"
-    postcss@<=8.5.22: ">=8.5.29"
+    # GHSA-w74x-v6f9-j3xg, GHSA-wjr9-j795-jxcr, GHSA-xhq7-xmqj-769h and
+    # GHSA-333x-w4r6-6crp (fast-uri URI/host confusion), all fixed in 4.2.3.
+    fast-uri@>=3.0.0 <3.1.3: ">=4.2.3 <5"
+    fast-uri@>=3.0.0 <=3.1.3: ">=4.2.3 <5"
+    fast-uri@>=3.0.0 <3.1.5: ">=4.2.3 <5"
+    fast-uri@>=4.0.0 <4.2.3: ">=4.2.3 <5"
+    postcss@<=8.5.22: ">=8.5.31"
     ip-address@>=10.1.1 <=10.2.0: ">=10.7.4"
     ip-address@>=10.1.1 <=10.2.1: ">=10.7.4"
     ip-address@<=10.3.0: ">=10.7.4"
