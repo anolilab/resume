@@ -180,8 +180,8 @@ catalogs:
       specifier: 2.0.3
       version: 2.0.3
     '@anolilab/semantic-release-preset':
-      specifier: ^13.4.37
-      version: 13.4.37
+      specifier: ^13.4.38
+      version: 13.4.38
     '@anolilab/textlint-config':
       specifier: ^13.0.6
       version: 13.0.6
@@ -314,7 +314,7 @@ overrides:
   form-data@<2.5.4: '>=4.0.6'
   http-cache-semantics@<=4.2.0: '>=4.3.0 <5'
   form-data@>=4.0.0 <4.0.6: '>=4.0.6'
-  hono@<4.12.25: '>=4.13.13'
+  hono@<4.12.25: '>=4.13.14'
   jpeg-js@<0.4.0: '>=0.4.4'
   jpeg-js@<0.4.4: '>=0.4.4'
   js-yaml@<=4.1.1: '>=5.5.0'
@@ -349,9 +349,9 @@ overrides:
   fast-uri@>=3.0.0 <3.1.5: '>=4.2.3 <5'
   fast-uri@>=4.0.0 <4.2.3: '>=4.2.3 <5'
   postcss@<=8.5.22: '>=8.5.31'
-  ip-address@>=10.1.1 <=10.2.0: '>=10.7.4'
-  ip-address@>=10.1.1 <=10.2.1: '>=10.7.4'
-  ip-address@<=10.3.0: '>=10.7.4'
+  ip-address@>=10.1.1 <=10.2.0: '>=10.7.5'
+  ip-address@>=10.1.1 <=10.2.1: '>=10.7.5'
+  ip-address@<=10.3.0: '>=10.7.5'
   nanoid@<3.3.17: '>=6.0.2'
   '@hono/node-server@<2.0.5': '>=2.1.5'
 
@@ -410,7 +410,7 @@ importers:
         version: 10.0.4(prettier@3.9.10)
       '@anolilab/semantic-release-preset':
         specifier: 'catalog:'
-        version: 13.4.37(@semantic-release/npm@13.2.0(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3)))(json5@2.2.3)(jsonc-parser@3.3.1)(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3))(supports-color@9.4.0)(yaml@2.9.1)
+        version: 13.4.38(@semantic-release/npm@13.2.0(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3)))(json5@2.2.3)(jsonc-parser@3.3.1)(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3))(supports-color@9.4.0)(yaml@2.9.1)
       '@anolilab/textlint-config':
         specifier: 'catalog:'
         version: 13.0.6(supports-color@9.4.0)(textlint@15.8.0(supports-color@9.4.0))
@@ -665,12 +665,12 @@ packages:
     resolution: {integrity: sha512-dQfpxkB8UqKaa4xlBXB88a0ZSrR3AI78YC8zfKWjC87Nx2tsyZjw9Q+QVJr76iEFvR78fWsO96VHzxkni1R7bA==}
     engines: {node: ^22.14.0 || >=24.10.0}
 
-  '@anolilab/semantic-release-preset@13.4.37':
-    resolution: {integrity: sha512-gMmAZwRCSeAkireX5Pz94ux+21kXWPD5VT9LyV6Elwn2TnWrfn03ylMvfWZDAO+uoie6/0m3NQFOYVB9IQnEIA==}
+  '@anolilab/semantic-release-preset@13.4.38':
+    resolution: {integrity: sha512-AU3qY6WyPsCUP8Os7A01OxqUxR6Rqf87kXnMvvUfzx2zg309ttAu+RAncz99sfg7Rry86x74yoUmIPBcvasW5g==}
     engines: {node: ^22.14.0 || >=24.10.0}
     os: [darwin, linux, win32]
     peerDependencies:
-      '@anolilab/semantic-release-pnpm': 8.1.35
+      '@anolilab/semantic-release-pnpm': 8.1.36
       '@semantic-release/npm': 13.2.0
       semantic-release: 25.0.9
       semantic-release-yarn: ^3.0.2
@@ -8284,7 +8284,7 @@ snapshots:
       - smol-toml
       - yaml
 
-  '@anolilab/semantic-release-preset@13.4.37(@semantic-release/npm@13.2.0(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3)))(json5@2.2.3)(jsonc-parser@3.3.1)(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3))(supports-color@9.4.0)(yaml@2.9.1)':
+  '@anolilab/semantic-release-preset@13.4.38(@semantic-release/npm@13.2.0(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3)))(json5@2.2.3)(jsonc-parser@3.3.1)(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3))(supports-color@9.4.0)(yaml@2.9.1)':
     dependencies:
       '@anolilab/semantic-release-clean-package-json': 5.5.28(json5@2.2.3)(jsonc-parser@3.3.1)(yaml@2.9.1)
       '@semantic-release/changelog': 7.0.0(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3))
