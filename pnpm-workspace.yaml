@@ -12,7 +12,7 @@ catalog:
     "@anolilab/lint-staged-config": ^13.0.1
     "@anolilab/prettier-config": ^10.0.4
     "@anolilab/resume-schema": 2.0.3
-    "@anolilab/semantic-release-preset": ^13.4.37
+    "@anolilab/semantic-release-preset": ^13.4.38
     "@anolilab/textlint-config": ^13.0.6
     "@commitlint/cli": ^21.2.4
     "@commitlint/config-conventional": ^21.2.4
@@ -99,7 +99,7 @@ overrides:
     # cacheable-request@10 depends on ^4.1.1, so this stays in range.
     http-cache-semantics@<=4.2.0: ">=4.3.0 <5"
     form-data@>=4.0.0 <4.0.6: ">=4.0.6"
-    hono@<4.12.25: ">=4.13.13"
+    hono@<4.12.25: ">=4.13.14"
     jpeg-js@<0.4.0: ">=0.4.4"
     jpeg-js@<0.4.4: ">=0.4.4"
     js-yaml@<=4.1.1: ">=5.5.0"
@@ -138,9 +138,9 @@ overrides:
     fast-uri@>=3.0.0 <3.1.5: ">=4.2.3 <5"
     fast-uri@>=4.0.0 <4.2.3: ">=4.2.3 <5"
     postcss@<=8.5.22: ">=8.5.31"
-    ip-address@>=10.1.1 <=10.2.0: ">=10.7.4"
-    ip-address@>=10.1.1 <=10.2.1: ">=10.7.4"
-    ip-address@<=10.3.0: ">=10.7.4"
+    ip-address@>=10.1.1 <=10.2.0: ">=10.7.5"
+    ip-address@>=10.1.1 <=10.2.1: ">=10.7.5"
+    ip-address@<=10.3.0: ">=10.7.5"
     nanoid@<3.3.17: ">=6.0.2"
     "@hono/node-server@<2.0.5": ">=2.1.5"
 
