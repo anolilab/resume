@@ -10,6 +10,6 @@ jobs:
         permissions:
             security-events: "write"
             contents: "read"
-        uses: "anolilab/workflows/.github/workflows/zizmor.yml@c69dbdcdfb274e317a1ca7a17b3457b19cbae527" # v24.2.2
+        uses: "anolilab/workflows/.github/workflows/zizmor.yml@6003d90154c36909a762bd6f3a9801a6559c19a0" # v25.0.7
         with:
             min_severity: "medium"

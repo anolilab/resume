@@ -7,6 +7,6 @@ on: # yamllint disable-line rule:truthy
 
 jobs:
     cleanup-branch-cache:
-        uses: "anolilab/workflows/.github/workflows/cleanup-branch-cache.yaml@c69dbdcdfb274e317a1ca7a17b3457b19cbae527" # v24.2.2 # main
+        uses: "anolilab/workflows/.github/workflows/cleanup-branch-cache.yaml@6003d90154c36909a762bd6f3a9801a6559c19a0" # v25.0.7 # main
         with:
             target-repo: "anolilab/resume"
