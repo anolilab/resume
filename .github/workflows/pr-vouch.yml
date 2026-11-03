@@ -24,6 +24,6 @@ jobs:
             contents: "read"
             issues: "write" # to create the labels
             pull-requests: "write" # to apply them
-        uses: "anolilab/workflows/.github/workflows/vouch.yml@6003d90154c36909a762bd6f3a9801a6559c19a0" # v25.0.7
+        uses: "anolilab/workflows/.github/workflows/vouch.yml@7d2d854c2e366a63e7c7b243d83145e8b5cd98b1" # v26.0.4
         with:
             target-repo: "anolilab/resume"
