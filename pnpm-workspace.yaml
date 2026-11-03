@@ -93,7 +93,7 @@ overrides:
     body-parser@>=2.2.0 <2.2.1: ">=2.4.0"
     chrono-node@<2.2.4: ">=2.10.3"
     esbuild@>=0.27.3 <0.28.1: ">=0.28.2"
-    file-type@>=13.0.0 <21.3.1: ">=22.2.0"
+    file-type@>=13.0.0 <21.3.1: ">=22.3.0"
     form-data@<2.5.4: ">=4.0.6"
     # GHSA-ch52-4w7c-c8xp (max-stale cross-user cache disclosure), fixed in 4.3.0.
     # cacheable-request@10 depends on ^4.1.1, so this stays in range.
