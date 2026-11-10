@@ -21,7 +21,7 @@ jobs:
         runs-on: "ubuntu-latest"
         steps:
             - name: "Harden Runner"
-              uses: "step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43" # v2.22.3
+              uses: "step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a" # v2.22.4
               with:
                   egress-policy: "audit"
 
@@ -35,7 +35,7 @@ jobs:
                   EMAIL: "github-actions[bot]@users.noreply.github.com"
 
             - name: "Check workflow files"
-              uses: "jdx/jactionlint@baa8d685e2b27ff5821558c9eeabb2051c1da61b" # v2.4.0
+              uses: "jdx/jactionlint@9e87e8f34edfc00b849a27807e26eff9d00b936d" # v2.5.0
               with:
                   profile: "correctness"
                   args: "--shellcheck="
