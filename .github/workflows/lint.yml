@@ -18,4 +18,4 @@ jobs:
             lint_yaml: true
             lint_actionlint: false
             lint_rust: false
-            node_version: "22"
+            node_version: "24.22.1"
