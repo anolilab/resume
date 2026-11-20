@@ -270,7 +270,7 @@ catalogs:
       specifier: ^8.5.32
       version: 8.5.33
     prettier:
-      specifier: ^3.9.10
+      specifier: ^3.10.1
       version: 3.10.1
     puppeteer:
       specifier: ^25.16.0

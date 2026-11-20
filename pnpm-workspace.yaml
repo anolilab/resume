@@ -42,7 +42,7 @@ catalog:
     lint-staged: ^17.6.0
     lodash.capitalize: ^4.2.1
     postcss: ^8.5.32
-    prettier: ^3.9.10
+    prettier: ^3.10.1
     puppeteer: ^25.16.0
     semantic-release: ^25.0.9
     sort-package-json: ^4.1.0
