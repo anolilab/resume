@@ -273,7 +273,7 @@ catalogs:
       specifier: ^3.10.1
       version: 3.10.1
     puppeteer:
-      specifier: ^25.16.0
+      specifier: ^25.17.0
       version: 25.17.0
     semantic-release:
       specifier: ^25.0.9
