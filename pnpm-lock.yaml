@@ -282,8 +282,8 @@ catalogs:
       specifier: ^3.10.1
       version: 3.10.1
     puppeteer:
-      specifier: ^25.17.0
-      version: 25.17.0
+      specifier: ^25.18.1
+      version: 25.18.1
     semantic-release:
       specifier: ^25.0.9
       version: 25.0.9
@@ -403,7 +403,7 @@ importers:
         version: 4.2.1
       puppeteer:
         specifier: 'catalog:'
-        version: 25.17.0
+        version: 25.18.1
     devDependencies:
       '@anolilab/commitlint-config':
         specifier: 'catalog:'
@@ -6547,12 +6547,12 @@ packages:
     resolution: {integrity: sha512-LjgDO2zPtoXP2wJpDjZrGdojii1uqO0cnwKoIoUzkfS98HDmbeiGmYiXo3lXeFlq2xvne1QFQhwYXSUCLKtEuA==}
     engines: {node: '>=12.20'}
 
-  puppeteer-core@25.17.0:
-    resolution: {integrity: sha512-YAgBitkd+K9gxRt+wzBAFTTkGjkC8aC2o4OxofsU8JUy2nnK/RflTCJ9bRCvCMNbq9TPhqFk4Phz98otN9FrGg==}
+  puppeteer-core@25.18.1:
+    resolution: {integrity: sha512-C0wHOJHDfAggGBtN5uUfsJGpeSKtPL5jzhgQYDuz4XKeOG1FUkxeZI2M5yK7AUyrdHO+RgDuiCfjmOpcw3PYTA==}
     engines: {node: '>=22.12.0'}
 
-  puppeteer@25.17.0:
-    resolution: {integrity: sha512-J+OQNlI7I6ZjHhF6Q8M+LgiUGldF7meer5EqMJBZMHgnFN3zcehOhpz/x0bYDEEvbEiXzKzmqSRP3QT+5accjQ==}
+  puppeteer@25.18.1:
+    resolution: {integrity: sha512-fCsfwERKluvC84jsVyhDoBZMNuI8t5FFnWXcTdH1vn3NhMk6clZcrF0Da2se6/Hj6CBJ+2PRPpqeV0qPIETeJA==}
     engines: {node: '>=22.12.0'}
     hasBin: true
 
@@ -14924,7 +14924,7 @@ snapshots:
     dependencies:
       escape-goat: 4.0.0
 
-  puppeteer-core@25.17.0:
+  puppeteer-core@25.18.1:
     dependencies:
       '@puppeteer/browsers': 3.2.7
       chromium-bidi: 157.0.8090-0(devtools-protocol@0.0.1717327)
@@ -14938,13 +14938,13 @@ snapshots:
       - utf-8-validate
       - yauzl
 
-  puppeteer@25.17.0:
+  puppeteer@25.18.1:
     dependencies:
       '@puppeteer/browsers': 3.2.7
       chromium-bidi: 157.0.8090-0(devtools-protocol@0.0.1717327)
       devtools-protocol: 0.0.1717327
       lilconfig: 3.1.5
-      puppeteer-core: 25.17.0
+      puppeteer-core: 25.18.1
       typed-query-selector: 2.12.3
     transitivePeerDependencies:
       - bufferutil
