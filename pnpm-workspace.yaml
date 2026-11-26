@@ -43,7 +43,7 @@ catalog:
     lodash.capitalize: ^4.2.1
     postcss: ^8.5.33
     prettier: ^3.10.1
-    puppeteer: ^25.17.0
+    puppeteer: ^25.18.1
     semantic-release: ^25.0.9
     sort-package-json: ^4.1.0
     tailwindcss: ^4.3.5
