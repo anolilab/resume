@@ -7,162 +7,172 @@ importers:
     configDependencies: {}
     packageManagerDependencies:
       pnpm:
-        specifier: 12.21.0
-        version: 12.21.0
+        specifier: 12.23.0
+        version: 12.23.0
 
 packages:
 
-  '@pnpm/exe.android-arm64@12.21.0':
-    resolution: {integrity: sha512-iaWidxR5B9NUBpwMznCQu1yUpKB6BjTY5BYX2lORj76VsfINdj8Z8XWSzSNrGI8qlxa28Jzdp5fiaspzOaJZlA==}
+  '@pnpm/exe.android-arm64@12.23.0':
+    resolution: {integrity: sha512-oqZu9yFInENTRA9BKiOnEqOcpr5dNMDbquxq9zKFKJy0nEC385Vw0e4wlsOAlDh90iX94GND6Fc22FVL2O2SmQ==}
     cpu: [arm64]
     os: [android]
 
-  '@pnpm/exe.android-x64@12.21.0':
-    resolution: {integrity: sha512-35e5v3wlwjIYxDywq+R6/z8CE4gLOEgRxt18yqz1tMRLmx2mnW+CFJI2Q8+srTNjn7gykXUC0x1k195JNikC5A==}
+  '@pnpm/exe.android-x64@12.23.0':
+    resolution: {integrity: sha512-fQRjE4Wno8ye0lxhYGmyqdcc6tv+tDGktEmgFzffZ7flp4BG/84VtdXn3i/O4BazgMbNuPdbM75aj7uDZwL7GQ==}
     cpu: [x64]
     os: [android]
 
-  '@pnpm/exe.darwin-arm64@12.21.0':
-    resolution: {integrity: sha512-F5OyMX/6zLSowpTZEQRojbCmPS1Pq+fyRaIinslsIe6Glh3qbyQ52u+Fe0eEzSaRuIbWZkXmAAXSWh6Q5Wrlgg==}
+  '@pnpm/exe.darwin-arm64@12.23.0':
+    resolution: {integrity: sha512-ny5+L92frsfyV3/B3zadYQuU5kBV8o2TXB5WnhBUoJ/9Mz32FVglMr8g1HmUc01yfKkjopZ4rmF1G7vs68JxIg==}
     cpu: [arm64]
     os: [darwin]
 
-  '@pnpm/exe.darwin-x64@12.21.0':
-    resolution: {integrity: sha512-EzpvcsaE6hrrgYeEiAFYd2rSgFybYyxXhkAY7K3y6Hg3loVfcyJ81hHczpFzi8lW5RXtUlFECRPZ8ZAMRFQYYg==}
+  '@pnpm/exe.darwin-x64@12.23.0':
+    resolution: {integrity: sha512-+MNmpJSAzb9yc80d5l4VbZ/3Teh8xtlacATUyTAx6fELUK0xwmgFi05hqzg1sXLdAPij5gcIp82VvrqY5tzPrQ==}
     cpu: [x64]
     os: [darwin]
 
-  '@pnpm/exe.freebsd-x64@12.21.0':
-    resolution: {integrity: sha512-wNjuEnmdLks4aayPu/QZWQ5tQM9Jn+odUp/vwQM8BXRYoulkTZhtZTHoD60N6mUdLWef1hgUeUh8llNGEUsimw==}
+  '@pnpm/exe.freebsd-x64@12.23.0':
+    resolution: {integrity: sha512-AGfkooje58I9hh4xdSDyZCPLKvjrjuvlkKTK2gsTtj6wfhVTw1jz33wB1XbERt2/0odJdEfgnBPUIdalRnb7Fw==}
     cpu: [x64]
     os: [freebsd]
 
-  '@pnpm/exe.linux-arm64-musl@12.21.0':
-    resolution: {integrity: sha512-Ceit9zn4g5ZqCJtx1fV8eJE7p8aeXMrGZ+Dc01vRqZLIUNgNeI+Ur0ruyqxtsnJx6rGADyXzohumxPLHjaJ5AQ==}
+  '@pnpm/exe.linux-arm64-musl@12.23.0':
+    resolution: {integrity: sha512-C09Z3tFnPz7CYiae326dGlJcRUNCBtlJvMc04S9M8YKACebHHyamxCItLAisvGdHVf1BawtU9shV0FngjYxMwA==}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@pnpm/exe.linux-arm64@12.21.0':
-    resolution: {integrity: sha512-4Oj/iF2TDCe2lcH0n4TupPR5sSdrNLclJB6xBElLMPCUOAvBhdf2rRlSaO5M4erJ6g4Fyy7YTXTpcmfFsKyxEA==}
+  '@pnpm/exe.linux-arm64@12.23.0':
+    resolution: {integrity: sha512-RLby8T0CIWAbljrbmjaX6S3PYhMHnLbUp+IDcOmZIY1/+wy8hJoQpjMPZlV4VJIGl8lZKUXtxJcLJ2XZ1z2SVw==}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@pnpm/exe.linux-ppc64@12.21.0':
-    resolution: {integrity: sha512-s2o7rdSDeUTBFsNqxptpZXlTgT6cojmMVUOvTQvFNSv6Easian02ha4tR32fwwD97Au4YzIIjMCwywCF4D82Sw==}
+  '@pnpm/exe.linux-loong64@12.23.0':
+    resolution: {integrity: sha512-XytxNoKD9/PcugxRHmBptRNDxUYwBtQZwBauJ3lKXFJ3sqHPZSjjFxIMX4HTWQn7FqCVnQlF+tbewjUnvQz0dQ==}
+    cpu: [loong64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-ppc64@12.23.0':
+    resolution: {integrity: sha512-1h9+mBpdmlFA5LW6fAfd5UnLgHakNkEsS1R67mEXY1J6WLLnZcWFJs7Cbde0BD034CRTUa99MaILAuSs2ERf7Q==}
     cpu: [ppc64]
     os: [linux]
     libc: [glibc]
 
-  '@pnpm/exe.linux-riscv64@12.21.0':
-    resolution: {integrity: sha512-EYv3GzxeBTITCuM3yGHHbpRFpUvyulkXpQ6LsjKAQNL3iaba1E6h9iDmlouLb3Io4AMMsfdk0/uG6poQ41uewA==}
+  '@pnpm/exe.linux-riscv64@12.23.0':
+    resolution: {integrity: sha512-SlPz2UxUshIxgyBRKT0PHncYr2pIoFOxf6WR68HCkhGmASGljYlYYwRVfefgoIPM603x4Fcge9/B1Z3aIq1bSQ==}
     cpu: [riscv64]
     os: [linux]
     libc: [glibc]
 
-  '@pnpm/exe.linux-s390x@12.21.0':
-    resolution: {integrity: sha512-8VXGNGVNEfs7pL9GTZOzFxjFEnMt4WL3rLOADR5/kPQ7ROTV9GfpVI2DPO/zArXFSkvfc9Zad/WypHLbvzoaTQ==}
+  '@pnpm/exe.linux-s390x@12.23.0':
+    resolution: {integrity: sha512-Hk8jKY0i9sjyKPJFYC71lu7Mq5ahb5sWT2zCqNxzzBCrivvCqv5GVfZurLETC5TsSusE9TRWFpynLgG+iaXmSA==}
     cpu: [s390x]
     os: [linux]
     libc: [glibc]
 
-  '@pnpm/exe.linux-x64-musl@12.21.0':
-    resolution: {integrity: sha512-MnC5vpIXYubhDZCgCwlfJMg7Cg6HupN2IuouT9gD/tUmOfVdQYqeyYccWbthyo/Jeto8de1oQlxeRN1+1Hl2DQ==}
+  '@pnpm/exe.linux-x64-musl@12.23.0':
+    resolution: {integrity: sha512-7+9bD4LBQ5r+7nLnIhDgMnvMm7a7cfc28NogU3NY1sM0+0Jz7K+IwxZb4BJDY/AN1s3F26TgZ3az/bjeCshmXA==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@pnpm/exe.linux-x64@12.21.0':
-    resolution: {integrity: sha512-8eufCjHXspKbNS/kh8q4Q0gqJoOuvC4Q5pgos6XS8By/nAMtP+jf8F1Cw9er840kfAX+PJ/ts+A9qnLE91rvXQ==}
+  '@pnpm/exe.linux-x64@12.23.0':
+    resolution: {integrity: sha512-vu/N1nUJxLA0IIumbxL/rR6leGA+++SQY0XL+5KPJ1O2kyvzJoLQYL1ibLGO7TRqsZ90wclboEdhIIWvr3Qsig==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@pnpm/exe.netbsd-x64@12.21.0':
-    resolution: {integrity: sha512-eyh1M8hQZCkLWxuva7S/fc1SbFbgqg0/5di0dgWmyiuc2Io3dbWVihDun8X+XM8zsR5uhIDvvZpbS9aZQbCovg==}
+  '@pnpm/exe.netbsd-x64@12.23.0':
+    resolution: {integrity: sha512-c85UPtAJfPR5+ghXS8UGRQlgxwqvz2PFaPaEzIVwUdBU+5DB4X2iuMAMlMXWS6hJ/OjqhKM6tpwyEc4Kkz40Fg==}
     cpu: [x64]
     os: [netbsd]
 
-  '@pnpm/exe.win32-arm64@12.21.0':
-    resolution: {integrity: sha512-7xTxxUXo/grRLivSeIl6B21gnsz7ooe5EMPcJmQqwxc8WLJVReN8MzrlHru8bqXfVr4X3+6ZGZscntKenlCBqQ==}
+  '@pnpm/exe.win32-arm64@12.23.0':
+    resolution: {integrity: sha512-lx0B8HPaUEG/ovIC0PmA6HhMhXh6ud0pAWVTDNxZvAfAzuGm0RM78SCT/oBY80lbJnwA9al4sTUroqozZK9hVA==}
     cpu: [arm64]
     os: [win32]
 
-  '@pnpm/exe.win32-x64@12.21.0':
-    resolution: {integrity: sha512-9TpkJemVApxJ1Z1w0ZFGN+AuSx4nJOqXSJUqMqDvaXTYwGOzvBiiWdFP9GN0ketiWCQS1Q0/pza2E7I3pP0OBQ==}
+  '@pnpm/exe.win32-x64@12.23.0':
+    resolution: {integrity: sha512-OnbBaQWQcw31m5APFNKcM8kdmM6H7k8MoaOnA2m1LsWAHX7AZKB5cdJfNwhHGBfkURcwWk1bnMXBdllujMiCFw==}
     cpu: [x64]
     os: [win32]
 
-  pnpm@12.21.0:
-    resolution: {integrity: sha512-Zv2CeO4ok1zpUXktNDZ/869cQyonVkRYIwKVM4NbjaUpu+C+UTCv1W7QcT+4eJ5Hutgtk71a4v5UsVVi1idu8A==}
+  pnpm@12.23.0:
+    resolution: {integrity: sha512-AtqU/68TP0YHQyKv5VL5DUC19xriWa77zNrMUIWx1hfpjWXgEx9XSLm2dEWXjuUFXX1ZpHPx7vDVBIVP781ZdQ==}
     engines: {node: '>=18'}
     hasBin: true
 
 snapshots:
 
-  '@pnpm/exe.android-arm64@12.21.0':
+  '@pnpm/exe.android-arm64@12.23.0':
     optional: true
 
-  '@pnpm/exe.android-x64@12.21.0':
+  '@pnpm/exe.android-x64@12.23.0':
     optional: true
 
-  '@pnpm/exe.darwin-arm64@12.21.0':
+  '@pnpm/exe.darwin-arm64@12.23.0':
     optional: true
 
-  '@pnpm/exe.darwin-x64@12.21.0':
+  '@pnpm/exe.darwin-x64@12.23.0':
     optional: true
 
-  '@pnpm/exe.freebsd-x64@12.21.0':
+  '@pnpm/exe.freebsd-x64@12.23.0':
     optional: true
 
-  '@pnpm/exe.linux-arm64-musl@12.21.0':
+  '@pnpm/exe.linux-arm64-musl@12.23.0':
     optional: true
 
-  '@pnpm/exe.linux-arm64@12.21.0':
+  '@pnpm/exe.linux-arm64@12.23.0':
     optional: true
 
-  '@pnpm/exe.linux-ppc64@12.21.0':
+  '@pnpm/exe.linux-loong64@12.23.0':
     optional: true
 
-  '@pnpm/exe.linux-riscv64@12.21.0':
+  '@pnpm/exe.linux-ppc64@12.23.0':
     optional: true
 
-  '@pnpm/exe.linux-s390x@12.21.0':
+  '@pnpm/exe.linux-riscv64@12.23.0':
     optional: true
 
-  '@pnpm/exe.linux-x64-musl@12.21.0':
+  '@pnpm/exe.linux-s390x@12.23.0':
     optional: true
 
-  '@pnpm/exe.linux-x64@12.21.0':
+  '@pnpm/exe.linux-x64-musl@12.23.0':
     optional: true
 
-  '@pnpm/exe.netbsd-x64@12.21.0':
+  '@pnpm/exe.linux-x64@12.23.0':
     optional: true
 
-  '@pnpm/exe.win32-arm64@12.21.0':
+  '@pnpm/exe.netbsd-x64@12.23.0':
     optional: true
 
-  '@pnpm/exe.win32-x64@12.21.0':
+  '@pnpm/exe.win32-arm64@12.23.0':
     optional: true
 
-  pnpm@12.21.0:
+  '@pnpm/exe.win32-x64@12.23.0':
+    optional: true
+
+  pnpm@12.23.0:
     optionalDependencies:
-      '@pnpm/exe.android-arm64': 12.21.0
-      '@pnpm/exe.android-x64': 12.21.0
-      '@pnpm/exe.darwin-arm64': 12.21.0
-      '@pnpm/exe.darwin-x64': 12.21.0
-      '@pnpm/exe.freebsd-x64': 12.21.0
-      '@pnpm/exe.linux-arm64': 12.21.0
-      '@pnpm/exe.linux-arm64-musl': 12.21.0
-      '@pnpm/exe.linux-ppc64': 12.21.0
-      '@pnpm/exe.linux-riscv64': 12.21.0
-      '@pnpm/exe.linux-s390x': 12.21.0
-      '@pnpm/exe.linux-x64': 12.21.0
-      '@pnpm/exe.linux-x64-musl': 12.21.0
-      '@pnpm/exe.netbsd-x64': 12.21.0
-      '@pnpm/exe.win32-arm64': 12.21.0
-      '@pnpm/exe.win32-x64': 12.21.0
+      '@pnpm/exe.android-arm64': 12.23.0
+      '@pnpm/exe.android-x64': 12.23.0
+      '@pnpm/exe.darwin-arm64': 12.23.0
+      '@pnpm/exe.darwin-x64': 12.23.0
+      '@pnpm/exe.freebsd-x64': 12.23.0
+      '@pnpm/exe.linux-arm64': 12.23.0
+      '@pnpm/exe.linux-arm64-musl': 12.23.0
+      '@pnpm/exe.linux-loong64': 12.23.0
+      '@pnpm/exe.linux-ppc64': 12.23.0
+      '@pnpm/exe.linux-riscv64': 12.23.0
+      '@pnpm/exe.linux-s390x': 12.23.0
+      '@pnpm/exe.linux-x64': 12.23.0
+      '@pnpm/exe.linux-x64-musl': 12.23.0
+      '@pnpm/exe.netbsd-x64': 12.23.0
+      '@pnpm/exe.win32-arm64': 12.23.0
+      '@pnpm/exe.win32-x64': 12.23.0
 
 ---
 lockfileVersion: '9.0'
@@ -343,16 +353,16 @@ overrides:
   source-map-js@<1.2.2: '>=1.2.4'
   tmp@<0.2.6: '>=0.2.7'
   tough-cookie@<4.1.3: '>=6.1.0'
-  undici@<6.27.0: '>=8.12.4'
-  undici@>=7.0.0 <7.28.0: '>=8.12.4'
+  undici@<6.27.0: '>=8.13.1'
+  undici@>=7.0.0 <7.28.0: '>=8.13.1'
   url-regex@<=5.0.0: npm:url-regex-safe@^4.0.0
   uuid@<11.1.1: '>=14.0.3'
   vite@>=7.0.0 <=7.3.1: '>=8.3.8'
   vite@>=7.1.0 <=7.3.1: '>=8.3.8'
   xml2js@<0.5.0: '>=0.6.2'
   brace-expansion@<1.1.17: '>=3.0.10'
-  brace-expansion@>=2.0.0 <2.1.2: '>=5.0.13'
-  brace-expansion@>=4.0.0 <5.0.9: '>=5.0.13'
+  brace-expansion@>=2.0.0 <2.1.2: '>=5.1.0'
+  brace-expansion@>=4.0.0 <5.0.9: '>=5.1.0'
   fast-uri@>=3.0.0 <3.1.3: '>=4.2.3 <5'
   fast-uri@>=3.0.0 <=3.1.3: '>=4.2.3 <5'
   fast-uri@>=3.0.0 <3.1.5: '>=4.2.3 <5'
@@ -410,7 +420,7 @@ importers:
         version: 10.1.5(@commitlint/cli@21.2.4(conventional-commits-parser@7.1.4)(typescript@6.0.3))(conventional-commits-parser@7.1.4)(typescript@6.0.3)
       '@anolilab/eslint-config':
         specifier: 'catalog:'
-        version: 29.0.1(@eslint/css@1.4.0)(@typescript-eslint/eslint-plugin@8.66.0(@typescript-eslint/parser@8.66.0(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(@typescript-eslint/utils@8.72.2(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(@visulima/yaml@1.0.0)(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(json5@2.2.3)(jsonc-parser@3.3.1)(supports-color@9.4.0)(typescript@6.0.3)(vitest@5.1.2)(yaml@2.9.1)
+        version: 29.0.1(@eslint/css@1.4.0)(@typescript-eslint/eslint-plugin@8.66.0(@typescript-eslint/parser@8.66.0(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(@typescript-eslint/utils@8.72.2(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(json5@2.2.3)(jsonc-parser@3.3.1)(supports-color@9.4.0)(typescript@6.0.3)(vitest@5.1.2)(yaml@2.9.1)
       '@anolilab/lint-staged-config':
         specifier: 'catalog:'
         version: 13.0.1(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(husky@9.1.7)(json5@2.2.3)(jsonc-parser@3.3.1)(lint-staged@17.6.2)(prettier@3.10.1)(vitest@5.1.2)(yaml@2.9.1)
@@ -419,7 +429,7 @@ importers:
         version: 10.0.4(prettier@3.10.1)
       '@anolilab/semantic-release-preset':
         specifier: 'catalog:'
-        version: 13.4.39(@semantic-release/npm@13.2.0(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3)))(@visulima/yaml@1.0.0)(json5@2.2.3)(jsonc-parser@3.3.1)(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3))(supports-color@9.4.0)
+        version: 13.4.39(@semantic-release/npm@13.2.0(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3)))(json5@2.2.3)(jsonc-parser@3.3.1)(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3))(supports-color@9.4.0)
       '@anolilab/textlint-config':
         specifier: 'catalog:'
         version: 13.0.6(supports-color@9.4.0)(textlint@15.8.0(supports-color@9.4.0))
@@ -2882,6 +2892,10 @@ packages:
 
   brace-expansion@5.0.13:
     resolution: {integrity: sha512-Vh3dmFbc4wZeox7M9I/0L9GfFd83Su4+yCck/OF9Gi/P/dAHn0RT7X4K9R7gMNMhDck3DvhR6QXsnQdjjgwNvQ==}
+    engines: {node: 20 || >=22}
+
+  brace-expansion@5.1.0:
+    resolution: {integrity: sha512-aa11Dv491GKnYqxaul3aRJ0szew7yMJMfZPnqD44NjGrZXoj62l41OEDDpdpC4eE2P88vBFfLuSyRhpG91NUvg==}
     engines: {node: 20 || >=22}
 
   braces@3.0.3:
@@ -7514,8 +7528,8 @@ packages:
   undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
 
-  undici@8.12.4:
-    resolution: {integrity: sha512-8Mx+uNKKER2bA4AdtedkqRbwUCIJFr2nJckXRe5yrDqzePqwLP7VNcctN8/XdmDSbF7mS+jJKIszlL+vbam1VA==}
+  undici@8.13.1:
+    resolution: {integrity: sha512-Kt7EaPjh0s93lJH/PmW3d5rhkcpUa6fS3jqZ7+YGxNd9L7Xy/i827xe4C2uhhq+pJebM4tQOl5AgHmW11G5Skg==}
     engines: {node: '>=22.19.0'}
 
   unherit@3.0.1:
@@ -8070,7 +8084,7 @@ snapshots:
   '@actions/http-client@4.0.1':
     dependencies:
       tunnel: 0.0.6
-      undici: 8.12.4
+      undici: 8.13.1
 
   '@actions/io@3.0.2': {}
 
@@ -8090,7 +8104,7 @@ snapshots:
       - conventional-commits-parser
       - typescript
 
-  '@anolilab/eslint-config@29.0.1(@eslint/css@1.4.0)(@typescript-eslint/eslint-plugin@8.66.0(@typescript-eslint/parser@8.66.0(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(@typescript-eslint/utils@8.72.2(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(@visulima/yaml@1.0.0)(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(json5@2.2.3)(jsonc-parser@3.3.1)(supports-color@9.4.0)(typescript@6.0.3)(vitest@5.1.2)(yaml@2.9.1)':
+  '@anolilab/eslint-config@29.0.1(@eslint/css@1.4.0)(@typescript-eslint/eslint-plugin@8.66.0(@typescript-eslint/parser@8.66.0(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(@typescript-eslint/utils@8.72.2(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(json5@2.2.3)(jsonc-parser@3.3.1)(supports-color@9.4.0)(typescript@6.0.3)(vitest@5.1.2)(yaml@2.9.1)':
     dependencies:
       '@e18e/eslint-plugin': 0.8.0(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))
       '@eslint-community/eslint-plugin-eslint-comments': 4.7.2(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))
@@ -8105,7 +8119,7 @@ snapshots:
       '@typescript-eslint/types': 8.66.0
       '@visulima/fs': 5.0.5(json5@2.2.3)(jsonc-parser@3.3.1)(yaml@2.9.1)
       '@visulima/package': 5.0.43(jsonc-parser@3.3.1)
-      '@visulima/tsconfig': 3.2.39(@visulima/yaml@1.0.0)(json5@2.2.3)
+      '@visulima/tsconfig': 3.2.39(json5@2.2.3)
       '@vitest/eslint-plugin': 1.6.26(@typescript-eslint/eslint-plugin@8.66.0(@typescript-eslint/parser@8.66.0(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3))(eslint@10.14.0(jiti@2.7.0)(supports-color@9.4.0))(supports-color@9.4.0)(typescript@6.0.3)(vitest@5.1.2)
       confusing-browser-globals: 1.0.11
       eslint: 10.14.0(jiti@2.7.0)(supports-color@9.4.0)
@@ -8190,10 +8204,10 @@ snapshots:
 
   '@anolilab/resume-schema@2.0.3': {}
 
-  '@anolilab/semantic-release-clean-package-json@5.5.29(@visulima/yaml@1.0.0)(json5@2.2.3)(jsonc-parser@3.3.1)':
+  '@anolilab/semantic-release-clean-package-json@5.5.29(json5@2.2.3)(jsonc-parser@3.3.1)':
     dependencies:
       '@semantic-release/error': 4.0.0
-      '@visulima/fs': 7.0.1(@visulima/yaml@1.0.0)(json5@2.2.3)(jsonc-parser@3.3.1)
+      '@visulima/fs': 7.0.1(json5@2.2.3)(jsonc-parser@3.3.1)
       '@visulima/path': 3.1.0
       detect-indent: 7.0.2
       type-fest: 5.10.0
@@ -8204,9 +8218,9 @@ snapshots:
       - jsonc-parser
       - smol-toml
 
-  '@anolilab/semantic-release-preset@13.4.39(@semantic-release/npm@13.2.0(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3)))(@visulima/yaml@1.0.0)(json5@2.2.3)(jsonc-parser@3.3.1)(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3))(supports-color@9.4.0)':
+  '@anolilab/semantic-release-preset@13.4.39(@semantic-release/npm@13.2.0(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3)))(json5@2.2.3)(jsonc-parser@3.3.1)(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3))(supports-color@9.4.0)':
     dependencies:
-      '@anolilab/semantic-release-clean-package-json': 5.5.29(@visulima/yaml@1.0.0)(json5@2.2.3)(jsonc-parser@3.3.1)
+      '@anolilab/semantic-release-clean-package-json': 5.5.29(json5@2.2.3)(jsonc-parser@3.3.1)
       '@semantic-release/changelog': 7.0.0(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3))
       '@semantic-release/commit-analyzer': 13.0.1(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3))(supports-color@9.4.0)
       '@semantic-release/exec': 7.1.0(semantic-release@25.0.9(supports-color@9.4.0)(typescript@6.0.3))(supports-color@9.4.0)
@@ -9409,7 +9423,7 @@ snapshots:
       p-filter: 4.1.0
       semantic-release: 25.0.9(supports-color@9.4.0)(typescript@6.0.3)
       tinyglobby: 0.2.17
-      undici: 8.12.4
+      undici: 8.13.1
       url-join: 5.2.0
     transitivePeerDependencies:
       - kerberos
@@ -9433,7 +9447,7 @@ snapshots:
       p-filter: 4.1.0
       semantic-release: 25.0.9(supports-color@9.4.0)(typescript@6.0.3)
       tinyglobby: 0.2.17
-      undici: 8.12.4
+      undici: 8.13.1
       url-join: 5.2.0
     transitivePeerDependencies:
       - kerberos
@@ -10230,11 +10244,10 @@ snapshots:
       json5: 2.2.3
       jsonc-parser: 3.3.1
 
-  '@visulima/fs@7.0.1(@visulima/yaml@1.0.0)(json5@2.2.3)(jsonc-parser@3.3.1)':
+  '@visulima/fs@7.0.1(json5@2.2.3)(jsonc-parser@3.3.1)':
     dependencies:
       '@visulima/path': 5.0.0
     optionalDependencies:
-      '@visulima/yaml': 1.0.0
       json5: 2.2.3
       jsonc-parser: 3.3.1
 
@@ -10259,9 +10272,9 @@ snapshots:
 
   '@visulima/path@5.0.0': {}
 
-  '@visulima/tsconfig@3.2.39(@visulima/yaml@1.0.0)(json5@2.2.3)':
+  '@visulima/tsconfig@3.2.39(json5@2.2.3)':
     dependencies:
-      '@visulima/fs': 7.0.1(@visulima/yaml@1.0.0)(json5@2.2.3)(jsonc-parser@3.3.1)
+      '@visulima/fs': 7.0.1(json5@2.2.3)(jsonc-parser@3.3.1)
       '@visulima/path': 5.0.0
       jsonc-parser: 3.3.1
       resolve-pkg-maps: 1.0.0
@@ -10561,6 +10574,10 @@ snapshots:
       wrap-ansi: 8.1.0
 
   brace-expansion@5.0.13:
+    dependencies:
+      balanced-match: 4.0.4
+
+  brace-expansion@5.1.0:
     dependencies:
       balanced-match: 4.0.4
 
@@ -14192,7 +14209,7 @@ snapshots:
 
   minimatch@10.2.6:
     dependencies:
-      brace-expansion: 5.0.13
+      brace-expansion: 5.1.0
 
   minimatch@11.0.8:
     dependencies:
@@ -14205,11 +14222,11 @@ snapshots:
 
   minimatch@5.1.9:
     dependencies:
-      brace-expansion: 5.0.13
+      brace-expansion: 5.1.0
 
   minimatch@9.0.9:
     dependencies:
-      brace-expansion: 5.0.13
+      brace-expansion: 5.1.0
 
   minimist-options@4.1.0:
     dependencies:
@@ -16212,7 +16229,7 @@ snapshots:
 
   undici-types@5.26.5: {}
 
-  undici@8.12.4: {}
+  undici@8.13.1: {}
 
   unherit@3.0.1: {}
 
