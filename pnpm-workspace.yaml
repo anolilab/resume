@@ -44,7 +44,7 @@ catalog:
     postcss: ^8.5.33
     prettier: ^3.10.1
     puppeteer: ^25.18.1
-    semantic-release: ^25.0.9
+    semantic-release: ^26.0.1
     sort-package-json: ^4.1.0
     tailwindcss: ^4.3.5
     textlint: ^15.8.0
